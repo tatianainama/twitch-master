@@ -31,6 +31,7 @@
 
 .card__content {
   flex: 1 1 0;
+  min-width: 0;
 }
 
 .card__content__title {
@@ -41,6 +42,9 @@
 .card__content__description {
   font-size: 80%;
   margin: 0.25rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .card__actions {
