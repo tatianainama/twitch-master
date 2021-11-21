@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--purple-navy);
+  color: #fff;
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+.card + .card {
+  margin-top: 1rem;
+}
+
+.card h4,
+.card h3,
+.card p {
+  margin: 0;
+}
+
+.card__media,
+.card__media_placeholder {
+  margin-right: 1rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 100%;
+}
