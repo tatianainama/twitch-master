@@ -36,6 +36,10 @@
 
 .card__content__title {
   margin: 0.25rem 0;
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .card__content p,

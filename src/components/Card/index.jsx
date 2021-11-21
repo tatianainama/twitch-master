@@ -1,8 +1,9 @@
-import styles from './card.module.css';
 import CastIcon from '../Icons/Cast';
 import ServerIcon from '../Icons/Server';
+import Chip from '../Chip';
+import styles from './card.module.css';
 
-const Card = ({title, description, children, Tag = 'div', media, ...props}) => (
+const Card = ({title, description, category, color, children, Tag = 'div', media, ...props}) => (
   <Tag className={styles.card} {...props}>
     {media 
       ?
@@ -10,8 +11,10 @@ const Card = ({title, description, children, Tag = 'div', media, ...props}) => (
       : <div className={styles.card__media_placeholder}></div>
     }
     <div className={styles.card__content}>
-      <h3 className={styles.card__content__title}>{title}</h3>
-      <p className={styles.card__content__description}>{description}</p>
+      <h3 className={styles.card__content__title}>
+        {title} <Chip color={color}>{category}</Chip>
+      </h3>
+      <p className={styles.card__content__description} title={description}>{description}</p>
       {children}
     </div>
     <div className={styles.card__actions}>

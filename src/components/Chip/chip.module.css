@@ -1,0 +1,52 @@
+.chip {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 70%;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2.5rem;
+  background-color: var(--purple-navy-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+}
+
+.uranianBlue {
+  background-color: var(--uranian-blue);
+  color: var(--purple-navy);
+}
+
+.iceberg {
+  background-color: var(--iceberg);
+  color: var(--purple-navy);
+}
+
+.middleBluePurple {
+  background-color: var(--middle-blue-purple);
+  color: var(--purple-navy);
+}
+
+.plum {
+  background-color: var(--plum);
+  color: var(--pale-purple);
+}
+
+.pansyPurple {
+  background-color: var(--pansy-purple);
+  color: var(--pale-purple);
+}
+
+.blueBell {
+  background-color: var(--blue-bell);
+  color: var(--purple-navy);
+}
+
+.spaceCadet {
+  color: var(--blue-bell);
+  background-color: var(--space-cadet);
+}
+
+.purpleNavy {
+  color: var(--blue-bell);
+  background-color: var(--purple-navy);
+}
