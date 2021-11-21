@@ -1,0 +1,13 @@
+{
+  "subprojects": [
+    {
+      "name": "twitch",
+      "dir": ".",
+      "artifacts": [
+        "dist/"
+      ],
+      "build_mode": "yarn"
+    }
+  ],
+  "deployer": "REST"
+}
