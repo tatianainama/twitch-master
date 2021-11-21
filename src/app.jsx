@@ -24,9 +24,7 @@ export function App(props) {
       {streaming && (
         <ul>
           {streaming.high.map(stream => (
-            <Card tag='li' key={stream.user} media={stream.avatar}>
-              <h4>{stream.user}</h4>
-              <p>{stream.desc}</p>
+            <Card tag='li' key={stream.user} media={stream.avatar} title={stream.user} description={stream.desc}>
             </Card>
           ))}
         </ul>

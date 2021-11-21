@@ -1,30 +1,68 @@
 .card {
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
   background-color: var(--purple-navy);
-  color: #fff;
+  color: var(--blue-bell);
+  box-shadow:
+    0.4px 0.4px 0.7px rgba(98, 96, 101, 0.007),
+    1.1px 1.1px 1.9px rgba(98, 96, 101, 0.01),
+    2.7px 2.7px 4.5px rgba(98, 96, 101, 0.013),
+    8px 8px 16px rgba(98, 96, 101, 0.02)
+  ;
+
 }
 
 .card:hover {
-  opacity: 0.8;
 }
 
 .card + .card {
   margin-top: 1rem;
 }
 
-.card h4,
-.card h3,
-.card p {
-  margin: 0;
-}
-
 .card__media,
 .card__media_placeholder {
-  margin-right: 1rem;
+  margin-right: 0.75rem;
   height: 3.5rem;
   width: 3.5rem;
   border-radius: 100%;
+}
+
+.card__content {
+  flex: 1 1 0;
+}
+
+.card__content__title {
+  margin: 0.25rem 0;
+}
+
+.card__content p,
+.card__content__description {
+  font-size: 80%;
+  margin: 0.25rem 0;
+}
+
+.card__actions {
+  display: flex;
+  margin-left: 0.75rem;
+  justify-self: end;
+}
+
+.card__actions button {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: var(--purple-navy-light);
+}
+
+.card__actions button + button {
+  margin-left: 0.5rem;
 }
