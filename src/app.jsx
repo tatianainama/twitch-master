@@ -3,18 +3,22 @@ import { getStreaming } from './api';
 
 import Card from './components/Card';
 import { ChipColors } from './components/Chip';
+import CastIcon from './components/Icons/Cast';
+import ServerIcon from './components/Icons/Server';
+
+import { castStream, playOnServer } from './api';
 
 const categorize = (data) => [...(new Set(data.map(data => data.category)))].reduce((map, cat, index) => ({ ...map, [cat]: ChipColors[index]}), {})
 
 export function App(props) {
   const [streaming, setStreaming] = useState(null);
   const [error, setError] = useState(null);
+
   useEffect(() => {
     getStreaming()
       .then(result => {
         const colors = categorize(result);
         const data = result.map(s => ({...s, color: colors[s.category]}));
-        console.log(data);
         setStreaming(data)
       })
       .catch(error => setError(error));
@@ -40,6 +44,7 @@ export function App(props) {
               title={user}
               category={category}
               description={desc}
+              actions={<Actions user={user} />}
             />
           ))}
         </ul>
@@ -47,3 +52,14 @@ export function App(props) {
     </>
   )
 }
+
+const Actions = ({ user }) => (
+  <>
+    <button onClick={() => castStream(user)}>
+      <CastIcon size={24} />
+    </button>
+    <button onClick={() => playOnServer(user)}>
+      <ServerIcon size={24} />
+    </button>
+  </>
+)
