@@ -1,29 +1,14 @@
-import { useState, useEffect } from 'preact/hooks';
-import { getStreaming } from './api';
+import useStreamingList from './hooks/useStreamingList';
 
 import Card from './components/Card';
-import { ChipColors } from './components/Chip';
+
 import CastIcon from './components/Icons/Cast';
 import ServerIcon from './components/Icons/Server';
 
 import { castStream, playOnServer } from './api';
 
-const categorize = (data) => [...(new Set(data.map(data => data.category)))].reduce((map, cat, index) => ({ ...map, [cat]: ChipColors[index]}), {})
-
 export function App(props) {
-  const [streaming, setStreaming] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    getStreaming()
-      .then(result => {
-        const colors = categorize(result);
-        const data = result.map(s => ({...s, color: colors[s.category]}));
-        setStreaming(data)
-      })
-      .catch(error => setError(error));
-  }, [])
-  
+  const { streaming, error } = useStreamingList();
   return (
     <>
       <nav className="navigation card">
