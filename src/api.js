@@ -19,6 +19,9 @@ export const playOnServer = (user) =>
   fetch(`${API}/stream?key=${user}&quality=1080p60,1080p,720p60,720p`)
     .then(res => res.json());
 
+export const getPlayingOnServer = () => 
+  fetch(`${API}/stream_list`).then(res => res.json());
+
 export default {
   getStreaming,
   castStream,
