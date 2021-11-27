@@ -22,13 +22,19 @@ const useStreamingList = () => {
   const [streaming, setStreaming] = useState(null);
   const [error, setError] = useState(null);
 
+  const fetchData = () => getStreaming()
+  .then(result => {
+    const data = categorize(result);
+    setStreaming(data);
+  })
+  .catch(error => setError(error));
+  
   useEffect(() => {
-    getStreaming()
-      .then(result => {
-        const data = categorize(result);
-        setStreaming(data);
-      })
-      .catch(error => setError(error));
+    fetchData();
+    const getStreamingInterval = setInterval(() => fetchData(), 10000);
+    return () => {
+      clearInterval(getStreamingInterval);
+    }
   }, []);
 
   return { streaming, error };
