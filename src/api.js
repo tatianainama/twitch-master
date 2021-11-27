@@ -22,6 +22,9 @@ export const playOnServer = (user) =>
 export const getPlayingOnServer = () => 
   fetch(`${API}/stream_list`).then(res => res.json());
 
+export const stopPlaying = (user) => 
+  fetch(`${API}/end?key=${user}`).then(res => res.json());
+
 export default {
   getStreaming,
   castStream,

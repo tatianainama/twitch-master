@@ -1,13 +1,12 @@
-import { useState } from 'react';
-
 import useStreamingList from './hooks/useStreamingList';
 import usePlayingOnServer from './hooks/usePlayingOnServer';
 
 import Card from './components/Card';
 import CastIcon from './components/Icons/Cast';
 import ServerIcon from './components/Icons/Server';
+import CancelIcon from './components/Icons/Cancel';
 
-import { castStream, playOnServer } from './api';
+import { castStream, playOnServer, stopPlaying } from './api';
 
 export function App(props) {
   const { streaming, error } = useStreamingList();
@@ -55,7 +54,17 @@ export function App(props) {
             <h3>Casting</h3>
             {
               casting.map(({user, port}) => (
-                <Card tag='li' key={user} title={user} description={`@ port: ${port}`} />
+                <Card
+                  tag='li'
+                  key={user}
+                  title={user}
+                  description={`@ port ${port}`}
+                  actions={
+                    <button onClick={() => stopPlaying(user).then(setCasting)}>
+                      <CancelIcon size={20} />
+                    </button>
+                  }
+                />
               ))
             }
           </section>
