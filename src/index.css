@@ -25,7 +25,7 @@ ul {
 
 html,
 body {
-  font-size: 16px;
+  font-size: 14px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -40,6 +40,10 @@ body {
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+  font-family: 'Ubuntu', arial, sans-serif;
 }
 
 * {
