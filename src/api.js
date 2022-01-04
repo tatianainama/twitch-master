@@ -25,8 +25,5 @@ export const getPlayingOnServer = () =>
 export const stopPlaying = (user) => 
   fetch(`${API}/end?key=${user}`).then(res => res.json());
 
-export default {
-  getStreaming,
-  castStream,
-  playOnServer
-}
+export const search = (query) => 
+  fetch(`${API}/search/channels/${query}`).then(res => res.json());

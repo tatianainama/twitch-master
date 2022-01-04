@@ -5,6 +5,7 @@ import Card from './components/Card';
 import CastIcon from './components/Icons/Cast';
 import ServerIcon from './components/Icons/Server';
 import CancelIcon from './components/Icons/Cancel';
+import Search from './components/Search';
 
 import { castStream, playOnServer, stopPlaying } from './api';
 
@@ -15,10 +16,7 @@ export function App(props) {
   return (
     <>
       <nav className="navigation card">
-        <div>
-          <input />
-          <button>search</button>
-        </div>
+        <Search />
       </nav>
       <section>
         <h2>Streaming now</h2>
@@ -61,7 +59,7 @@ export function App(props) {
                   description={`@ port ${port}`}
                   actions={
                     <button onClick={() => stopPlaying(user).then(setCasting)}>
-                      <CancelIcon size={20} />
+                      <CancelIcon size={15} />
                     </button>
                   }
                 />
