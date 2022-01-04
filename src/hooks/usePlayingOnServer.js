@@ -7,12 +7,11 @@ const usePlayingOnServer = () => {
 
   const fetchData = () => getPlayingOnServer().then(setPlayingOnServer);
 
-
   useEffect(() => {
     fetchData();
-    const getStreamingInterval = setInterval(() => fetchData(), 10000);
+    const getPlayingInterval = setInterval(() => fetchData(), 10000);
     return () => {
-      clearInterval(getStreamingInterval);
+      clearInterval(getPlayingInterval);
     }
   }, []);
   return [playingOnServer, setPlayingOnServer];
