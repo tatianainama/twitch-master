@@ -24,7 +24,7 @@ export function App(props) {
         <h2>Streaming now</h2>
         {streaming && (
           <ul>
-            {streaming.map(({user, avatar, desc, category, color}) => (
+            {streaming.map(({ user, avatar, desc, category, color }) => (
               <Card
                 tag='li'
                 key={user}
@@ -35,7 +35,7 @@ export function App(props) {
                 description={desc}
                 actions={
                   <>
-                    <button onClick={() => castStream(user)}>
+                    <button onClick={() => castStream(user).then(setCasting)}>
                       <CastIcon size={24} />
                     </button>
                     <button onClick={() => playOnServer(user).then(setCasting)}>
@@ -53,7 +53,7 @@ export function App(props) {
           <section>
             <h3>Casting</h3>
             {
-              casting.map(({user, port}) => (
+              casting.map(({ user, port }) => (
                 <Card
                   tag='li'
                   key={user}
