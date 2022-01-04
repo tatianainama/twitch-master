@@ -1,7 +1,6 @@
 import useStreamingList from './hooks/useStreamingList';
 import usePlayingOnServer from './hooks/usePlayingOnServer';
 
-
 import Card from './components/Card';
 import CastIcon from './components/Icons/Cast';
 import ServerIcon from './components/Icons/Server';
