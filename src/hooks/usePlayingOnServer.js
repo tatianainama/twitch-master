@@ -5,11 +5,17 @@ import { getPlayingOnServer } from '../api';
 const usePlayingOnServer = () => {
   const [playingOnServer, setPlayingOnServer] = useState([]);
 
-  useEffect(() => {
-    getPlayingOnServer().then(setPlayingOnServer)
-  }, []);
+  const fetchData = () => getPlayingOnServer().then(setPlayingOnServer);
 
-  return [ playingOnServer, setPlayingOnServer ];
+
+  useEffect(() => {
+    fetchData();
+    const getStreamingInterval = setInterval(() => fetchData(), 10000);
+    return () => {
+      clearInterval(getStreamingInterval);
+    }
+  }, []);
+  return [playingOnServer, setPlayingOnServer];
 };
 
 export default usePlayingOnServer;
