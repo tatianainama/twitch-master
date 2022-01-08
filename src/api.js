@@ -1,5 +1,5 @@
 const API = import.meta.env.VITE_TWITCH_API;
-const KODI_JSONRPC_URL = import.meta.env.KODI_JSONRPC_URL;
+const KODI_JSONRPC_URL = import.meta.env.VITE_KODI_JSONRPC_URL;
 
 const MOCK_DATA = import.meta.env.MODE === 'MOCK' ? [
   { viewers: 7509, user: "Vixella", desc: "villager hunting day 2 (๑✧◡✧๑) !bingo", category: "Animal Crossing: New Horizons", avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/8fccb72a-a9d3-43c9-90fc-a90a54284ae7-profile_image-70x70.png" },
