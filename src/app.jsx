@@ -21,7 +21,7 @@ export function App(props) {
           <button>search</button>
         </div>
       </nav>
-      <section>
+      <section id="streamingNow">
         <h2>Streaming now</h2>
         {streaming && (
           <ul>
@@ -52,7 +52,13 @@ export function App(props) {
       {
         casting.length > 0 && (
           <section>
-            <h3>Casting</h3>
+            <div className="streamingHeader">
+              <h3 className="streamingHeaderTitle">Casting</h3>
+              <div className="streamingActions">
+                <Button onClick={kodiDecreaseVolume}>-</Button>
+                <Button onClick={kodiIncreaseVolume}>+</Button>
+              </div>
+            </div>
             {
               casting.map(({ user, port }) => (
                 <Card
@@ -69,12 +75,11 @@ export function App(props) {
               ))
             }
           </section>
+
+
         )
       }
-      <section>
-        <Button onClick={kodiDecreaseVolume}>-</Button>
-        <Button onClick={kodiIncreaseVolume}>+</Button>
-      </section>
+
     </>
   )
 }

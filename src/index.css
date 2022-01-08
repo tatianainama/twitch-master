@@ -59,3 +59,30 @@ input {
   color: #fff;
 }
 
+.streamingHeader {
+  display: flex;
+  align-items: center;
+  padding-right: 0.75rem;
+}
+
+.streamingActions {
+  display: flex;
+  justify-self: end;
+}
+
+.streamingActions button + button {
+  margin-left: 0.5rem;
+}
+
+.streamingHeaderTitle {
+  flex: 1 1 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+#streamingNow {
+  flex: 1;
+}
