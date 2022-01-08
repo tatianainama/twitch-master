@@ -1,0 +1,14 @@
+button.button {
+    color: #82afdcff;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: var(--purple-navy-light);
+  }
