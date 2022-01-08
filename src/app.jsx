@@ -5,8 +5,9 @@ import Card from './components/Card';
 import CastIcon from './components/Icons/Cast';
 import ServerIcon from './components/Icons/Server';
 import CancelIcon from './components/Icons/Cancel';
+import Button from './components/Button';
 
-import { castStream, playOnServer, stopPlaying } from './api';
+import { castStream, playOnServer, stopPlaying, kodiIncreaseVolume, kodiDecreaseVolume } from './api';
 
 export function App(props) {
   const { streaming, error } = useStreamingList();
@@ -35,12 +36,12 @@ export function App(props) {
                 description={desc}
                 actions={
                   <>
-                    <button onClick={() => castStream(user).then(setCasting)}>
+                    <Button onClick={() => castStream(user).then(setCasting)}>
                       <CastIcon size={24} />
-                    </button>
-                    <button onClick={() => playOnServer(user).then(setCasting)}>
+                    </Button>
+                    <Button onClick={() => playOnServer(user).then(setCasting)}>
                       <ServerIcon size={24} />
-                    </button>
+                    </Button>
                   </>
                 }
               />
@@ -60,9 +61,9 @@ export function App(props) {
                   title={user}
                   description={`@ port ${port}`}
                   actions={
-                    <button onClick={() => stopPlaying(user).then(setCasting)}>
+                    <Button onClick={() => stopPlaying(user).then(setCasting)}>
                       <CancelIcon size={20} />
-                    </button>
+                    </Button>
                   }
                 />
               ))
@@ -70,6 +71,10 @@ export function App(props) {
           </section>
         )
       }
+      <section>
+        <Button onClick={kodiDecreaseVolume}>-</Button>
+        <Button onClick={kodiIncreaseVolume}>+</Button>
+      </section>
     </>
   )
 }
