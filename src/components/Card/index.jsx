@@ -4,9 +4,9 @@ import styles from './card.module.css';
 
 
 
-const Card = ({title, description, category, color, children, Tag = 'div', media, actions, ...props}) => (
+const Card = ({ title, description, category, color, children, Tag = 'div', media, actions, ...props }) => (
   <Tag className={styles.card} {...props}>
-    {media &&  <img src={media} width={34} height={34} className={styles.card__media} loading="lazy" alt=""/>
+    {media && <img src={media} width={34} height={34} className={styles.card__media} loading="lazy" alt="" />
     }
     <div className={styles.card__content}>
       <h3 className={styles.card__content__title}>

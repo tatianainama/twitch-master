@@ -54,20 +54,6 @@
   justify-self: end;
 }
 
-.card__actions button {
-  width: 2.5rem;
-  height: 2.5rem;
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  text-decoration: none;
-  background-color: var(--purple-navy-light);
-}
-
 .card__actions button + button {
   margin-left: 0.5rem;
 }
