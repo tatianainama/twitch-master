@@ -54,7 +54,7 @@ export function App(props) {
                 color={casted.color}
                 media={casted.avatar}
                 title={casted.user_name}
-                category={casted.game_name || "VOD"}
+                category={casted.game_name}
                 description={casted.title}
                 actions={
                   <Button onClick={() => stopPlaying().then(setCasted)}>

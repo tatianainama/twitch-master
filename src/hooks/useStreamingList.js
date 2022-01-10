@@ -39,7 +39,7 @@ const useStreamingList = () => {
     }
   }, []);
 
-  return { streaming, setStreaming };
+  return { streaming, setStreaming, error };
 };
 
 export default useStreamingList;

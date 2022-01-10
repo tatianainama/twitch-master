@@ -21,7 +21,7 @@ const useCasted = () => {
     }
   }, []);
 
-  return { casted, setCasted };
+  return { casted, setCasted, error };
 };
 
 export default useCasted;
