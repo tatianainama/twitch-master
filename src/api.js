@@ -13,7 +13,7 @@ export const getStreaming = () =>
     .then(res => res.json())
     .then(data => [...data, ...MOCK_DATA])
 
-export const castStream = (user) => fetch(`${API}/cast_live?user=${user}`)
+export const castStream = (user_name) => fetch(`${API}/cast_live?user=${user_name}`)
   .then(res => res.json());
 
 export const playOnServer = (user) =>
