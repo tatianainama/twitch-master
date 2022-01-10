@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'preact/hooks';
-import { ChipColors } from '../components/Chip';
-import { getStreaming } from '../api';
+import { getCurrentlyCasted } from '../api';
 
 const categorize = (data) => {
   const uniqueCategories = [...new Set(data.map(stream => stream.category))];
@@ -18,28 +17,27 @@ const categorize = (data) => {
   }));
 };
 
-const useStreamingList = () => {
-  const [streaming, setStreaming] = useState(null);
+const useCasting = () => {
+  const [casting, setCasting] = useState(null);
   const [error, setError] = useState(null);
 
   const fetchData = () => {
-    getStreaming()
+    getCurrentlyCasted()
       .then(result => {
-        const data = categorize(result);
-        setStreaming(data);
+        setCasting(result);
       })
       .catch(error => setError(error));
   };
 
   useEffect(() => {
     fetchData();
-    const getStreamingInterval = setInterval(() => fetchData(), 10000);
+    const getCastedInterval = setInterval(() => fetchData(), 10000);
     return () => {
-      clearInterval(getStreamingInterval);
+      clearInterval(getCastedInterval);
     }
   }, []);
 
-  return { streaming, setStreaming };
+  return { casting, setCasting };
 };
 
-export default useStreamingList;
+export default useCasting;
