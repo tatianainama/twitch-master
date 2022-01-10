@@ -4,19 +4,19 @@ import { getCurrentlyCasted } from '../api';
 const useCasted = () => {
   const [casted, setCasted] = useState(null);
   const [error, setError] = useState(null);
-
-  const fetchData = () => {
-    getCurrentlyCasted()
-      .then(result => {
-        setCasted(result);
-      })
-      .catch(error => setError(error));
-  };
-
+  
   useEffect(() => {
+    const fetchData = () => {
+      getCurrentlyCasted()
+        .then(result => {
+          setCasted(result);
+        })
+        .catch(error => setError(error));
+    };
     fetchData();
     const getCastedInterval = setInterval(() => fetchData(), 10000);
     return () => {
+      console.log("clear getCasted", getCastedInterval);
       clearInterval(getCastedInterval);
     }
   }, []);
