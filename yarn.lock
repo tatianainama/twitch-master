@@ -573,6 +573,11 @@ postcss@^8.3.8:
     picocolors "^1.0.0"
     source-map-js "^0.6.2"
 
+preact-router@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/preact-router/-/preact-router-4.0.0.tgz#0701994d396cf405c144c9c6391699314ac7622b"
+  integrity sha512-Y5f/G8ITHcw0vcJJ+drEsEcv4yHGeKJ78v3kF7AL6Ef35Lgoj+qPuRHarTeMBCXDzlmLWAqhmacfDNIgMa0+pw==
+
 preact@^10.5.13:
   version "10.5.15"
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.5.15.tgz#6df94d8afecf3f9e10a742fd8c362ddab464225f"

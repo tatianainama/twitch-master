@@ -16,6 +16,12 @@ export const getStreaming = () =>
 export const castStream = (user_name) => fetch(`${API}/cast_live?user=${user_name}`)
   .then(res => res.json());
 
+export const castVOD = (video_id) => fetch(`${API}/cast_vod?vod_id=${video_id}`)
+  .then(res => res.json());
+
+export const getVODs = (user) => fetch(`${API}/vods?user=${user}`)
+  .then(res => res.json());
+
 export const playOnServer = (user) =>
   fetch(`${API}/stream?key=${user}&quality=1080p60,1080p,720p60,720p`)
     .then(res => res.json());
