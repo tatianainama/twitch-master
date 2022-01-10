@@ -3,18 +3,18 @@ import { ChipColors } from '../components/Chip';
 import { getStreaming } from '../api';
 
 const categorize = (data) => {
-  const uniqueCategories = [...new Set(data.map(stream => stream.title))];
+  const uniqueCategories = [...new Set(data.map(stream => stream.game_name))];
   const colorPalette = uniqueCategories.reduce(
-    (catalogue, title, index) => (
+    (catalogue, game_name, index) => (
       {
         ...catalogue,
-        [title]: ChipColors[index],
+        [game_name]: ChipColors[index],
       }
     ),
     {});
   return data.map(stream => ({
     ...stream,
-    color: colorPalette[stream.title],
+    color: colorPalette[stream.game_name],
   }));
 };
 
