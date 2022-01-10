@@ -57,7 +57,7 @@ export function App(props) {
                 category={casted.game_name}
                 description={casted.title}
                 actions={
-                  <Button onClick={() => stopPlaying().then(setCasted)}>
+                  <Button onClick={() => stopPlaying().then(setCasted(null))}>
                     <CancelIcon size={20} />
                   </Button>
                 }
