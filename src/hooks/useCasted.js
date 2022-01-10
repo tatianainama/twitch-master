@@ -17,14 +17,14 @@ const categorize = (data) => {
   }));
 };
 
-const useCasting = () => {
-  const [casting, setCasting] = useState(null);
+const useCasted = () => {
+  const [casted, setCasted] = useState(null);
   const [error, setError] = useState(null);
 
   const fetchData = () => {
     getCurrentlyCasted()
       .then(result => {
-        setCasting(result);
+        setCasted(result);
       })
       .catch(error => setError(error));
   };
@@ -37,7 +37,7 @@ const useCasting = () => {
     }
   }, []);
 
-  return { casting, setCasting };
+  return { casted, setCasted };
 };
 
-export default useCasting;
+export default useCasted;

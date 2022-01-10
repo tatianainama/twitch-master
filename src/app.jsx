@@ -1,5 +1,5 @@
 import useStreamingList from './hooks/useStreamingList';
-import useCasting from './hooks/useCasting';
+import useCasted from './hooks/useCasted';
 
 import Card from './components/Card';
 import CastIcon from './components/Icons/Cast';
@@ -10,7 +10,7 @@ import { castStream, stopPlaying } from './api';
 
 export function App(props) {
   const { streaming, setStreaming } = useStreamingList();
-  const { casting, setCasting } = useCasting();
+  const { casted, setCasted } = useCasted();
 
   return (
     <>
@@ -34,7 +34,7 @@ export function App(props) {
                 category={game_name}
                 description={title}
                 actions={
-                  <Button onClick={() => castStream(user_name).then(setCasting)}>
+                  <Button onClick={() => castStream(user_name).then(setCasted)}>
                     <CastIcon size={24} />
                   </Button>
                 }
@@ -43,21 +43,21 @@ export function App(props) {
           </ul>
         )}
       </section>
-      {casting && (
+      {casted && (
         <section>
           <h2>Casted now</h2>
           <ul>
             {(
               <Card
                 tag='li'
-                key={casting.user_name}
-                color={casting.color}
-                media={casting.avatar}
-                title={casting.user_name}
-                category={casting.game_name || "VOD"}
-                description={casting.title}
+                key={casted.user_name}
+                color={casted.color}
+                media={casted.avatar}
+                title={casted.user_name}
+                category={casted.game_name || "VOD"}
+                description={casted.title}
                 actions={
-                  <Button onClick={() => stopPlaying().then(setCasting)}>
+                  <Button onClick={() => stopPlaying().then(setCasted)}>
                     <CancelIcon size={20} />
                   </Button>
                 }
