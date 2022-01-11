@@ -16,7 +16,6 @@ const useCasted = () => {
     fetchData();
     const getCastedInterval = setInterval(() => fetchData(), 10000);
     return () => {
-      console.log("clear getCasted", getCastedInterval);
       clearInterval(getCastedInterval);
     }
   }, []);
