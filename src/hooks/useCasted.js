@@ -18,7 +18,7 @@ const useCasted = () => {
     return () => {
       console.log("clear getCasted", getCastedInterval);
       clearInterval(getCastedInterval);
-    }
+    };
   }, []);
 
   return { casted, setCasted, error };
