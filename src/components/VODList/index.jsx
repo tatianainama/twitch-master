@@ -1,5 +1,6 @@
 import { VOD } from '../VOD';
 import useVOD from '../../hooks/useVOD';
+import styles from './vodlist.module.css';
 
 export function VODList () {
   const { vods } = useVOD();
@@ -10,9 +11,16 @@ export function VODList () {
             vods && Object.keys(vods).map((username) => { 
               const userVods = vods[username];
               
-              return userVods.map((vod) => (
-                <VOD key={vod.id} vod={vod} />
-            ));
+              return (
+                <>
+                  <p>{username}</p>
+                  <div className={styles.VODList}>
+                    {userVods.map((vod) => (
+                      <VOD key={vod.id} vod={vod} />
+                  ))}
+                  </div>
+                </>
+              );
           })
         }
     </>

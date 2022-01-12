@@ -9,18 +9,11 @@ import useCasted from '../../hooks/useCasted';
 
 import { castStream, stopPlaying } from '../../api';
 
-export function Live (props) {
+export function Live () {
   const { streaming } = useStreamingList();
   const { casted, setCasted } = useCasted();
   return (
     <>
-      <nav className="navigation card">
-        <div>
-          <input />
-          <button>search</button>
-        </div>
-
-      </nav>
       <section>
         <h2>Streaming now</h2>
         {streaming && (

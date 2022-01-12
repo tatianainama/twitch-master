@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@babel/core": "^7.12.10",
     "preact": "^10.5.13",
     "preact-router": "^4.0.0"
   },
