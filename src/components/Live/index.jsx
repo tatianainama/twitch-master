@@ -1,16 +1,15 @@
+import Card from "../Card";
+import CastIcon from "../Icons/Cast";
+import Button from "../Button";
+import CancelIcon from "../Icons/Cancel";
 
-import Card from '../Card';
-import CastIcon from '../Icons/Cast';
-import Button from '../Button';
-import CancelIcon from '../Icons/Cancel';
+import useStreamingList from "../../hooks/useStreamingList";
+import useCasted from "../../hooks/useCasted";
 
-import useStreamingList from '../../hooks/useStreamingList';
-import useCasted from '../../hooks/useCasted';
+import styles from "./live.module.css";
+import { castStream, stopPlaying } from "../../api";
 
-import styles from './live.module.css';
-import { castStream, stopPlaying } from '../../api';
-
-export function Live () {
+export function Live() {
   const { streaming } = useStreamingList();
   const { casted, setCasted } = useCasted();
   return (
@@ -21,7 +20,7 @@ export function Live () {
           <ul className={styles.cardGroup}>
             {streaming.map(({ user_name, avatar, title, game_name, color }) => (
               <Card
-                tag='li'
+                tag="li"
                 key={user_name}
                 color={color}
                 media={avatar}
@@ -42,9 +41,9 @@ export function Live () {
         <section>
           <h2>Casted now</h2>
           <ul>
-            {(
+            {
               <Card
-                tag='li'
+                tag="li"
                 key={casted.user_name}
                 color={casted.color}
                 media={casted.avatar}
@@ -57,11 +56,10 @@ export function Live () {
                   </Button>
                 }
               />
-            )}
+            }
           </ul>
         </section>
-      )
-
-      }
-    </>);
+      )}
+    </>
+  );
 }

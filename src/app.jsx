@@ -1,9 +1,9 @@
-import Router from 'preact-router';
-import { Live } from './components/Live';
-import { VODList } from './components/VODList';
-import { Navigation } from './components/Navigation';
+import Router from "preact-router";
+import { Live } from "./components/Live";
+import { VODList } from "./components/VODList";
+import { Navigation } from "./components/Navigation";
 
-export function App () {
+export function App() {
   return (
     <div>
       <Navigation />

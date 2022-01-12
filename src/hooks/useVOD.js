@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'preact/hooks';
-import { getVODs } from '../api';
+import { useState, useEffect } from "preact/hooks";
+import { getVODs } from "../api";
 
 const useCasted = () => {
   const [vods, setVODs] = useState(null);
@@ -9,7 +9,7 @@ const useCasted = () => {
     const fetchData = () => {
       getVODs()
         .then(setVODs)
-        .catch(error => setError(error));
+        .catch((error) => setError(error));
     };
     fetchData();
   }, []);

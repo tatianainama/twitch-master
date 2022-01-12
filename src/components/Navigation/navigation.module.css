@@ -1,10 +1,10 @@
 .activeNav {
-    color: red !important;
+  color: red !important;
 }
 .navLink {
-    color: white;
+  color: white;
 }
 
 .nav a + a {
-    margin-left: 50px;
+  margin-left: 50px;
 }

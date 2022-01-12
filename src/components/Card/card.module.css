@@ -5,13 +5,10 @@
   border-radius: 0.25rem;
   background-color: var(--purple-navy);
   color: var(--blue-bell);
-  box-shadow:
-    0.4px 0.4px 0.7px rgba(98, 96, 101, 0.007),
+  box-shadow: 0.4px 0.4px 0.7px rgba(98, 96, 101, 0.007),
     1.1px 1.1px 1.9px rgba(98, 96, 101, 0.01),
     2.7px 2.7px 4.5px rgba(98, 96, 101, 0.013),
-    8px 8px 16px rgba(98, 96, 101, 0.02)
-  ;
-
+    8px 8px 16px rgba(98, 96, 101, 0.02);
 }
 
 .card__media,

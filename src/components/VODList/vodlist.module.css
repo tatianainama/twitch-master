@@ -1,7 +1,7 @@
 .VODList {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    overflow-x: scroll;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  overflow-x: scroll;
+  gap: 20px;
 }

@@ -1,7 +1,7 @@
-import { Link } from 'preact-router/match';
-import styles from './navigation.module.css';
+import { Link } from "preact-router/match";
+import styles from "./navigation.module.css";
 
-export function Navigation () {
+export function Navigation() {
   return (
     <nav className={styles.nav}>
       <Link className={styles.navLink} href="/">
