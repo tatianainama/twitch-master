@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   src: url("fonts/Ubuntu/Ubuntu-Medium.ttf");
 }
 
@@ -9,13 +9,20 @@
   --iceberg: #82afdcff;
   --middle-blue-purple: #827dbeff;
   --plum: #874b96ff;
-  --pansy-purple: #871E5F;
-  --pale-purple: #EFE4F1;
-  --blue-bell: #9B9BBF;
+  --pansy-purple: #871e5f;
+  --pale-purple: #efe4f1;
+  --blue-bell: #9b9bbf;
   --space-cadet: #302f4dff;
-  --purple-navy-light: #50507C;
+  --purple-navy-light: #50507c;
   --purple-navy: #363659;
-  --main-gradient: linear-gradient(150deg, var(--uranian-blue) 0%, var(--iceberg) 20%, var(--middle-blue-purple) 50%, var(--plum) 75%, var(--pansy-purple) 100%);
+  --main-gradient: linear-gradient(
+    150deg,
+    var(--uranian-blue) 0%,
+    var(--iceberg) 20%,
+    var(--middle-blue-purple) 50%,
+    var(--plum) 75%,
+    var(--pansy-purple) 100%
+  );
 }
 
 ul {
@@ -35,15 +42,15 @@ body {
   padding: 0;
   margin: 0;
   background: var(--space-cadet);
-  font-family: 'Ubuntu', arial, sans-serif;
+  font-family: "Ubuntu", arial, sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 input {
-  font-family: 'Ubuntu', arial, sans-serif;
+  font-family: "Ubuntu", arial, sans-serif;
 }
 
 * {
@@ -59,30 +66,7 @@ input {
   color: #fff;
 }
 
-.streamingHeader {
-  display: flex;
-  align-items: center;
-  padding-right: 0.75rem;
-}
-
-.streamingActions {
-  display: flex;
-  justify-self: end;
-}
-
-.streamingActions button + button {
-  margin-left: 0.5rem;
-}
-
-.streamingHeaderTitle {
-  flex: 1 1 0;
-}
-
 #app {
   display: flex;
   flex-direction: column;
-}
-
-#streamingNow {
-  flex: 1;
 }

@@ -4,13 +4,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
-    "preact": "^10.5.13"
+    "@babel/core": "^7.12.10",
+    "preact": "^10.5.13",
+    "preact-router": "^4.0.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.0.0",
+    "eslint": "^8.6.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "prettier": "^2.5.1",
     "vite": "^2.6.4"
   }
 }

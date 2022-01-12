@@ -3,9 +3,7 @@
     {
       "name": "twitch",
       "dir": ".",
-      "artifacts": [
-        "dist/"
-      ],
+      "artifacts": ["dist/"],
       "build_mode": "yarn"
     }
   ],
