@@ -1,6 +1,6 @@
 import Router from 'preact-router';
 import { Live } from './components/Live';
-import { VOD } from './components/VOD';
+import { VODList } from './components/VODList';
 import { Navigation } from './components/Navigation';
 
 export function App () {
@@ -9,7 +9,7 @@ export function App () {
       <Navigation />
       <Router>
         <Live path="/" />
-        <VOD path="/vod" />
+        <VODList path="/vod" />
       </Router>
     </>
   );

@@ -22,6 +22,7 @@ module.exports = {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/jsx-indent": [2, 2, {checkAttributes: true, indentLogicalExpressions: true}],
+    "react/prop-types": [0],
     semi: [2, 'always']
   }
 };
