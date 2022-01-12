@@ -3,3 +3,24 @@
   display: flex;
   flex-direction: column;
 }
+
+.castedHeader {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+.castedActions {
+  flex: 1;
+  justify-content: end;
+  display: flex;
+  flex-direction: inherit;
+}
+
+.castedActions button + button {
+  margin-left: 0.5rem;
+}
+
+.liveSection {
+  flex: 1;
+}

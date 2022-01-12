@@ -7,14 +7,19 @@ import useStreamingList from "../../hooks/useStreamingList";
 import useCasted from "../../hooks/useCasted";
 
 import styles from "./live.module.css";
-import { castStream, stopPlaying } from "../../api";
+import {
+  castStream,
+  stopPlaying,
+  kodiIncreaseVolume,
+  kodiDecreaseVolume,
+} from "../../api";
 
 export function Live() {
   const { streaming } = useStreamingList();
   const { casted, setCasted } = useCasted();
   return (
     <>
-      <section>
+      <section className={styles.liveSection}>
         <h2>Streaming now</h2>
         {streaming && (
           <ul className={styles.cardGroup}>
@@ -39,7 +44,13 @@ export function Live() {
       </section>
       {casted && (
         <section>
-          <h2>Casted now</h2>
+          <div className={styles.castedHeader}>
+            <h2>Casted now</h2>
+            <div className={styles.castedActions}>
+              <Button onClick={kodiDecreaseVolume}>-</Button>
+              <Button onClick={kodiIncreaseVolume}>+</Button>
+            </div>
+          </div>
           <ul>
             {
               <Card
