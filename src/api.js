@@ -11,7 +11,7 @@ const MOCK_DATA = import.meta.env.MODE === 'MOCK' ? [
 export const getStreaming = () =>
   fetch(`${API}/list`)
     .then(res => res.json())
-    .then(data => [...data, ...MOCK_DATA])
+    .then(data => [...data, ...MOCK_DATA]);
 
 export const castStream = (user_name) => fetch(`${API}/cast_live?user=${user_name}`)
   .then(res => res.json());
@@ -19,7 +19,7 @@ export const castStream = (user_name) => fetch(`${API}/cast_live?user=${user_nam
 export const castVOD = (video_id) => fetch(`${API}/cast_vod?vod_id=${video_id}`)
   .then(res => res.json());
 
-export const getVODs = (user) => fetch(`${API}/vods?user=${user}`)
+export const getVODs = () => fetch(`${API}/vods/`)
   .then(res => res.json());
 
 export const playOnServer = (user) =>

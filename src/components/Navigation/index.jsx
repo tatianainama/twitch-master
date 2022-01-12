@@ -2,7 +2,7 @@ import { Link } from 'preact-router/match';
 
 export function Navigation (props) {
   return (
-    < nav>
+    <nav>
       <Link activeClassName="active" href="/">
         Home
       </Link>

@@ -7,10 +7,8 @@ const useCasted = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      getVODs('vixella') // FIXME
-        .then(result => {
-          setVODs({ vixella: result });
-        })
+      getVODs()
+        .then(setVODs)
         .catch(error => setError(error));
     };
     fetchData();
