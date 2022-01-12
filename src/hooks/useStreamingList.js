@@ -1,18 +1,17 @@
-import { useState, useEffect } from 'preact/hooks';
-import { ChipColors } from '../components/Chip';
-import { getStreaming } from '../api';
+import { useState, useEffect } from "preact/hooks";
+import { ChipColors } from "../components/Chip";
+import { getStreaming } from "../api";
 
 const categorize = (data) => {
-  const uniqueCategories = [...new Set(data.map(stream => stream.game_name))];
+  const uniqueCategories = [...new Set(data.map((stream) => stream.game_name))];
   const colorPalette = uniqueCategories.reduce(
-    (catalogue, game_name, index) => (
-      {
-        ...catalogue,
-        [game_name]: ChipColors[index],
-      }
-    ),
-    {});
-  return data.map(stream => ({
+    (catalogue, game_name, index) => ({
+      ...catalogue,
+      [game_name]: ChipColors[index],
+    }),
+    {}
+  );
+  return data.map((stream) => ({
     ...stream,
     color: colorPalette[stream.game_name],
   }));
@@ -23,21 +22,20 @@ const useStreamingList = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-
     const fetchData = () => {
       getStreaming()
-        .then(result => {
+        .then((result) => {
           const data = categorize(result);
           setStreaming(data);
         })
-        .catch(error => setError(error));
+        .catch((error) => setError(error));
     };
 
     fetchData();
     const getStreamingInterval = setInterval(() => fetchData(), 10000);
     return () => {
       clearInterval(getStreamingInterval);
-    }
+    };
   }, []);
 
   return { streaming, setStreaming, error };

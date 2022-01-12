@@ -1,0 +1,10 @@
+.activeNav {
+  color: red !important;
+}
+.navLink {
+  color: white;
+}
+
+.nav a + a {
+  margin-left: 50px;
+}
