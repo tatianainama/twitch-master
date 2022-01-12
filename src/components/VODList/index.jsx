@@ -16,7 +16,7 @@ export function VODList () {
                   <p>{username}</p>
                   <div className={styles.VODList}>
                     {userVods.map((vod) => (
-                      <VOD key={vod.id} vod={vod} />
+                      <VOD className={styles.VOD} key={vod.id} vod={vod} />
                   ))}
                   </div>
                 </>
