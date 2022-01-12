@@ -1,17 +1,16 @@
 import useStreamingList from './hooks/useStreamingList';
-import usePlayingOnServer from './hooks/usePlayingOnServer';
+import useCasted from './hooks/useCasted';
 
 import Card from './components/Card';
 import CastIcon from './components/Icons/Cast';
-import ServerIcon from './components/Icons/Server';
-import CancelIcon from './components/Icons/Cancel';
 import Button from './components/Button';
+import CancelIcon from './components/Icons/Cancel';
 
-import { castStream, playOnServer, stopPlaying } from './api';
+import { castStream, stopPlaying } from './api';
 
 export function App(props) {
-  const { streaming, error } = useStreamingList();
-  const [casting, setCasting] = usePlayingOnServer();
+  const { streaming, setStreaming } = useStreamingList();
+  const { casted, setCasted } = useCasted();
 
   return (
     <>
@@ -25,51 +24,48 @@ export function App(props) {
         <h2>Streaming now</h2>
         {streaming && (
           <ul>
-            {streaming.map(({ user, avatar, desc, category, color }) => (
+            {streaming.map(({ user_name, avatar, title, game_name, color }) => (
               <Card
                 tag='li'
-                key={user}
+                key={user_name}
                 color={color}
                 media={avatar}
-                title={user}
-                category={category}
-                description={desc}
+                title={user_name}
+                category={game_name}
+                description={title}
                 actions={
-                  <>
-                    <Button onClick={() => castStream(user).then(setCasting)}>
-                      <CastIcon size={24} />
-                    </Button>
-                    <Button onClick={() => playOnServer(user).then(setCasting)}>
-                      <ServerIcon size={24} />
-                    </Button>
-                  </>
+                  <Button onClick={() => castStream(user_name).then(setCasted)}>
+                    <CastIcon size={24} />
+                  </Button>
                 }
               />
             ))}
           </ul>
         )}
       </section>
-      {
-        casting.length > 0 && (
-          <section>
-            <h3>Casting</h3>
-            {
-              casting.map(({ user, port }) => (
-                <Card
-                  tag='li'
-                  key={user}
-                  title={user}
-                  description={`@ port ${port}`}
-                  actions={
-                    <Button onClick={() => stopPlaying(user).then(setCasting)}>
-                      <CancelIcon size={20} />
-                    </Button>
-                  }
-                />
-              ))
-            }
-          </section>
-        )
+      {casted && (
+        <section>
+          <h2>Casted now</h2>
+          <ul>
+            {(
+              <Card
+                tag='li'
+                key={casted.user_name}
+                color={casted.color}
+                media={casted.avatar}
+                title={casted.user_name}
+                category={casted.game_name}
+                description={casted.title}
+                actions={
+                  <Button onClick={() => stopPlaying().then(setCasted(null))}>
+                    <CancelIcon size={20} />
+                  </Button>
+                }
+              />
+            )}
+          </ul>
+        </section>
+      )
       }
     </>
   )
