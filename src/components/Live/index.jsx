@@ -7,6 +7,7 @@ import CancelIcon from '../Icons/Cancel';
 import useStreamingList from '../../hooks/useStreamingList';
 import useCasted from '../../hooks/useCasted';
 
+import styles from './live.module.css';
 import { castStream, stopPlaying } from '../../api';
 
 export function Live () {
@@ -17,7 +18,7 @@ export function Live () {
       <section>
         <h2>Streaming now</h2>
         {streaming && (
-          <ul>
+          <ul className={styles.cardGroup}>
             {streaming.map(({ user_name, avatar, title, game_name, color }) => (
               <Card
                 tag='li'
