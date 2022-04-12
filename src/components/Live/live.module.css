@@ -13,7 +13,6 @@
   flex: 1;
   justify-content: end;
   display: flex;
-  flex-direction: inherit;
 }
 
 .castedActions button + button {
