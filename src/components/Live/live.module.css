@@ -7,7 +7,6 @@
 .castedHeader {
   display: flex;
   flex-direction: row;
-  display: flex;
   align-items: center;
 }
 .castedActions {
