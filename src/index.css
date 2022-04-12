@@ -65,3 +65,8 @@ input {
   background-color: var(--space-cadet);
   color: #fff;
 }
+
+#app {
+  display: flex;
+  flex-direction: column;
+}

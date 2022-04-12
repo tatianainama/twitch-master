@@ -3,3 +3,22 @@
   display: flex;
   flex-direction: column;
 }
+
+.castedHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.castedActions {
+  flex: 1;
+  justify-content: end;
+  display: flex;
+}
+
+.castedActions button + button {
+  margin-left: 0.5rem;
+}
+
+.liveSection {
+  flex: 1;
+}

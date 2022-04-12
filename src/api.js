@@ -1,4 +1,5 @@
 const API = import.meta.env.VITE_TWITCH_API;
+const KODI_JSONRPC_URL = import.meta.env.VITE_KODI_JSONRPC_URL;
 
 const MOCK_DATA =
   import.meta.env.MODE === "MOCK"
@@ -66,5 +67,40 @@ export const playOnServer = (user) =>
 
 export const stopPlaying = () => fetch(`${API}/end`).then((res) => res.json());
 
+const getVolumeFromKodi = () => {
+  return postJson(KODI_JSONRPC_URL, {
+    jsonrpc: "2.0",
+    method: "Application.GetProperties",
+    params: [["volume", "muted"]],
+    id: 53
+  }).then((text) => text.result);
+};
+export const kodiIncreaseVolume = () => {
+  getVolumeFromKodi().then(({ volume }) => kodiSetVolume(volume + 5));
+};
+export const kodiDecreaseVolume = () => {
+  getVolumeFromKodi().then(({ volume }) => kodiSetVolume(volume - 5));
+};
+
+const postJson = (url, data) => {
+  return fetch(url,
+    {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(res => res.json());
+};
+
+const kodiSetVolume = (volume) => {
+  postJson(KODI_JSONRPC_URL, {
+    jsonrpc: "2.0",
+    method: "Application.SetVolume",
+    params: [volume],
+    id: 1
+  }).then((text) => text.result);
+
+};
 export const getCurrentlyCasted = () =>
   fetch(`${API}/currently_casting`).then((res) => res.json());
