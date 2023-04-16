@@ -42,7 +42,8 @@ export function Live() {
           </ul>
         )}
       </section>
-      {casted && (
+      
+	{casted && (
         <section>
           <div className={styles.castedHeader}>
             <h2>Casted now</h2>
@@ -70,7 +71,7 @@ export function Live() {
             }
           </ul>
         </section>
-      )}
+        )}
     </>
   );
 }

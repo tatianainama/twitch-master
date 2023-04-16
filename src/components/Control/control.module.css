@@ -1,0 +1,10 @@
+.castedActions {
+  flex: 1;
+  justify-content: start;
+  display: flex;
+  font-size: 24px;
+}
+
+.castedActions button + button {
+  margin-left: 1rem;
+}

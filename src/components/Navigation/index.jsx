@@ -10,6 +10,9 @@ export function Navigation() {
       <Link className={styles.navLink} href="/vod">
         VOD
       </Link>
+      <Link className={styles.navLink} href="/control">
+        Control
+      </Link>
     </nav>
   );
 }
