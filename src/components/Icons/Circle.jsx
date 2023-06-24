@@ -1,4 +1,4 @@
-export const Play = ({ size = 34, ...props }) => (
+export const Circle = ({ size = 34, ...props }) => (
   <svg
     width={size}
     height={size}
@@ -11,6 +11,6 @@ export const Play = ({ size = 34, ...props }) => (
     strokeLinejoin="round"
     {...props}
   >
-    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+    <circle cx="12" cy="12" r="10"></circle>
   </svg>
 );

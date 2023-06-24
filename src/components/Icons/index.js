@@ -5,3 +5,5 @@ export * from "./Stop";
 export * from "./Minus";
 export * from "./Plus";
 export * from "./Grid";
+export * from "./VolumeX";
+export * from "./Circle";

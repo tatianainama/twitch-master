@@ -1,6 +1,16 @@
 import Card from "../Card";
 import Button from "../Button";
-import { Grid, Play, Stop, Plus, Minus, Cast } from "../Icons";
+import {
+  Grid,
+  Play,
+  Stop,
+  Plus,
+  Minus,
+  Cast,
+  VolumeX,
+  Circle,
+  Cancel,
+} from "../Icons";
 import Chip from "../Chip";
 import useStreamingList from "../../hooks/useStreamingList";
 import useCasted from "../../hooks/useCasted";
@@ -57,6 +67,23 @@ export function Live() {
               <Minus size={24} />
             </button>
           </div>
+          <div className={styles.controlMain}>
+            <button>
+              <VolumeX size={18} />
+            </button>
+            <button>
+              <Stop size={18} />
+            </button>
+            <div className={styles.controlMainPower}>
+              <button>
+                <Circle size={18} />
+              </button>
+              <span>PWR</span>
+              <button>
+                <Minus size={18} />
+              </button>
+            </div>
+          </div>
           <div className={styles.controlGroup}>
             <button onClick={setSourceKodi}>
               <Grid size={18} />
@@ -82,7 +109,7 @@ export function Live() {
                 <p>{casting.title}</p>
               </div>
               <Button onClick={() => stopPlaying().then(setCasting(null))}>
-                <Stop size={20} />
+                <Cancel size={20} />
               </Button>
             </>
           ) : (

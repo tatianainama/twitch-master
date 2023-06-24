@@ -69,7 +69,8 @@
 .control {
   padding: 1rem;
   display: flex;
-  justify-content: space-evenly;
+  gap: 1rem;
+    align-items: stretch;
 }
 
 .controlGroup {
@@ -96,4 +97,40 @@
   text-decoration: none;
   background-color: var(--purple-navy-light);
   opacity: 0.8;
+}
+.controlMain {
+  flex: 1;
+  border-radius: 6px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+}
+
+.controlMainPower {
+  grid-area: 2 / 1 / 3 / 3;
+  display: flex;
+  width: 100%;
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--space-cadet);
+  padding: 0.75rem;
+  border-radius: 2rem;
+}
+
+.controlMain button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 100%;
+  padding: 0.25rem;
+  text-decoration: none;
+  background: none;
+  color: var(--blue-bell);
+  border: 1px solid var(--blue-bell);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
