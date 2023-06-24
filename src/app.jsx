@@ -11,7 +11,7 @@ export function App() {
       <div
         style={{
           minHeight: 0,
-          overflowY: `scroll`,
+          overflowY: `auto`,
           overflowX: `hidden`,
           padding: `0 1rem`,
         }}
