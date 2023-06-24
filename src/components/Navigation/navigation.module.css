@@ -1,10 +1,40 @@
-.activeNav {
-  color: red !important;
-}
 .navLink {
-  color: white;
+color: white;
+opacity: 0.4;
+  display: inline-flex;
+  gap: 0.5rem;
+  text-decoration: none;
+  align-items: center;
 }
 
-.nav a + a {
-  margin-left: 50px;
+.navLink.active {
+  opacity: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+.nav button {
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 100%;
+  text-decoration: none;
+  background-color: var(--purple-navy-light);
+  opacity: 0.8;
+  padding: 0.5rem;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.nav div {
+  flex: 1;
 }

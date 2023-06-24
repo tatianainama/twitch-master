@@ -82,6 +82,19 @@ export const kodiDecreaseVolume = () => {
   getVolumeFromKodi().then(({ volume }) => kodiSetVolume(volume - 5));
 };
 
+export const setPowerOn = () => {
+  fetch(`${API}/remote/tv/on`).then((res) => res.json());
+};
+export const setPowerOff = () => {
+  fetch(`${API}/remote/tv/off`).then((res) => res.json());
+};
+export const setSourceCC = () => {
+  fetch(`${API}/remote/input/chromecast`).then((res) => res.json());
+};
+export const setSourceKodi = () => {
+  fetch(`${API}/remote/input/kodi`).then((res) => res.json());
+};
+
 const postJson = (url, data) => {
   return fetch(url,
     {
