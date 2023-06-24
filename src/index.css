@@ -68,6 +68,6 @@ input {
 }
 
 #app {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+    grid-template-rows: 42px 1fr min-content;
 }

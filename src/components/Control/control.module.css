@@ -13,6 +13,7 @@
   background-color: var(--purple-navy);
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+  margin-top: 1rem;
 }
 
 .remoteControlCasting {

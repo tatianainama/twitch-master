@@ -8,7 +8,14 @@ export function App() {
   return (
     <>
       <Navigation />
-      <div style={{ flex: 1, padding: `1rem` }}>
+      <div
+        style={{
+          minHeight: 0,
+          overflowY: `scroll`,
+          overflowX: `hidden`,
+          padding: `0 1rem`,
+        }}
+      >
         <Router>
           <Live path="/" />
           <VODList path="/vod" />
