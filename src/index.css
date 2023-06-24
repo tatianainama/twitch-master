@@ -62,7 +62,6 @@ input {
 #app {
   width: 100%;
   max-width: 48em;
-  padding: 1rem;
   height: 100%;
   background-color: var(--space-cadet);
   color: #fff;

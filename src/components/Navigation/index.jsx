@@ -1,17 +1,21 @@
 import { Link } from "preact-router/match";
+import { Radio, Film } from "../Icons";
 import styles from "./navigation.module.css";
 
 export function Navigation() {
   return (
     <nav className={styles.nav}>
-      <Link className={styles.navLink} href="/">
-        Home
+      <Link className={styles.navLink} activeClassName={styles.active} href="/">
+        <Radio size={20} />
+        Live
       </Link>
-      <Link className={styles.navLink} href="/vod">
-        VOD
-      </Link>
-      <Link className={styles.navLink} href="/control">
-        Control
+      <Link
+        className={styles.navLink}
+        activeClassName={styles.active}
+        href="/vod"
+      >
+        <Film size={18} />
+        VoD
       </Link>
     </nav>
   );

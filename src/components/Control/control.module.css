@@ -8,3 +8,120 @@
 .castedActions button + button {
   margin-left: 1rem;
 }
+
+.remoteControl {
+  background-color: var(--purple-navy);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.remoteControlCasting {
+  height: 4rem;
+  background-color: var(--ultra-violet);
+  padding: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.remoteControlCasting.nothingCasting {
+  background-color: var(--purple-navy-light);
+  justify-content: center;
+}
+
+.remoteControlCasting button {
+  background-color: var(--ultra-violet-dark);
+  justify-self: flex-end;
+}
+
+.remoteControlCasting>div {
+  overflow: hidden;
+}
+
+.remoteControlCasting h3 {
+  margin: 0 0 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.remoteControlCasting p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.control {
+  padding: 1.5rem 1rem;
+  justify-content: space-evenly;
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.controlGroup {
+  display: inline-flex;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--space-cadet);
+  padding: 0.75rem 1rem;
+  border-radius: 2rem;
+}
+
+.controlGroup button {
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 100%;
+  padding: 0.25rem;
+  text-decoration: none;
+  background-color: var(--purple-navy-light);
+  opacity: 0.8;
+}
+
+.controlMain {
+  flex: 1;
+  border-radius: 6px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+}
+
+.controlMainPower {
+  grid-area: 2 / 1 / 3 / 3;
+  display: flex;
+  width: 100%;
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--space-cadet);
+  padding: 0.75rem;
+  border-radius: 2rem;
+  justify-content: space-between;
+}
+
+.controlMain button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 100%;
+  padding: 0.25rem;
+  text-decoration: none;
+  background: none;
+  color: var(--blue-bell);
+  border: 1px solid var(--blue-bell);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

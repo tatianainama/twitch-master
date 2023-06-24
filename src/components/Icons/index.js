@@ -7,3 +7,5 @@ export * from "./Plus";
 export * from "./Grid";
 export * from "./VolumeX";
 export * from "./Circle";
+export * from "./Film";
+export * from "./Radio";
