@@ -9,8 +9,6 @@ import {
   kodiIncreaseVolume,
   kodiDecreaseVolume,
   setSourceCC,
-  setPowerOn,
-  setPowerOff,
 } from "../../api";
 
 export function Control() {

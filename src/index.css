@@ -69,5 +69,5 @@ input {
 
 #app {
   display: grid;
-    grid-template-rows: 42px 1fr min-content;
+    grid-template-rows: 52px 1fr min-content;
 }
