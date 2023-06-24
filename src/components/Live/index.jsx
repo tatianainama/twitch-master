@@ -1,8 +1,7 @@
 import Card from "../Card";
-import CastIcon from "../Icons/Cast";
 import Button from "../Button";
-import CancelIcon from "../Icons/Cancel";
-
+import { Grid, Play, Stop, Plus, Minus, Cast } from "../Icons";
+import Chip from "../Chip";
 import useStreamingList from "../../hooks/useStreamingList";
 import useCasted from "../../hooks/useCasted";
 
@@ -12,11 +11,13 @@ import {
   stopPlaying,
   kodiIncreaseVolume,
   kodiDecreaseVolume,
+  setSourceKodi,
+  setSourceCC,
 } from "../../api";
 
 export function Live() {
   const { streaming } = useStreamingList();
-  const { casted, setCasted } = useCasted();
+  const { casting, setCasting } = useCasted();
   return (
     <>
       <section className={styles.liveSection}>
@@ -33,8 +34,10 @@ export function Live() {
                 category={game_name}
                 description={title}
                 actions={
-                  <Button onClick={() => castStream(user_name).then(setCasted)}>
-                    <CastIcon size={24} />
+                  <Button
+                    onClick={() => castStream(user_name).then(setCasting)}
+                  >
+                    <Play size={24} />
                   </Button>
                 }
               />
@@ -42,36 +45,55 @@ export function Live() {
           </ul>
         )}
       </section>
-      
-	{casted && (
-        <section>
-          <div className={styles.castedHeader}>
-            <h2>Casted now</h2>
-            <div className={styles.castedActions}>
-              <Button onClick={kodiDecreaseVolume}>-</Button>
-              <Button onClick={kodiIncreaseVolume}>+</Button>
-            </div>
+
+      <section className={styles.remoteControl}>
+        <div className={styles.control}>
+          <div className={styles.controlGroup}>
+            <button onClick={kodiIncreaseVolume}>
+              <Plus size={24} />
+            </button>
+            <span>VOL</span>
+            <button onClick={kodiDecreaseVolume}>
+              <Minus size={24} />
+            </button>
           </div>
-          <ul>
-            {
-              <Card
-                tag="li"
-                key={casted.user_name}
-                color={casted.color}
-                media={casted.avatar}
-                title={casted.user_name}
-                category={casted.game_name}
-                description={casted.title}
-                actions={
-                  <Button onClick={() => stopPlaying().then(setCasted(null))}>
-                    <CancelIcon size={20} />
-                  </Button>
-                }
-              />
-            }
-          </ul>
-        </section>
-        )}
+          <div className={styles.controlGroup}>
+            <button onClick={setSourceKodi}>
+              <Grid size={18} />
+            </button>
+            <span>SRC</span>
+            <button onClick={setSourceCC}>
+              <Cast size={24} />
+            </button>
+          </div>
+        </div>
+        <div
+          className={`${styles.remoteControlCasting} ${
+            !casting ? styles.nothingCasting : ""
+          }`}
+        >
+          {casting ? (
+            <>
+              <div>
+                <h3>
+                  {casting.user_name}{" "}
+                  <Chip color={casting.color}>{casting.game_name}</Chip>
+                </h3>
+                <p>{casting.title}</p>
+              </div>
+              <Button onClick={() => stopPlaying().then(setCasting(null))}>
+                <Stop size={20} />
+              </Button>
+            </>
+          ) : (
+            <>
+              <div>
+                <p>Nothing casting (ㅠ︵ㅠ)</p>
+              </div>
+            </>
+          )}
+        </div>
+      </section>
     </>
   );
 }

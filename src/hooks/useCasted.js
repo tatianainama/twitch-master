@@ -2,14 +2,14 @@ import { useState, useEffect } from "preact/hooks";
 import { getCurrentlyCasted } from "../api";
 
 const useCasted = () => {
-  const [casted, setCasted] = useState(null);
+  const [casting, setCasting] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = () => {
       getCurrentlyCasted()
         .then((result) => {
-          setCasted(result);
+          setCasting(result);
         })
         .catch((error) => setError(error));
     };
@@ -20,7 +20,7 @@ const useCasted = () => {
     };
   }, []);
 
-  return { casted, setCasted, error };
+  return { casting, setCasting, error };
 };
 
 export default useCasted;
