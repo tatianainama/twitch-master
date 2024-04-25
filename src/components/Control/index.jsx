@@ -1,6 +1,5 @@
 import styles from "./control.module.css";
 import Button from "../Button";
-import Dota from "../Dota";
 import useCasted from "../../hooks/useCasted";
 import { Grid, Plus, Minus, Cast, VolumeX, Cancel } from "../Icons";
 import Chip from "../Chip";
@@ -56,10 +55,6 @@ export function Control() {
             <Button onClick={() => stopPlaying().then(setCasting(null))}>
               <Cancel size={20} />
             </Button>
-			{casting.game_name == "Dota 2" ?
-				(<Dota channel={casting.user_id} />)
-				: (<></>)
-			}
           </>
         ) : (
           <>

@@ -5,19 +5,32 @@ import Inventory from "../Inventory";
 import useDotaInfo from "../../hooks/useDotaInfo.js";
 
 import styles from "./live.module.css";
-
-const Dota = ({channel}) => {
-  const { dotaInfo } = useDotaInfo(channel);
-	  //<img src={`https://cdn.steamstatic.com/apps/dota2/images/heroes/${dotaInfo.n.replace("npc_dota_hero_", "")}_vert.jpg`}/>
-  return dotaInfo ? (
-    <section className={styles.liveSection}>
-	  <img src={`https://dotatooltips.b-cdn.net/heroes/${dotaInfo.n}_png.png`}/>
+// https://dotatooltips.b-cdn.net/hero_videos/npc_dota_hero_marci.webm
+// https://dotatooltips.b-cdn.net/hero_miniicons/npc_dota_hero_marci_png.png
+const DotaHero = (dotaInfo) => {
+	return <section className={styles.liveSection}>
+	  <img src={`https://dotatooltips.b-cdn.net/hero_icons/${dotaInfo.n}_png.png`}/>
 	  <h2>{dotaInfo.name}</h2>
 	  <TalentTree tree={dotaInfo.talent_tree.entries}></TalentTree>
 	  <Skills skills={dotaInfo.abilities}></Skills>
 	  <Inventory inventory={dotaInfo.inventory}></Inventory>
     </section>
-  ) : <></>;
+};
+const Dota = ({user_login}) => {
+	const { dotaInfo } = useDotaInfo(user_login);
+	console.log(dotaInfo);
+	if (dotaInfo  == null) {
+		return <></>;
+	}
+	if (dotaInfo.type == "single") {
+		return DotaHero(dotaInfo.data);
+	}
+	if (dotaInfo.type == "multiple") {
+		return <>
+			{dotaInfo.data.map(h => DotaHero(h))}
+			</>;
+	}
+	return <></>;
 };
 
 export default Dota;

@@ -295,11 +295,8 @@ export const setSourceKodi = () => {
   fetch(`${API}/remote/input/kodi`).then((res) => res.json());
 };
 
-export const getDotaFromCurrentlyCasting = async ({ user_id, game_name }) => {
-  if (game_name != "Dota 2") {
-    throw new Error("no");
-  }
-  const res = await fetch(`${API}/dota_info/${user_id}`);
+export const getDotaFromChannel = async ({ user_name }) => {
+  const res = await fetch(`${API}/dota_info/${user_name}`);
   return await res.json();
 };
 
