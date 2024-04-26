@@ -7,7 +7,7 @@ import useCasted from "../../hooks/useCasted";
 import styles from "./live.module.css";
 import { castStream } from "../../api";
 
-export function Live() {
+export function Live({target}) {
   const { streaming } = useStreamingList();
   const { setCasting } = useCasted();
   return (
@@ -24,7 +24,7 @@ export function Live() {
               category={game_name}
               description={title}
               actions={
-                <Button onClick={() => castStream(user_name).then(setCasting)}>
+                <Button onClick={() => castStream(target, user_name).then(setCasting)}>
                   <Play size={24} />
                 </Button>
               }
