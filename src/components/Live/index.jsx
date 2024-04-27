@@ -24,16 +24,18 @@ export function Live() {
               title={user_name}
               category={game_name}
               description={title}
-			  actions={
-				  <>
-					  {game_name == "Dota 2" ?
-						  (<Dota user_login={user_login} />) : <p>no</p>
-					  }
-					  <Button onClick={() => castStream(user_name).then(setCasting)}>
-					  <Play size={24} />
-					  </Button>
-				  </>
-			  }
+              actions={
+                  <>
+                      <Button onClick={() => castStream(user_name).then(setCasting)}>
+                      <Play size={24} />
+                      </Button>
+                  </>
+              }
+              footer={
+                  game_name == "Dota 2" ?
+                      (<summary><details><Dota user_login={user_login} /></details></summary>)
+                          : <></>
+              }
             />
           ))}
         </ul>

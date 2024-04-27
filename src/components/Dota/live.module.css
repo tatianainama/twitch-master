@@ -1,24 +1,26 @@
-.cardGroup {
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
+b {
+    color: #ccc;
 }
 
-.castedHeader {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.dotaScoreBoard {
+    display: grid;
+    grid-template-columns: 70px 190px 380px 70px;
+    grid-row-gap: 5px;
 }
-.castedActions {
-  flex: 1;
-  justify-content: end;
-  display: flex;
+.heroPortrait {
+    max-width: 60px;
+    height: 40px;
 }
-
-.castedActions button + button {
-  margin-left: 0.5rem;
+.heroInfo {
+    display: flex;
+    flex-direction: column;
 }
-
-.liveSection {
-  flex: 1;
+.neutralItem {
+    height: 40px;
+}
+.inventory {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    gap: 5px;
 }

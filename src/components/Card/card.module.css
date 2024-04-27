@@ -1,6 +1,6 @@
-.card {
+.card2 {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
   background-color: var(--purple-navy);
@@ -9,6 +9,10 @@
     1.1px 1.1px 1.9px rgba(98, 96, 101, 0.01),
     2.7px 2.7px 4.5px rgba(98, 96, 101, 0.013),
     8px 8px 16px rgba(98, 96, 101, 0.02);
+}
+.card {
+  display: flex;
+  align-items: center;
 }
 
 .card__media,
