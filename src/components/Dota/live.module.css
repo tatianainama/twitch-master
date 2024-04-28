@@ -4,23 +4,46 @@ b {
 
 .dotaScoreBoard {
     display: grid;
-    grid-template-columns: 70px 190px 380px 70px;
-    grid-row-gap: 5px;
+    grid-template-columns: 40px 150px 380px 70px;
+    grid-row-gap: 15px;
+	grid-column-gap: 10px;
 }
 .heroPortrait {
-    max-width: 60px;
-    height: 40px;
+    max-width: 30px;
+    height: 30px;
+	place-self: center;
 }
 .heroInfo {
     display: flex;
     flex-direction: column;
+	place-self: center;
+	width: 100%;
+}
+.heroLevel {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .neutralItem {
     height: 40px;
+	max-width: 40px;
+	border-radius: 20px;
+	place-self: center;
 }
 .inventory {
     display: flex;
     flex-direction: row;
-    height: 40px;
     gap: 5px;
+	flex-wrap: wrap;
+}
+
+.inventory img {
+    height: 40px;
+}
+
+
+@media (max-width: 800px) {
+	.dotaScoreBoard {
+		grid-template-columns: 40px 150px 180px 60px;
+	}
 }

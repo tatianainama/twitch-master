@@ -5,12 +5,12 @@ import styles from "./live.module.css";
 // https://dotatooltips.b-cdn.net/hero_miniicons/npc_dota_hero_marci_png.png
 const HeroSummary = (dotaInfo) => {
     return <>
-      <img className={styles.heroPortrait} src={`https://dotatooltips.b-cdn.net/hero_icons/${dotaInfo.n}_png.png`}/>
+      <img className={styles.heroPortrait} src={`https://dotatooltips.b-cdn.net/hero_miniicons/${dotaInfo.n}_png.png`}/>
       <div className={styles.heroInfo}>
         <a href={`https://liquipedia.net/dota2/${dotaInfo.player}`} target="_blank">
           <b>{dotaInfo.player}</b>
         </a>
-        <span>Lvl <b>{dotaInfo.level}</b> {dotaInfo.name}</span>
+        <span className={styles.heroLevel}>Lvl <b>{dotaInfo.level}</b> {dotaInfo.name}</span>
       </div>
         <div className={styles.inventory}>
           {dotaInfo.inventory.items.map(item =>
