@@ -1,0 +1,265 @@
+{
+  "n": "npc_dota_hero_antimage",
+  "name": "Anti-Mage",
+  "talent_tree": {
+    "entries": [
+      [
+        {
+          "name": "+9 Strength",
+          "picked": true
+        },
+        {
+          "name": "+150 Mana Void Radius",
+          "picked": false
+        }
+      ],
+      [
+        {
+          "name": "+1% Max Mana Mana Burn",
+          "picked": false
+        },
+        {
+          "name": "-1s Blink Cooldown",
+          "picked": false
+        }
+      ],
+      [
+        {
+          "name": "+0.2 Mana Void Damage Multiplier",
+          "picked": false
+        },
+        {
+          "name": "+150 Blink Cast Range",
+          "picked": false
+        }
+      ],
+      [
+        {
+          "name": "+20% Counterspell Magic Resistance",
+          "picked": false
+        },
+        {
+          "name": "-50s Mana Void Cooldown",
+          "picked": false
+        }
+      ]
+    ]
+  },
+  "abilities": [
+    {
+      "name": "Mana Break",
+      "n": "antimage_mana_break",
+      "tooltip": {
+        "description": "Burns an opponent's mana on each attack and deals damage equal to a percentage of the mana burnt. Enemies with no mana left are temporarily slowed.",
+        "lore": "A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner.",
+        "scepter_description": null
+      },
+      "has_scepter_upgrade": false,
+      "has_shard_upgrade": false,
+      "properties": [
+        {
+          "name": "%MANA BURNED AS DAMAGE:",
+          "value": [
+            "50"
+          ]
+        },
+        {
+          "name": "MANA BURNED PER HIT:",
+          "value": [
+            "25",
+            "30",
+            "35",
+            "40"
+          ]
+        },
+        {
+          "name": "%MAX MANA BURNED PER HIT:",
+          "value": [
+            "1.6",
+            "2.4",
+            "3.2",
+            "4"
+          ]
+        },
+        {
+          "name": "%MOVE SPEED SLOW ON FULL DRAIN:",
+          "value": [
+            "25",
+            "30",
+            "35",
+            "40"
+          ]
+        },
+        {
+          "name": "SLOW DURATION:",
+          "value": [
+            "0.75"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blink",
+      "n": "antimage_blink",
+      "tooltip": {
+        "description": "Short distance teleportation that allows Anti-Mage to move in and out of combat.",
+        "lore": "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive.",
+        "scepter_description": null
+      },
+      "has_scepter_upgrade": false,
+      "has_shard_upgrade": false,
+      "properties": []
+    },
+    {
+      "name": "Counterspell",
+      "n": "antimage_counterspell",
+      "tooltip": {
+        "description": "Passively grants magic resistance. Counterspell may be activated to create an anti-magic shell around Anti-Mage that blocks and sends any targeted spells back towards enemies instead.",
+        "lore": "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation.",
+        "scepter_description": null
+      },
+      "has_scepter_upgrade": false,
+      "has_shard_upgrade": false,
+      "properties": [
+        {
+          "name": "%MAGIC RESISTANCE:",
+          "value": [
+            "15",
+            "25",
+            "35",
+            "45"
+          ]
+        },
+        {
+          "name": "DURATION:",
+          "value": [
+            "1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blink Fragment",
+      "n": "antimage_mana_overload",
+      "tooltip": {
+        "description": "Blinks an illusion to the target enemy or location, which attacks for a brief time. Counterspell is replicated on the Blink Fragment illusion. Has 3 Charges.",
+        "lore": null,
+        "scepter_description": null
+      },
+      "has_scepter_upgrade": true,
+      "has_shard_upgrade": false,
+      "properties": [
+        {
+          "name": "ILLUSION DURATION:",
+          "value": [
+            "7"
+          ]
+        },
+        {
+          "name": "%ILLUSION OUTGOING DAMAGE:",
+          "value": [
+            "-25"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Counterspell Ally",
+      "n": "antimage_counterspell_ally",
+      "tooltip": {
+        "description": "Counterspell Ally may be activated to create an anti-magic shell around an allied hero that blocks and sends any targeted spells back towards enemies instead. Any time a spell is reflected by Counterspell or Counterspell Ally, an illusion of Anti-Mage will be created next to the enemy.",
+        "lore": null,
+        "scepter_description": null
+      },
+      "has_scepter_upgrade": false,
+      "has_shard_upgrade": false,
+      "properties": []
+    },
+    {
+      "name": "Mana Void",
+      "n": "antimage_mana_void",
+      "tooltip": {
+        "description": "For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies.  The main target is also mini-stunned.",
+        "lore": "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts.",
+        "scepter_description": null
+      },
+      "has_scepter_upgrade": false,
+      "has_shard_upgrade": false,
+      "properties": [
+        {
+          "name": "DAMAGE:",
+          "value": [
+            "0.8",
+            "0.95",
+            "1.1"
+          ]
+        },
+        {
+          "name": "STUN DURATION:",
+          "value": [
+            "0.3"
+          ]
+        },
+        {
+          "name": "RADIUS:",
+          "value": [
+            "500"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventory": {
+    "items": [
+      {
+        "n": "item_power_treads",
+        "name": "Power Treads",
+        "active": "[h1]Active: Switch Attribute[/h1]Switches between +[b]10[/b] Strength, +[b]10[/b] Agility, or +[b]10[/b] Intelligence.\\nMovement speed bonuses from multiple pairs of boots do not stack.",
+        "cooldown": null,
+        "manacost": null,
+        "use": null
+      },
+      {
+        "n": "item_bfury",
+        "name": "Battle Fury",
+        "active": "[h1]Active: Chop Tree[/h1] Destroy a target tree.\\n\\nCast Range: [b]350[/b]\\n\\n",
+        "cooldown": "4.0",
+        "manacost": null,
+        "use": null
+      },
+      {
+        "n": "item_branches",
+        "name": "Iron Branch",
+        "active": null,
+        "cooldown": "0.0",
+        "manacost": null,
+        "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
+      },
+      {
+        "n": "item_yasha",
+        "name": "Yasha",
+        "active": null,
+        "cooldown": null,
+        "manacost": null,
+        "use": null
+      },
+      {
+        "n": "item_wraith_band",
+        "name": "Wraith Band",
+        "active": null,
+        "cooldown": null,
+        "manacost": null,
+        "use": null
+      }
+    ],
+    "neutral_slot": {
+      "n": "item_unstable_wand",
+      "name": "Pig Pole",
+      "active": "[h1]Active: Pig, Out![/h1]Turns your hero into a critter for [b]4[/b] seconds and gives them +10% Movement Speed.",
+      "cooldown": "25.0",
+      "manacost": "50",
+      "use": null
+    }
+  },
+  "player": null
+}
