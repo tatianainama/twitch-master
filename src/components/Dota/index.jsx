@@ -29,6 +29,10 @@ const HeroSummary = (dotaInfo) => {
               :
             <div></div>
           }
+        <div className={styles.aghsShard}>
+            <img src={`images/scepter_${dotaInfo.has_aghs ? "on" : "off"}.png`}></img>
+            <img src={`images/shard_${dotaInfo.has_shard ? "on" : "off"}.png`}></img>
+        </div>
     </>
 };
 const Dota = ({user_login}) => {
@@ -41,9 +45,16 @@ const Dota = ({user_login}) => {
     }
     if (dotaInfo.type == "multiple") {
         return (
+            <>
+            <h2>Radiant</h2>
             <div className={styles.dotaScoreBoard}>
-                {dotaInfo.data.map(h => HeroSummary(h))}
+                {dotaInfo.data.slice(0, 5).map(h => HeroSummary(h))}
             </div>
+            <h2>Dire</h2>
+            <div className={styles.dotaScoreBoard}>
+                {dotaInfo.data.slice(5, 10).map(h => HeroSummary(h))}
+            </div>
+            </>
         );
     }
     return <></>;

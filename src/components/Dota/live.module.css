@@ -4,46 +4,48 @@ b {
 
 .dotaScoreBoard {
     display: grid;
-    grid-template-columns: 40px 150px 380px 70px;
+    grid-template-columns: 30px 130px auto 40px 35px;
     grid-row-gap: 15px;
-	grid-column-gap: 10px;
+    grid-column-gap: 10px;
 }
 .heroPortrait {
     max-width: 30px;
     height: 30px;
-	place-self: center;
+    place-self: center;
 }
 .heroInfo {
     display: flex;
     flex-direction: column;
-	place-self: center;
-	width: 100%;
+    place-self: center;
+    width: 100%;
+}
+.aghsShard {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    width: 100%;
+}
+.aghsShard img {
+    width: 35px;
 }
 .heroLevel {
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .neutralItem {
     height: 40px;
-	max-width: 40px;
-	border-radius: 20px;
-	place-self: center;
+    max-width: 40px;
+    border-radius: 20px;
+    place-self: center;
 }
 .inventory {
     display: flex;
     flex-direction: row;
     gap: 5px;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .inventory img {
     height: 40px;
-}
-
-
-@media (max-width: 800px) {
-	.dotaScoreBoard {
-		grid-template-columns: 40px 150px 180px 60px;
-	}
 }
