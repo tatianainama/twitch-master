@@ -16,7 +16,8 @@ export function Control() {
 
   return (
     <section className={styles.remoteControl}>
-      <div className={styles.control}>
+      {/* TODO: Move to own route */}
+      {/* <div className={styles.control}>
         <div className={styles.controlGroup}>
           <button onClick={setSourceKodi}>
             <Grid size={18} />
@@ -27,7 +28,6 @@ export function Control() {
           </button>
         </div>
         <div className={styles.controlGroup}>
-          {/* TODO: Missing API */}
           <button>
             <VolumeX size={18} />
           </button>
@@ -38,7 +38,7 @@ export function Control() {
             <Plus size={24} />
           </button>
         </div>
-      </div>
+      </div> */}
       <div
         className={`${styles.remoteControlCasting} ${
           !casting ? styles.nothingCasting : ""
