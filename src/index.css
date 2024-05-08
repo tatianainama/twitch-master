@@ -36,11 +36,6 @@ html,
 body {
   font-size: 14px;
   height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: center;
   padding: 0;
   margin: 0;
   background: var(--space-cadet);
@@ -60,11 +55,12 @@ input {
 }
 
 #app {
-  width: 100%;
   max-width: 48em;
   height: 100%;
   background-color: var(--space-cadet);
   color: #fff;
+  width: 100%;
+    margin: 0 auto;
 }
 
 #app {
