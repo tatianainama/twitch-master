@@ -11,7 +11,7 @@ import { castStream } from "../../api";
 export function Live() {
   const { streaming } = useStreamingList();
   const { setCasting } = useCasted();
-  console.log(streaming);
+
   return (
     <section className={styles.liveSection}>
       {streaming && (

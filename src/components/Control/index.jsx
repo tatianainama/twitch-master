@@ -13,6 +13,7 @@ import {
 
 export function Control() {
   const { casting, setCasting } = useCasted();
+
   return (
     <section className={styles.remoteControl}>
       <div className={styles.control}>

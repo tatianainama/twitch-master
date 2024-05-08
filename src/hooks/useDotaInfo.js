@@ -5,7 +5,6 @@ const useDotaInfo = (chan_name) => {
   const [dotaInfo, setDotaInfo] = useState(null);
   const [error, setError] = useState(null);
 
-  console.log("chan name", chan_name);
   useEffect(() => {
     const fetchData = () => {
       getDotaFromChannel({ user_name: chan_name })
