@@ -1,7 +1,7 @@
-import { Link } from "preact-router/match";
+import { NavLink } from "react-router-dom";
 import { Radio, Film, Power } from "../Icons";
 import styles from "./navigation.module.css";
-import { useState } from "preact/hooks";
+import { useState } from "react";
 import { setPowerOn, setPowerOff } from "../../api";
 
 export function Navigation() {
@@ -14,18 +14,24 @@ export function Navigation() {
 
   return (
     <nav className={styles.nav}>
-      <Link className={styles.navLink} activeClassName={styles.active} href="/">
+      <NavLink
+        className={({ isActive }) =>
+          `${styles.navLink} ${isActive ? styles.active : ""}`
+        }
+        to="/"
+      >
         <Radio size={20} />
         Live
-      </Link>
-      <Link
-        className={styles.navLink}
-        activeClassName={styles.active}
-        href="/vod"
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          `${styles.navLink} ${isActive ? styles.active : ""}`
+        }
+        to="/vod"
       >
         <Film size={18} />
         VoD
-      </Link>
+      </NavLink>
       <div>
         <button onClick={handlePower}>
           <Power size={20} />

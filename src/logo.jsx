@@ -3,7 +3,6 @@ export const Logo = () => (
     class="logo"
     height="180px"
     viewBox="-256 -256 1800 512"
-    title="Preact"
     style="
 display: inline-block;
 margin: -0.25em 0px 0px;

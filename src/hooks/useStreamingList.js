@@ -1,4 +1,4 @@
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect } from "react";
 import { ChipColors } from "../components/Chip";
 import { getStreaming } from "../api";
 

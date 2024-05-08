@@ -1,6 +1,14 @@
-import { render } from "preact";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { App } from "./app";
 import "./preflight.css";
 import "./index.css";
 
-render(<App />, document.getElementById("app"));
+ReactDOM.createRoot(document.getElementById("app")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
