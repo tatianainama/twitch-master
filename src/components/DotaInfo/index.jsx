@@ -5,6 +5,7 @@ import Button from "./../Button";
 import { Notepad } from "../Icons";
 export const DotaInfo = ({ user }) => {
   const { dotaInfo } = useDotaInfo(user);
+  console.log(dotaInfo);
   if (!dotaInfo) return null;
 
   return (

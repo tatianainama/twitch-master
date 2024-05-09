@@ -218,7 +218,14 @@
             "use": null
           }
         ],
-        "neutral_slot": null
+        "neutral_slot": {
+          "n": "item_unstable_wand",
+          "name": "Pig Pole",
+          "active": "[h1]Active: Pig, Out![/h1]Turns your hero into a critter for [b]4[/b] seconds and gives them +10% Movement Speed.",
+          "cooldown": "25.0",
+          "manacost": "50",
+          "use": null
+        }
       },
       "player": "Pure~",
       "level": 1
@@ -545,7 +552,14 @@
             "use": null
           }
         ],
-        "neutral_slot": null
+        "neutral_slot": {
+          "n": "item_unstable_wand",
+          "name": "Pig Pole",
+          "active": "[h1]Active: Pig, Out![/h1]Turns your hero into a critter for [b]4[/b] seconds and gives them +10% Movement Speed.",
+          "cooldown": "25.0",
+          "manacost": "50",
+          "use": null
+        }
       },
       "player": "Tobi",
       "level": 1
