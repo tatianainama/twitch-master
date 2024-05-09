@@ -8,22 +8,13 @@
 
 .dialogContent {
   --shadow-color: 242deg 34% 11%;
-  --box-shadow:
-    0px 0.1px 0.1px hsl(var(--shadow-color) / 0.28),
-    0px 0.6px 0.7px -0.3px hsl(var(--shadow-color) / 0.28),
-    0px 1.2px 1.4px -0.7px hsl(var(--shadow-color) / 0.29),
-    0.1px 1.9px 2.2px -1px hsl(var(--shadow-color) / 0.29),
-    0.1px 3px 3.4px -1.4px hsl(var(--shadow-color) / 0.29),
-    0.1px 4.6px 5.2px -1.7px hsl(var(--shadow-color) / 0.3),
-    0.2px 7px 8px -2.1px hsl(var(--shadow-color) / 0.3),
-    0.3px 10.3px 11.7px -2.4px hsl(var(--shadow-color) / 0.3);
   background-color: var(--purple-navy);
   position: fixed;
   inset: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: var(--box-shadow)
+  box-shadow: var(--shadow-elevation-high)
 }
 
 @keyframes overlayShow {

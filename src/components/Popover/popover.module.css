@@ -1,0 +1,13 @@
+.popoverContent {
+  --shadow-color: 240deg 33% 15%;
+  background-color: var(--purple-navy-light);
+  box-shadow: var(--shadow-elevation-high);
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.popoverContentSubtitle {
+  font-size: smaller;
+  opacity: 0.8;
+}
