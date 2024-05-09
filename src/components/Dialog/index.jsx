@@ -11,11 +11,10 @@ const DialogContent = ({ children }) => (
   <RxDialog.Portal>
     <RxDialog.Overlay className={styles.dialogOverlay} />
     <RxDialog.Content className={styles.dialogContent}>
-      <RxDialog.Title>Hello!!!!! title</RxDialog.Title>
-      {children}
       <RxDialog.Close>
         <Cancel size={20} />
       </RxDialog.Close>
+      <div>{children}</div>
     </RxDialog.Content>
   </RxDialog.Portal>
 );

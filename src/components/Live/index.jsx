@@ -3,7 +3,7 @@ import Button from "../Button";
 import { Play } from "../Icons";
 import useStreamingList from "../../hooks/useStreamingList";
 import useCasted from "../../hooks/useCasted";
-import { DotaInfo } from "./DotaInfo";
+import { DotaInfo } from "./../DotaInfo";
 import styles from "./live.module.css";
 import { castStream } from "../../api";
 
@@ -13,8 +13,6 @@ export function Live() {
 
   return (
     <section className={styles.liveSection}>
-      <DotaInfo />
-
       {streaming && (
         <ul className={styles.cardGroup}>
           {streaming.map(
@@ -29,6 +27,7 @@ export function Live() {
                 description={title}
                 actions={
                   <>
+                    {game_name === "Dota 2" && <DotaInfo user={user_name} />}
                     <Button
                       onClick={() => castStream(user_name).then(setCasting)}
                     >
