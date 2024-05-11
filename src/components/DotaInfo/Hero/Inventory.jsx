@@ -60,6 +60,15 @@ const Item = ({ data, ratio = 3 / 2 }) => {
                   {data.cooldown}
                 </>
               )}{" "}
+              {data.cost && data.cost !== "0" && (
+                <>
+                  <img
+                    src="images/icon_gold.png"
+                    className={styles.inventoryItemUseIcon}
+                  />{" "}
+                  {data.cost}
+                </>
+              )}{" "}
             </PopoverSubtitle>
           </div>
           <p className={styles.inventoryItemContentDescription}>

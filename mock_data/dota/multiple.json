@@ -62,18 +62,11 @@
           "properties": [
             {
               "name": "BEAM DAMAGE:",
-              "value": [
-                "80",
-                "160",
-                "240",
-                "320"
-              ]
+              "value": ["80", "160", "240", "320"]
             },
             {
               "name": "STUN DURATION:",
-              "value": [
-                "0.6"
-              ]
+              "value": ["0.6"]
             }
           ]
         },
@@ -90,27 +83,15 @@
           "properties": [
             {
               "name": "BOUNCE RADIUS:",
-              "value": [
-                "500"
-              ]
+              "value": ["500"]
             },
             {
               "name": "BOUNCES:",
-              "value": [
-                "3",
-                "4",
-                "5",
-                "6"
-              ]
+              "value": ["3", "4", "5", "6"]
             },
             {
               "name": "%DAMAGE REDUCTION PER BOUNCE:",
-              "value": [
-                "50",
-                "45",
-                "40",
-                "35"
-              ]
+              "value": ["50", "45", "40", "35"]
             }
           ]
         },
@@ -127,27 +108,15 @@
           "properties": [
             {
               "name": "BLESSING RADIUS:",
-              "value": [
-                "1200"
-              ]
+              "value": ["1200"]
             },
             {
               "name": "ATTACK DAMAGE BONUS (ALLIES):",
-              "value": [
-                "3",
-                "9",
-                "15",
-                "21"
-              ]
+              "value": ["3", "9", "15", "21"]
             },
             {
               "name": "NIGHT VISION:",
-              "value": [
-                "250",
-                "500",
-                "750",
-                "1000"
-              ]
+              "value": ["250", "500", "750", "1000"]
             }
           ]
         },
@@ -164,29 +133,19 @@
           "properties": [
             {
               "name": "TOTAL BEAMS:",
-              "value": [
-                "6",
-                "9",
-                "12"
-              ]
+              "value": ["6", "9", "12"]
             },
             {
               "name": "RADIUS:",
-              "value": [
-                "675"
-              ]
+              "value": ["675"]
             },
             {
               "name": "MAX BEAMS PER UNIT:",
-              "value": [
-                "5"
-              ]
+              "value": ["5"]
             },
             {
               "name": "NIGHT DURATION:",
-              "value": [
-                "10.0"
-              ]
+              "value": ["10.0"]
             }
           ]
         }
@@ -199,6 +158,7 @@
             "active": "[h1]Active: Chop Tree[/h1] Destroy a target tree. \\n\\nCast Range: [b]350[/b]\\n\\n",
             "cooldown": "4.0",
             "manacost": "0",
+            "cost": "1400",
             "use": null
           },
           {
@@ -207,6 +167,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -215,6 +176,7 @@
             "active": "[h1]Active: Energy Charge[/h1]Instantly restores [b]15[/b] health and mana per charge stored. \\n\\nMax [b]20[/b] charges. Gains a charge whenever a visible enemy within [b]1200[/b] range uses an ability.",
             "cooldown": "15.0",
             "manacost": null,
+            "cost": "1400",
             "use": null
           }
         ],
@@ -224,6 +186,7 @@
           "active": "[h1]Active: Pig, Out![/h1]Turns your hero into a critter for [b]4[/b] seconds and gives them +10% Movement Speed.",
           "cooldown": "25.0",
           "manacost": "50",
+          "cost": "0",
           "use": null
         }
       },
@@ -291,48 +254,27 @@
           "properties": [
             {
               "name": "RADIUS:",
-              "value": [
-                "225"
-              ]
+              "value": ["225"]
             },
             {
               "name": "%MOVE SLOW:",
-              "value": [
-                "-40"
-              ]
+              "value": ["-40"]
             },
             {
               "name": "SLOW DURATION:",
-              "value": [
-                "1",
-                "2",
-                "3",
-                "4"
-              ]
+              "value": ["1", "2", "3", "4"]
             },
             {
               "name": "STUN DURATION:",
-              "value": [
-                "1.6"
-              ]
+              "value": ["1.6"]
             },
             {
               "name": "DELAY:",
-              "value": [
-                "1.6",
-                "1.6",
-                "1.6",
-                "1.6"
-              ]
+              "value": ["1.6", "1.6", "1.6", "1.6"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "80",
-                "160",
-                "240",
-                "320"
-              ]
+              "value": ["80", "160", "240", "320"]
             }
           ]
         },
@@ -349,27 +291,15 @@
           "properties": [
             {
               "name": "CLEAVE RANGE:",
-              "value": [
-                "650",
-                "800",
-                "950",
-                "1100"
-              ]
+              "value": ["650", "800", "950", "1100"]
             },
             {
               "name": "DAMAGE BONUS:",
-              "value": [
-                "30",
-                "60",
-                "90",
-                "120"
-              ]
+              "value": ["30", "60", "90", "120"]
             },
             {
               "name": "%CLEAVE DAMAGE:",
-              "value": [
-                "150"
-              ]
+              "value": ["150"]
             }
           ]
         },
@@ -386,15 +316,11 @@
           "properties": [
             {
               "name": "ENEMY DELAY:",
-              "value": [
-                "4.0"
-              ]
+              "value": ["4.0"]
             },
             {
               "name": "ALLIED DELAY:",
-              "value": [
-                "8.0"
-              ]
+              "value": ["8.0"]
             }
           ]
         },
@@ -423,33 +349,23 @@
           "properties": [
             {
               "name": "SPEED:",
-              "value": [
-                "700"
-              ]
+              "value": ["700"]
             },
             {
               "name": "RADIUS:",
-              "value": [
-                "750"
-              ]
+              "value": ["750"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "180"
-              ]
+              "value": ["180"]
             },
             {
               "name": "DURATION:",
-              "value": [
-                "1.0"
-              ]
+              "value": ["1.0"]
             },
             {
               "name": "KNOCKBACK DISTANCE:",
-              "value": [
-                "600"
-              ]
+              "value": ["600"]
             }
           ]
         },
@@ -466,45 +382,31 @@
           "properties": [
             {
               "name": "IMPACT DELAY:",
-              "value": [
-                "3.1"
-              ]
+              "value": ["3.1"]
             },
             {
               "name": "RANGE:",
-              "value": [
-                "2000"
-              ]
+              "value": ["2000"]
             },
             {
               "name": "WIDTH:",
-              "value": [
-                "450"
-              ]
+              "value": ["450"]
             },
             {
               "name": "%RUM BONUS SPEED:",
-              "value": [
-                "15"
-              ]
+              "value": ["15"]
             },
             {
               "name": "RUM DURATION:",
-              "value": [
-                "10"
-              ]
+              "value": ["10"]
             },
             {
               "name": "STUN DURATION:",
-              "value": [
-                "1.2"
-              ]
+              "value": ["1.2"]
             },
             {
               "name": "%DAMAGE DELAYED:",
-              "value": [
-                "35"
-              ]
+              "value": ["35"]
             }
           ]
         }
@@ -517,6 +419,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -525,6 +428,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -533,6 +437,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -541,6 +446,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -549,6 +455,7 @@
             "active": "[h1]Active: Chop Tree[/h1] Destroy a target tree. \\n\\nCast Range: [b]350[/b]\\n\\n",
             "cooldown": "4.0",
             "manacost": "0",
+            "cost": "1400",
             "use": null
           }
         ],
@@ -558,6 +465,7 @@
           "active": "[h1]Active: Pig, Out![/h1]Turns your hero into a critter for [b]4[/b] seconds and gives them +10% Movement Speed.",
           "cooldown": "25.0",
           "manacost": "50",
+          "cost": "0",
           "use": null
         }
       },
@@ -625,21 +533,11 @@
           "properties": [
             {
               "name": "STUN DURATION:",
-              "value": [
-                "1.4",
-                "1.5",
-                "1.6",
-                "1.7"
-              ]
+              "value": ["1.4", "1.5", "1.6", "1.7"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "90",
-                "180",
-                "270",
-                "360"
-              ]
+              "value": ["90", "180", "270", "360"]
             }
           ]
         },
@@ -656,36 +554,19 @@
           "properties": [
             {
               "name": "DAMAGE:",
-              "value": [
-                "60",
-                "80",
-                "100",
-                "120"
-              ]
+              "value": ["60", "80", "100", "120"]
             },
             {
               "name": "ARMOR REDUCTION:",
-              "value": [
-                "-3",
-                "-4",
-                "-5",
-                "-6"
-              ]
+              "value": ["-3", "-4", "-5", "-6"]
             },
             {
               "name": "%ATTACK DAMAGE REDUCTION:",
-              "value": [
-                "10",
-                "15",
-                "20",
-                "25"
-              ]
+              "value": ["10", "15", "20", "25"]
             },
             {
               "name": "VISION DURATION:",
-              "value": [
-                "4"
-              ]
+              "value": ["4"]
             }
           ]
         },
@@ -702,18 +583,11 @@
           "properties": [
             {
               "name": "%BASE DAMAGE BONUS:",
-              "value": [
-                "10",
-                "15",
-                "20",
-                "25"
-              ]
+              "value": ["10", "15", "20", "25"]
             },
             {
               "name": "RADIUS:",
-              "value": [
-                "1200"
-              ]
+              "value": ["1200"]
             }
           ]
         },
@@ -730,17 +604,11 @@
           "properties": [
             {
               "name": "SHIELD DURATION:",
-              "value": [
-                "10"
-              ]
+              "value": ["10"]
             },
             {
               "name": "DAMAGE/SHIELD:",
-              "value": [
-                "150",
-                "300",
-                "450"
-              ]
+              "value": ["150", "300", "450"]
             }
           ]
         }
@@ -753,6 +621,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -761,6 +630,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Devour[/h1] Consumes a target tree to gain [b]7.0[/b] health regeneration for [b]16.0[/b] seconds. Consuming an Ironwood Tree doubles the heal amount.\\n\\nComes with [b]3[/b] charges.  Can be used on an allied hero to give them one Tango.\\n\\nTree Range: [b]165[/b]"
           },
           {
@@ -769,6 +639,7 @@
             "active": "[h1]Active: Energy Charge[/h1] Instantly restores [b]15[/b] health and mana per charge stored.\\n\\n Max [b]10[/b] charges. Gains a charge whenever a visible enemy within [b]1200[/b] range uses an ability.",
             "cooldown": "17.0",
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -777,6 +648,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -785,6 +657,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -793,6 +666,7 @@
             "active": null,
             "cooldown": "0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant[/h1] Plant the currently active ward.  Double-Click to switch the currently active ward.\\n\\nRange: [b]500[/b]"
           }
         ],
@@ -862,48 +736,27 @@
           "properties": [
             {
               "name": "BONUS ATTACK RANGE:",
-              "value": [
-                "125",
-                "200",
-                "275",
-                "350"
-              ]
+              "value": ["125", "200", "275", "350"]
             },
             {
               "name": "BONUS DAMAGE:",
-              "value": [
-                "55",
-                "90",
-                "125",
-                "160"
-              ]
+              "value": ["55", "90", "125", "160"]
             },
             {
               "name": "%BASE DAMAGE:",
-              "value": [
-                "75"
-              ]
+              "value": ["75"]
             },
             {
               "name": "BOUNCE COUNT:",
-              "value": [
-                "2",
-                "3",
-                "4",
-                "5"
-              ]
+              "value": ["2", "3", "4", "5"]
             },
             {
               "name": "SLOW DURATION:",
-              "value": [
-                "0.35"
-              ]
+              "value": ["0.35"]
             },
             {
               "name": "%MOVEMENT SLOW:",
-              "value": [
-                "100"
-              ]
+              "value": ["100"]
             }
           ]
         },
@@ -920,27 +773,15 @@
           "properties": [
             {
               "name": "RADIUS:",
-              "value": [
-                "265"
-              ]
+              "value": ["265"]
             },
             {
               "name": "STUN DURATION:",
-              "value": [
-                "1.4",
-                "1.6",
-                "1.8",
-                "2.0"
-              ]
+              "value": ["1.4", "1.6", "1.8", "2.0"]
             },
             {
               "name": "TOTAL DAMAGE:",
-              "value": [
-                "90",
-                "180",
-                "270",
-                "360"
-              ]
+              "value": ["90", "180", "270", "360"]
             }
           ]
         },
@@ -957,54 +798,27 @@
           "properties": [
             {
               "name": "EVASION RADIUS:",
-              "value": [
-                "275"
-              ]
+              "value": ["275"]
             },
             {
               "name": "%BONUS MOVEMENT SPEED:",
-              "value": [
-                "20",
-                "25",
-                "30",
-                "35"
-              ]
+              "value": ["20", "25", "30", "35"]
             },
             {
               "name": "BUFF DURATION:",
-              "value": [
-                "3.5",
-                "4.0",
-                "4.5",
-                "5.0"
-              ]
+              "value": ["3.5", "4.0", "4.5", "5.0"]
             },
             {
               "name": "%EVASION:",
-              "value": [
-                "15",
-                "20",
-                "25",
-                "30"
-              ]
+              "value": ["15", "20", "25", "30"]
             },
             {
               "name": "ACTIVE CAST RANGE:",
-              "value": [
-                "50",
-                "100",
-                "150",
-                "200"
-              ]
+              "value": ["50", "100", "150", "200"]
             },
             {
               "name": "ACTIVE ATTACK RANGE:",
-              "value": [
-                "50",
-                "100",
-                "150",
-                "200"
-              ]
+              "value": ["50", "100", "150", "200"]
             }
           ]
         },
@@ -1021,33 +835,23 @@
           "properties": [
             {
               "name": "ILLUSION DURATION:",
-              "value": [
-                "6.0"
-              ]
+              "value": ["6.0"]
             },
             {
               "name": "BUSHWHACK RADIUS:",
-              "value": [
-                "250"
-              ]
+              "value": ["250"]
             },
             {
               "name": "BUSHWHACK DURATION:",
-              "value": [
-                "1.6"
-              ]
+              "value": ["1.6"]
             },
             {
               "name": "%MOVEMENT SPEED:",
-              "value": [
-                "15"
-              ]
+              "value": ["15"]
             },
             {
               "name": "%SHARPSHOOTER DAMAGE:",
-              "value": [
-                "60"
-              ]
+              "value": ["60"]
             }
           ]
         },
@@ -1064,33 +868,23 @@
           "properties": [
             {
               "name": "RADIUS:",
-              "value": [
-                "150"
-              ]
+              "value": ["150"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "200"
-              ]
+              "value": ["200"]
             },
             {
               "name": "MARK DURATION:",
-              "value": [
-                "7.0"
-              ]
+              "value": ["7.0"]
             },
             {
               "name": "%MOVEMENT SLOW:",
-              "value": [
-                "20"
-              ]
+              "value": ["20"]
             },
             {
               "name": "%INCOMING SPELL DAMAGE:",
-              "value": [
-                "20"
-              ]
+              "value": ["20"]
             }
           ]
         },
@@ -1107,37 +901,23 @@
           "properties": [
             {
               "name": "ARROW SPEED:",
-              "value": [
-                "2200"
-              ]
+              "value": ["2200"]
             },
             {
               "name": "MAX WIND-UP TIME:",
-              "value": [
-                "3.0"
-              ]
+              "value": ["3.0"]
             },
             {
               "name": "MAX DAMAGE:",
-              "value": [
-                "550",
-                "900",
-                "1250"
-              ]
+              "value": ["550", "900", "1250"]
             },
             {
               "name": "MAX DEBUFF DURATION:",
-              "value": [
-                "5.0"
-              ]
+              "value": ["5.0"]
             },
             {
               "name": "%MOVE SLOW:",
-              "value": [
-                "30",
-                "40",
-                "50"
-              ]
+              "value": ["30", "40", "50"]
             }
           ]
         }
@@ -1150,6 +930,7 @@
             "active": null,
             "cooldown": "5.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Imbue[/h1] Instantly restores [b]85[/b] health."
           },
           {
@@ -1158,6 +939,7 @@
             "active": null,
             "cooldown": "10",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Throw Grenade[/h1] Throw a grenade at the target area. Enemies in the area will take [b]50[/b] damage on impact, and be slowed by [b]-15[/b]% and take [b]15[/b] damage every [b]1[/b]s for [b]5[/b] seconds. Radius [b][object Object][/b]. "
           },
           {
@@ -1166,6 +948,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Devour[/h1] Consumes a target tree to gain [b]7.0[/b] health regeneration for [b]16.0[/b] seconds. Consuming an Ironwood Tree doubles the heal amount.\\n\\nComes with [b]3[/b] charges.  Can be used on an allied hero to give them one Tango.\\n\\nTree Range: [b]165[/b]"
           },
           {
@@ -1174,6 +957,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -1182,6 +966,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -1190,6 +975,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           }
         ],
@@ -1259,36 +1045,19 @@
           "properties": [
             {
               "name": "%MOVEMENT SLOW:",
-              "value": [
-                "-12",
-                "-18",
-                "-24",
-                "-30"
-              ]
+              "value": ["-12", "-18", "-24", "-30"]
             },
             {
               "name": "RADIUS:",
-              "value": [
-                "400",
-                "425",
-                "450",
-                "475"
-              ]
+              "value": ["400", "425", "450", "475"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "25",
-                "40",
-                "55",
-                "70"
-              ]
+              "value": ["25", "40", "55", "70"]
             },
             {
               "name": "DURATION:",
-              "value": [
-                "10.0"
-              ]
+              "value": ["10.0"]
             }
           ]
         },
@@ -1305,30 +1074,19 @@
           "properties": [
             {
               "name": "DAMAGE:",
-              "value": [
-                "20",
-                "50",
-                "80",
-                "110"
-              ]
+              "value": ["20", "50", "80", "110"]
             },
             {
               "name": "%CHANCE:",
-              "value": [
-                "40"
-              ]
+              "value": ["40"]
             },
             {
               "name": "KNOCKBACK DISTANCE:",
-              "value": [
-                "10"
-              ]
+              "value": ["10"]
             },
             {
               "name": "SLOW DURATION:",
-              "value": [
-                "0.5"
-              ]
+              "value": ["0.5"]
             }
           ]
         },
@@ -1345,18 +1103,11 @@
           "properties": [
             {
               "name": "BONUS RANGE:",
-              "value": [
-                "130",
-                "220",
-                "310",
-                "400"
-              ]
+              "value": ["130", "220", "310", "400"]
             },
             {
               "name": "DURATION:",
-              "value": [
-                "3"
-              ]
+              "value": ["3"]
             }
           ]
         },
@@ -1373,33 +1124,23 @@
           "properties": [
             {
               "name": "DAMAGE:",
-              "value": [
-                "200"
-              ]
+              "value": ["200"]
             },
             {
               "name": "RADIUS:",
-              "value": [
-                "375"
-              ]
+              "value": ["375"]
             },
             {
               "name": "%MOVE SLOW:",
-              "value": [
-                "50"
-              ]
+              "value": ["50"]
             },
             {
               "name": "SLOW DURATION:",
-              "value": [
-                "3"
-              ]
+              "value": ["3"]
             },
             {
               "name": "KNOCKBACK DISTANCE:",
-              "value": [
-                "475"
-              ]
+              "value": ["475"]
             }
           ]
         },
@@ -1416,17 +1157,11 @@
           "properties": [
             {
               "name": "STUN DURATION:",
-              "value": [
-                "0.8",
-                "1.0",
-                "1.2"
-              ]
+              "value": ["0.8", "1.0", "1.2"]
             },
             {
               "name": "AIM DURATION:",
-              "value": [
-                "0.5"
-              ]
+              "value": ["0.5"]
             }
           ]
         }
@@ -1439,6 +1174,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -1447,6 +1183,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -1455,6 +1192,7 @@
             "active": null,
             "cooldown": "1.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant[/h1]Plants an Observer Ward, an invisible watcher that gives ground vision in a [b]1600[/b] radius to your team. Lasts [b]6[/b] minutes.\\n\\nHold Control to give one Observer Ward to an allied hero.\\n\\nRange: [b]500[/b]"
           },
           {
@@ -1463,6 +1201,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -1471,6 +1210,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -1479,6 +1219,7 @@
             "active": null,
             "cooldown": "5.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Imbue[/h1] Instantly restores [b]85[/b] health."
           }
         ],
@@ -1548,18 +1289,11 @@
           "properties": [
             {
               "name": "RADIUS:",
-              "value": [
-                "675"
-              ]
+              "value": ["675"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "75",
-                "150",
-                "225",
-                "300"
-              ]
+              "value": ["75", "150", "225", "300"]
             }
           ]
         },
@@ -1576,45 +1310,27 @@
           "properties": [
             {
               "name": "RANGE:",
-              "value": [
-                "3000"
-              ]
+              "value": ["3000"]
             },
             {
               "name": "MINIMUM STUN:",
-              "value": [
-                "0.01"
-              ]
+              "value": ["0.01"]
             },
             {
               "name": "MAXIMUM STUN:",
-              "value": [
-                "2.6",
-                "3.4",
-                "4.2",
-                "5.0"
-              ]
+              "value": ["2.6", "3.4", "4.2", "5.0"]
             },
             {
               "name": "MAXIMUM BONUS DAMAGE:",
-              "value": [
-                "150",
-                "160",
-                "170",
-                "180"
-              ]
+              "value": ["150", "160", "170", "180"]
             },
             {
               "name": "SEARCH RADIUS:",
-              "value": [
-                "500"
-              ]
+              "value": ["500"]
             },
             {
               "name": "%PRIMARY HIT STARSTORM DAMAGE:",
-              "value": [
-                "50"
-              ]
+              "value": ["50"]
             }
           ]
         },
@@ -1631,57 +1347,35 @@
           "properties": [
             {
               "name": "DISTANCE:",
-              "value": [
-                "575"
-              ]
+              "value": ["575"]
             },
             {
               "name": "%MOVEMENT BONUS:",
-              "value": [
-                "8",
-                "16",
-                "24",
-                "32"
-              ]
+              "value": ["8", "16", "24", "32"]
             },
             {
               "name": "ATTACK SPEED BONUS:",
-              "value": [
-                "25",
-                "50",
-                "75",
-                "100"
-              ]
+              "value": ["25", "50", "75", "100"]
             },
             {
               "name": "INITIAL CONE RADIUS:",
-              "value": [
-                "300"
-              ]
+              "value": ["300"]
             },
             {
               "name": "FINAL CONE RADIUS:",
-              "value": [
-                "450"
-              ]
+              "value": ["450"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "170"
-              ]
+              "value": ["170"]
             },
             {
               "name": "%MOVEMENT SLOW:",
-              "value": [
-                "30"
-              ]
+              "value": ["30"]
             },
             {
               "name": "SLOW DURATION:",
-              "value": [
-                "2.5"
-              ]
+              "value": ["2.5"]
             }
           ]
         },
@@ -1698,25 +1392,15 @@
           "properties": [
             {
               "name": "FADE DELAY:",
-              "value": [
-                "2.5",
-                "2.0",
-                "1.5"
-              ]
+              "value": ["2.5", "2.0", "1.5"]
             },
             {
               "name": "DURATION:",
-              "value": [
-                "18.0"
-              ]
+              "value": ["18.0"]
             },
             {
               "name": "%MOVEMENT SPEED:",
-              "value": [
-                "9",
-                "12",
-                "15"
-              ]
+              "value": ["9", "12", "15"]
             }
           ]
         }
@@ -1729,6 +1413,7 @@
             "active": "[h1]Active: Energy Charge[/h1] Instantly restores [b]15[/b] health and mana per charge stored.\\n\\n Max [b]10[/b] charges. Gains a charge whenever a visible enemy within [b]1200[/b] range uses an ability.",
             "cooldown": "17.0",
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -1737,6 +1422,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Devour[/h1] Consumes a target tree to gain [b]7.0[/b] health regeneration for [b]16.0[/b] seconds. Consuming an Ironwood Tree doubles the heal amount.\\n\\nComes with [b]3[/b] charges.  Can be used on an allied hero to give them one Tango.\\n\\nTree Range: [b]165[/b]"
           },
           {
@@ -1745,6 +1431,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -1753,6 +1440,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -1761,6 +1449,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -1769,6 +1458,7 @@
             "active": null,
             "cooldown": "1.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant[/h1] Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a [b]1000[/b] radius.\\nLasts [b]7[/b] minutes.\\n\\nDoes not grant ground vision.\\nHold Control to give one Sentry Ward to an allied hero. <br/><br/>Range: [b]500[/b]"
           }
         ],
@@ -1838,33 +1528,19 @@
           "properties": [
             {
               "name": "RADIUS:",
-              "value": [
-                "400"
-              ]
+              "value": ["400"]
             },
             {
               "name": "ROCKETS PER SECOND:",
-              "value": [
-                "10"
-              ]
+              "value": ["10"]
             },
             {
               "name": "ROCKET DAMAGE:",
-              "value": [
-                "8",
-                "14",
-                "20",
-                "26"
-              ]
+              "value": ["8", "14", "20", "26"]
             },
             {
               "name": "%SLOW RESISTANCE:",
-              "value": [
-                "20",
-                "30",
-                "40",
-                "50"
-              ]
+              "value": ["20", "30", "40", "50"]
             }
           ]
         },
@@ -1881,24 +1557,15 @@
           "properties": [
             {
               "name": "HITS TO DESTROY:",
-              "value": [
-                "3"
-              ]
+              "value": ["3"]
             },
             {
               "name": "TOWER HITS TO DESTROY:",
-              "value": [
-                "6"
-              ]
+              "value": ["6"]
             },
             {
               "name": "STUN DURATION:",
-              "value": [
-                "1.3",
-                "1.7",
-                "2.1",
-                "2.5"
-              ]
+              "value": ["1.3", "1.7", "2.1", "2.5"]
             }
           ]
         },
@@ -1915,30 +1582,19 @@
           "properties": [
             {
               "name": "RADIUS:",
-              "value": [
-                "1250"
-              ]
+              "value": ["1250"]
             },
             {
               "name": "MAX ATTACKS:",
-              "value": [
-                "4",
-                "5",
-                "6",
-                "7"
-              ]
+              "value": ["4", "5", "6", "7"]
             },
             {
               "name": "SIDE GUNNER FIRE RATE:",
-              "value": [
-                "1.3"
-              ]
+              "value": ["1.3"]
             },
             {
               "name": "SIDE GUNNER ATTACK RADIUS:",
-              "value": [
-                "700"
-              ]
+              "value": ["700"]
             }
           ]
         },
@@ -1955,29 +1611,19 @@
           "properties": [
             {
               "name": "SLOW DURATION:",
-              "value": [
-                "4"
-              ]
+              "value": ["4"]
             },
             {
               "name": "%MISSILE SLOW:",
-              "value": [
-                "50"
-              ]
+              "value": ["50"]
             },
             {
               "name": "MISSILE DAMAGE:",
-              "value": [
-                "250",
-                "400",
-                "550"
-              ]
+              "value": ["250", "400", "550"]
             },
             {
               "name": "RADIUS:",
-              "value": [
-                "400"
-              ]
+              "value": ["400"]
             }
           ]
         }
@@ -1990,6 +1636,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -1998,6 +1645,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -2006,6 +1654,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -2014,6 +1663,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           }
         ],
@@ -2083,39 +1733,23 @@
           "properties": [
             {
               "name": "RUN SPEED:",
-              "value": [
-                "1200"
-              ]
+              "value": ["1200"]
             },
             {
               "name": "MAX DISTANCE:",
-              "value": [
-                "2000"
-              ]
+              "value": ["2000"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "75",
-                "170",
-                "265",
-                "360"
-              ]
+              "value": ["75", "170", "265", "360"]
             },
             {
               "name": "TIME TO MAX CHARGE:",
-              "value": [
-                "1.7"
-              ]
+              "value": ["1.7"]
             },
             {
               "name": "STUN DURATION:",
-              "value": [
-                "0.8",
-                "1.0",
-                "1.2",
-                "1.4"
-              ]
+              "value": ["0.8", "1.0", "1.2", "1.4"]
             }
           ]
         },
@@ -2132,30 +1766,19 @@
           "properties": [
             {
               "name": "DAMAGE AOE:",
-              "value": [
-                "230"
-              ]
+              "value": ["230"]
             },
             {
               "name": "BASE DAMAGE:",
-              "value": [
-                "15",
-                "30",
-                "45",
-                "60"
-              ]
+              "value": ["15", "30", "45", "60"]
             },
             {
               "name": "DURATION:",
-              "value": [
-                "5.5"
-              ]
+              "value": ["5.5"]
             },
             {
               "name": "%ATTACK DAMAGE MULTIPLIER:",
-              "value": [
-                "35"
-              ]
+              "value": ["35"]
             }
           ]
         },
@@ -2172,72 +1795,43 @@
           "properties": [
             {
               "name": "BASE BONUS DAMAGE:",
-              "value": [
-                "5",
-                "10",
-                "15",
-                "20"
-              ]
+              "value": ["5", "10", "15", "20"]
             },
             {
               "name": "BONUS DAMAGE PER STACK:",
-              "value": [
-                "10",
-                "20",
-                "30",
-                "40"
-              ]
+              "value": ["10", "20", "30", "40"]
             },
             {
               "name": "MAX STACKS:",
-              "value": [
-                "5"
-              ]
+              "value": ["5"]
             },
             {
               "name": "%SLOW PER STACK:",
-              "value": [
-                "8"
-              ]
+              "value": ["8"]
             },
             {
               "name": "SLOW DURATION:",
-              "value": [
-                "3.0"
-              ]
+              "value": ["3.0"]
             },
             {
               "name": "ROAR RADIUS:",
-              "value": [
-                "900"
-              ]
+              "value": ["900"]
             },
             {
               "name": "ROAR ARMOR BONUS PER STACK:",
-              "value": [
-                "2",
-                "3",
-                "4",
-                "5"
-              ]
+              "value": ["2", "3", "4", "5"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "85"
-              ]
+              "value": ["85"]
             },
             {
               "name": "SPLIT DELAY:",
-              "value": [
-                "1.25"
-              ]
+              "value": ["1.25"]
             },
             {
               "name": "BREAK DURATION:",
-              "value": [
-                "2.5"
-              ]
+              "value": ["2.5"]
             }
           ]
         },
@@ -2254,51 +1848,35 @@
           "properties": [
             {
               "name": "DAMAGE:",
-              "value": [
-                "325"
-              ]
+              "value": ["325"]
             },
             {
               "name": "IMPACT RADIUS:",
-              "value": [
-                "225"
-              ]
+              "value": ["225"]
             },
             {
               "name": "MIN RANGE:",
-              "value": [
-                "550"
-              ]
+              "value": ["550"]
             },
             {
               "name": "MIN TRAVEL TIME:",
-              "value": [
-                "0.45"
-              ]
+              "value": ["0.45"]
             },
             {
               "name": "MAX TRAVEL TIME:",
-              "value": [
-                "1.5"
-              ]
+              "value": ["1.5"]
             },
             {
               "name": "STUN DURATION:",
-              "value": [
-                "1.4"
-              ]
+              "value": ["1.4"]
             },
             {
               "name": "FRAGMENT FLIGHT DISTANCE:",
-              "value": [
-                "525"
-              ]
+              "value": ["525"]
             },
             {
               "name": "FRAGMENT IMPACT RADIUS:",
-              "value": [
-                "185"
-              ]
+              "value": ["185"]
             }
           ]
         },
@@ -2327,37 +1905,23 @@
           "properties": [
             {
               "name": "AOE RADIUS:",
-              "value": [
-                "600"
-              ]
+              "value": ["600"]
             },
             {
               "name": "HIT INTERVAL:",
-              "value": [
-                "0.75"
-              ]
+              "value": ["0.75"]
             },
             {
               "name": "STUN DURATION:",
-              "value": [
-                "0.2"
-              ]
+              "value": ["0.2"]
             },
             {
               "name": "HIT DAMAGE:",
-              "value": [
-                "125",
-                "175",
-                "225"
-              ]
+              "value": ["125", "175", "225"]
             },
             {
               "name": "BONUS DAMAGE PER HIT:",
-              "value": [
-                "20",
-                "40",
-                "60"
-              ]
+              "value": ["20", "40", "60"]
             }
           ]
         }
@@ -2370,6 +1934,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -2378,6 +1943,7 @@
             "active": null,
             "cooldown": "5.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Imbue[/h1] Instantly restores [b]85[/b] health."
           },
           {
@@ -2386,6 +1952,7 @@
             "active": null,
             "cooldown": "1.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant[/h1]Plants an Observer Ward, an invisible watcher that gives ground vision in a [b]1600[/b] radius to your team. Lasts [b]6[/b] minutes.\\n\\nHold Control to give one Observer Ward to an allied hero.\\n\\nRange: [b]500[/b]"
           },
           {
@@ -2394,6 +1961,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -2402,6 +1970,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -2410,6 +1979,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           }
         ],
@@ -2479,42 +2049,23 @@
           "properties": [
             {
               "name": "RADIUS:",
-              "value": [
-                "325"
-              ]
+              "value": ["325"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "85",
-                "130",
-                "175",
-                "220"
-              ]
+              "value": ["85", "130", "175", "220"]
             },
             {
               "name": "TREE BONUS DAMAGE:",
-              "value": [
-                "11",
-                "18",
-                "25",
-                "32"
-              ]
+              "value": ["11", "18", "25", "32"]
             },
             {
               "name": "%STAT LOSS PERCENT:",
-              "value": [
-                "13"
-              ]
+              "value": ["13"]
             },
             {
               "name": "STAT LOSS DURATION:",
-              "value": [
-                "12",
-                "13",
-                "14",
-                "15"
-              ]
+              "value": ["12", "13", "14", "15"]
             }
           ]
         },
@@ -2531,39 +2082,19 @@
           "properties": [
             {
               "name": "LATCH RANGE:",
-              "value": [
-                "750",
-                "900",
-                "1050",
-                "1200"
-              ]
+              "value": ["750", "900", "1050", "1200"]
             },
             {
               "name": "RADIUS:",
-              "value": [
-                "225",
-                "225",
-                "225",
-                "225"
-              ]
+              "value": ["225", "225", "225", "225"]
             },
             {
               "name": "SPEED:",
-              "value": [
-                "2200",
-                "2400",
-                "2600",
-                "2800"
-              ]
+              "value": ["2200", "2400", "2600", "2800"]
             },
             {
               "name": "DAMAGE:",
-              "value": [
-                "50",
-                "95",
-                "140",
-                "185"
-              ]
+              "value": ["50", "95", "140", "185"]
             }
           ]
         },
@@ -2580,39 +2111,19 @@
           "properties": [
             {
               "name": "BONUS ARMOR:",
-              "value": [
-                "0.4",
-                "0.5",
-                "0.6",
-                "0.7"
-              ]
+              "value": ["0.4", "0.5", "0.6", "0.7"]
             },
             {
               "name": "BONUS HP REGEN:",
-              "value": [
-                "0.3",
-                "0.4",
-                "0.5",
-                "0.6"
-              ]
+              "value": ["0.3", "0.4", "0.5", "0.6"]
             },
             {
               "name": "MAX STACKS:",
-              "value": [
-                "12",
-                "22",
-                "32",
-                "42"
-              ]
+              "value": ["12", "22", "32", "42"]
             },
             {
               "name": "STACK DURATION:",
-              "value": [
-                "10",
-                "12",
-                "14",
-                "16"
-              ]
+              "value": ["10", "12", "14", "16"]
             }
           ]
         },
@@ -2641,45 +2152,31 @@
           "properties": [
             {
               "name": "DAMAGE PER SECOND:",
-              "value": [
-                "70"
-              ]
+              "value": ["70"]
             },
             {
               "name": "DURATION:",
-              "value": [
-                "8"
-              ]
+              "value": ["8"]
             },
             {
               "name": "WIDTH:",
-              "value": [
-                "275"
-              ]
+              "value": ["275"]
             },
             {
               "name": "RANGE:",
-              "value": [
-                "400"
-              ]
+              "value": ["400"]
             },
             {
               "name": "%MOVE SLOW:",
-              "value": [
-                "30"
-              ]
+              "value": ["30"]
             },
             {
               "name": "%BUILDING DAMAGE:",
-              "value": [
-                "40"
-              ]
+              "value": ["40"]
             },
             {
               "name": "DEBUFF LINGER TIME:",
-              "value": [
-                "2.0"
-              ]
+              "value": ["2.0"]
             }
           ]
         },
@@ -2696,39 +2193,23 @@
           "properties": [
             {
               "name": "RADIUS:",
-              "value": [
-                "200"
-              ]
+              "value": ["200"]
             },
             {
               "name": "PASS DAMAGE:",
-              "value": [
-                "110",
-                "155",
-                "200"
-              ]
+              "value": ["110", "155", "200"]
             },
             {
               "name": "DAMAGE PER SECOND:",
-              "value": [
-                "50",
-                "75",
-                "100"
-              ]
+              "value": ["50", "75", "100"]
             },
             {
               "name": "%SLOW:",
-              "value": [
-                "5"
-              ]
+              "value": ["5"]
             },
             {
               "name": "MANA COST PER SECOND:",
-              "value": [
-                "14",
-                "22",
-                "30"
-              ]
+              "value": ["14", "22", "30"]
             }
           ]
         }
@@ -2741,6 +2222,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Devour[/h1] Consumes a target tree to gain [b]7.0[/b] health regeneration for [b]16.0[/b] seconds. Consuming an Ironwood Tree doubles the heal amount.\\n\\nComes with [b]3[/b] charges.  Can be used on an allied hero to give them one Tango.\\n\\nTree Range: [b]165[/b]"
           },
           {
@@ -2749,6 +2231,7 @@
             "active": "[h1]Active: Energy Charge[/h1] Instantly restores [b]15[/b] health and mana per charge stored.\\n\\n Max [b]10[/b] charges. Gains a charge whenever a visible enemy within [b]1200[/b] range uses an ability.",
             "cooldown": "17.0",
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -2757,6 +2240,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -2765,6 +2249,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -2773,6 +2258,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -2781,6 +2267,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           }
         ],
@@ -2850,42 +2337,23 @@
           "properties": [
             {
               "name": "BANISH DURATION:",
-              "value": [
-                "2.75"
-              ]
+              "value": ["2.75"]
             },
             {
               "name": "ILLUSION DURATION:",
-              "value": [
-                "11",
-                "12",
-                "13",
-                "14"
-              ]
+              "value": ["11", "12", "13", "14"]
             },
             {
               "name": "%ILLUSION DAMAGE:",
-              "value": [
-                "20.0",
-                "30.0",
-                "40.0",
-                "50.0"
-              ]
+              "value": ["20.0", "30.0", "40.0", "50.0"]
             },
             {
               "name": "BONUS BASE DAMAGE:",
-              "value": [
-                "40",
-                "50",
-                "60",
-                "70"
-              ]
+              "value": ["40", "50", "60", "70"]
             },
             {
               "name": "%ILLUSION DAMAGE TAKEN:",
-              "value": [
-                "300"
-              ]
+              "value": ["300"]
             }
           ]
         },
@@ -2902,18 +2370,11 @@
           "properties": [
             {
               "name": "DURATION:",
-              "value": [
-                "6"
-              ]
+              "value": ["6"]
             },
             {
               "name": "%SHARED DAMAGE:",
-              "value": [
-                "20",
-                "25",
-                "30",
-                "35"
-              ]
+              "value": ["20", "25", "30", "35"]
             }
           ]
         },
@@ -2930,33 +2391,19 @@
           "properties": [
             {
               "name": "STACK DAMAGE:",
-              "value": [
-                "24",
-                "36",
-                "48",
-                "60"
-              ]
+              "value": ["24", "36", "48", "60"]
             },
             {
               "name": "MAX STACKS TO MULTIPLY:",
-              "value": [
-                "5"
-              ]
+              "value": ["5"]
             },
             {
               "name": "RADIUS:",
-              "value": [
-                "200"
-              ]
+              "value": ["200"]
             },
             {
               "name": "HIT DAMAGE:",
-              "value": [
-                "30",
-                "40",
-                "50",
-                "60"
-              ]
+              "value": ["30", "40", "50", "60"]
             }
           ]
         },
@@ -2985,23 +2432,15 @@
           "properties": [
             {
               "name": "CLEANSE HEAL:",
-              "value": [
-                "300",
-                "450",
-                "600"
-              ]
+              "value": ["300", "450", "600"]
             },
             {
               "name": "MAX CHARGES:",
-              "value": [
-                "2"
-              ]
+              "value": ["2"]
             },
             {
               "name": "BASE CHARGE RESTORE TIME:",
-              "value": [
-                "60"
-              ]
+              "value": ["60"]
             }
           ]
         },
@@ -3018,23 +2457,15 @@
           "properties": [
             {
               "name": "PURGE DAMAGE:",
-              "value": [
-                "300",
-                "450",
-                "600"
-              ]
+              "value": ["300", "450", "600"]
             },
             {
               "name": "MAX CHARGES:",
-              "value": [
-                "2"
-              ]
+              "value": ["2"]
             },
             {
               "name": "BASE CHARGE RESTORE TIME:",
-              "value": [
-                "60"
-              ]
+              "value": ["60"]
             }
           ]
         }
@@ -3047,6 +2478,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Devour[/h1] Consumes a target tree to gain [b]7.0[/b] health regeneration for [b]16.0[/b] seconds. Consuming an Ironwood Tree doubles the heal amount.\\n\\nComes with [b]3[/b] charges.  Can be used on an allied hero to give them one Tango.\\n\\nTree Range: [b]165[/b]"
           },
           {
@@ -3055,6 +2487,7 @@
             "active": null,
             "cooldown": "0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant[/h1] Plant the currently active ward.  Double-Click to switch the currently active ward.\\n\\nRange: [b]500[/b]"
           },
           {
@@ -3063,6 +2496,7 @@
             "active": null,
             "cooldown": "10",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Throw Grenade[/h1] Throw a grenade at the target area. Enemies in the area will take [b]50[/b] damage on impact, and be slowed by [b]-15[/b]% and take [b]15[/b] damage every [b]1[/b]s for [b]5[/b] seconds. Radius [b][object Object][/b]. "
           },
           {
@@ -3071,6 +2505,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           },
           {
@@ -3079,6 +2514,7 @@
             "active": null,
             "cooldown": null,
             "manacost": null,
+            "cost": "1400",
             "use": null
           },
           {
@@ -3087,6 +2523,7 @@
             "active": null,
             "cooldown": "0.0",
             "manacost": null,
+            "cost": "1400",
             "use": "[h1]Use: Plant Tree[/h1] Targets the ground to plant a happy little tree that lasts for [b]20[/b] seconds.\\n\\nRange: [b]400[/b]"
           }
         ],
