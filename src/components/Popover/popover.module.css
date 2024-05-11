@@ -1,13 +1,27 @@
 .popoverContent {
   --shadow-color: 240deg 33% 15%;
-  background-color: var(--purple-navy-light);
   box-shadow: var(--shadow-elevation-high);
+  background-color: var(--space-cadet-2);
   padding: 0.5rem;
   margin: 0 0.5rem;
   border-radius: 0.25rem;
+  border: var(--border);
+  color: var(--space-cadet-10);
+  font-size: 0.875rem;
 }
 
+.popoverContentTitle {
+  color: var(--space-cadet-11);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
 .popoverContentSubtitle {
-  font-size: smaller;
-  opacity: 0.8;
+  font-size: 0.75rem;
+  color: var(--space-cadet-10);
+  margin-bottom: 0.5rem;
+}
+
+.PopoverHeader {
+  padding: 0.5rem;
+  background-color: var(--space-cadet-2);
 }
