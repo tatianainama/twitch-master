@@ -1,3 +1,6 @@
+.hero {
+  margin: 1rem 0;
+}
 .heroDetailSummary {
   display: flex
 }
@@ -49,7 +52,47 @@
   width: 1rem;
   height: 1rem;
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
   margin-left: 0.5rem;
   margin-right: 0.125rem;
+}
+/**
+* SUMMARY
+**/
+
+.summaryContainer {}
+
+.summaryHeader {
+  flex: 1;
+}
+
+.summaryHeader>img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.summaryHeaderHero {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.summaryHeaderHero h2 {
+  font-size: large;
+  line-height: 1;
+}
+
+.summaryHeaderHero p {
+  font-size: smaller;
+  opacity: 0.7;
+}
+
+.abilitiesList {
+  display: flex;
+  align-items: flex-start;
+}
+
+.abilitiesList>* {
+  flex: 1 1 0;
+  height: 3.5rem;
 }
