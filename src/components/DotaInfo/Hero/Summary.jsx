@@ -1,22 +1,29 @@
 import styles from "./hero.module.css";
 import imageAPI from "./../imageAPI";
-
+import { TalentTree } from "./TalentTree";
+import { Aghanim } from "./Aghanim";
 export const Summary = ({ hero }) => {
   return (
     <div className={styles.summaryContainer}>
       <div className={styles.summaryHeader}>
-        <img src={imageAPI.hero.portrait(hero.n)} />
+        <div className={styles.summaryHeaderPortrait}>
+          <img src={imageAPI.hero.portrait(hero.n)} />
+        </div>
         <div className={styles.summaryHeaderHero}>
           <h2>{hero.player}</h2>
           <p>
             Lvl <strong>{hero.level}</strong> {hero.name}
           </p>
         </div>
+        <TalentTree />
+        <Aghanim scepter={false} shard={false} />
       </div>
-      <div className={styles.abilitiesList}>
-        {hero.abilities.map((_) => (
-          <Ability data={_} key={_.n} />
-        ))}
+      <div className={styles.abilities}>
+        <div className={styles.abilitiesList}>
+          {hero.abilities.map((_) => (
+            <Ability data={_} key={_.n} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -27,7 +34,7 @@ export const Ability = ({ data }) => {
     <div>
       <img
         src={imageAPI.hero.ability(data.n)}
-        style={{ maxWidth: `100%`, maxHeight: `100%`, objectFit: "cover" }}
+        style={{ width: `3rem`, height: `3rem`, objectFit: "cover" }}
       />
     </div>
   );

@@ -40,7 +40,7 @@ const Card = ({
         {children}
       </div>
 
-    {actions && <div className={styles.card__actions}>{actions}</div>}
+      {actions && <div className={styles.card__actions}>{actions}</div>}
     </Tag>
     {footer && <div className={styles.card__footer}>{footer}</div>}
   </div>

@@ -16,10 +16,12 @@ export const Inventory = ({ hero }) => {
 
   return (
     <div className={styles.inventory}>
-      {inventoryItems.map((item, i) =>
-        item ? <Item data={item} key={i} /> : <Empty key={i} />
-      )}
-      <NeutralItem data={hero.inventory.neutral_slot} ratio={1} />
+      <div className={styles.inventoryGrid}>
+        {inventoryItems.map((item, i) =>
+          item ? <Item data={item} key={i} /> : <Empty key={i} />
+        )}
+        <NeutralItem data={hero.inventory.neutral_slot} ratio={1} />
+      </div>
     </div>
   );
 };
@@ -38,15 +40,15 @@ const Item = ({ data, ratio = 3 / 2 }) => {
         </AspectRatio.Root>
       </PopoverTrigger>
       <PopoverContent>
-        <div className={styles.inventoryItemContent}>
-          <div className={styles.inventoryItemHeader}>
+        <div className={styles.inventoryGridItemContent}>
+          <div className={styles.inventoryGridItemHeader}>
             <PopoverTitle>{data.name}</PopoverTitle>
             <PopoverSubtitle>
               {data.manacost && (
                 <>
                   <img
                     src="images/mana.png"
-                    className={styles.inventoryItemUseIcon}
+                    className={styles.inventoryGridItemUseIcon}
                   />
                   {data.manacost}
                 </>
@@ -55,7 +57,7 @@ const Item = ({ data, ratio = 3 / 2 }) => {
                 <>
                   <img
                     src="images/cd.png"
-                    className={styles.inventoryItemUseIcon}
+                    className={styles.inventoryGridItemUseIcon}
                   />{" "}
                   {data.cooldown}
                 </>
@@ -64,14 +66,14 @@ const Item = ({ data, ratio = 3 / 2 }) => {
                 <>
                   <img
                     src="images/icon_gold.png"
-                    className={styles.inventoryItemUseIcon}
+                    className={styles.inventoryGridItemUseIcon}
                   />{" "}
                   {data.cost}
                 </>
               )}{" "}
             </PopoverSubtitle>
           </div>
-          <p className={styles.inventoryItemContentDescription}>
+          <p className={styles.inventoryGridItemContentDescription}>
             {/* TODO: Get better item description */}
             Ex ex veniam amet ex ut. Eu labore dolor nulla mollit aliquip est
             laborum mollit nisi tempor incididunt. Velit qui laboris
@@ -86,13 +88,13 @@ const Item = ({ data, ratio = 3 / 2 }) => {
   );
 };
 
-const Empty = () => <div className={styles.inventoryEmptyItem} />;
+const Empty = () => <div className={styles.inventoryGridEmptyItem} />;
 
 const NeutralItem = ({ data }) => {
   return (
-    <div className={styles.inventoryNeutralItemContainer}>
+    <div className={styles.inventoryGridNeutralItemContainer}>
       {data && (
-        <div className={styles.inventoryNeutralItem}>
+        <div className={styles.inventoryGridNeutralItem}>
           <Item data={data} ratio={1 / 1} />
         </div>
       )}

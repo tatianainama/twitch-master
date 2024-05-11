@@ -23,8 +23,8 @@
   background-color: var(--space-cadet);
 }
 
-.vodImagePlaceholder::after{
-  content: 'ಥ_ಥ';
+.vodImagePlaceholder::after {
+  content: "ಥ_ಥ";
 }
 
 .vodImageContainer {

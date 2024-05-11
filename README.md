@@ -5,6 +5,7 @@ npm run dev
 ```
 
 .env
+
 ```
 export MODE=MOCK
 export VITE_TWITCH_API=http://localhost:7777

@@ -1,19 +1,16 @@
-
 import styles from "./live.module.css";
 
-const TalentTree = ({tree}) => {
+const TalentTree = ({ tree }) => {
   return (
     <section className={styles.liveSection}>
-	  {tree.map(items => 
-		  <>
-		  {items.map(item => 
-			  item.picked ? (<b>{item.name}</b>) : (<span>{item.name}</span>)
-		  )
-		  }
-		  <br/>
-		  </>
-	  )
-	  }
+      {tree.map((items) => (
+        <>
+          {items.map((item) =>
+            item.picked ? <b>{item.name}</b> : <span>{item.name}</span>
+          )}
+          <br />
+        </>
+      ))}
     </section>
   );
 };

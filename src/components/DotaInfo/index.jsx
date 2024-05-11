@@ -9,7 +9,7 @@ export const DotaInfo = ({ user }) => {
   if (!dotaInfo) return null;
 
   return (
-    <Dialog>
+    <Dialog open>
       <DialogTrigger asChild>
         <Button>
           <Notepad />

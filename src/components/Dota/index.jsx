@@ -11,7 +11,10 @@ const HeroSummary = (dotaInfo) => {
         src={`https://dotatooltips.b-cdn.net/hero_miniicons/${dotaInfo.n}_png.png`}
       />
       <div className={styles.heroInfo}>
-        <a href={`https://liquipedia.net/dota2/${dotaInfo.player}`} target="_blank">
+        <a
+          href={`https://liquipedia.net/dota2/${dotaInfo.player}`}
+          target="_blank"
+        >
           <b>{dotaInfo.player}</b>
         </a>
         <span className={styles.heroLevel}>
@@ -20,21 +23,34 @@ const HeroSummary = (dotaInfo) => {
       </div>
       <div className={styles.inventory}>
         {dotaInfo.inventory.items.map((item) => (
-          <img alt={item.name} src={`https://dotatooltips.b-cdn.net/items/${item.n.replace("item_", "")}_png.png`} />
+          <img
+            alt={item.name}
+            src={`https://dotatooltips.b-cdn.net/items/${item.n.replace(
+              "item_",
+              ""
+            )}_png.png`}
+          />
         ))}
       </div>
       {dotaInfo.inventory.neutral_slot ? (
         <img
           className={styles.neutralItem}
-          src={`https://dotatooltips.b-cdn.net/items/${dotaInfo.inventory.neutral_slot.n.replace("item_", "")}_png.png`}
+          src={`https://dotatooltips.b-cdn.net/items/${dotaInfo.inventory.neutral_slot.n.replace(
+            "item_",
+            ""
+          )}_png.png`}
           alt={dotaInfo.inventory.neutral_slot.name}
         />
       ) : (
         <div></div>
       )}
       <div className={styles.aghsShard}>
-        <img src={`images/scepter_${dotaInfo.has_aghs ? "on" : "off"}.png`}></img>
-        <img src={`images/shard_${dotaInfo.has_shard ? "on" : "off"}.png`}></img>
+        <img
+          src={`images/scepter_${dotaInfo.has_aghs ? "on" : "off"}.png`}
+        ></img>
+        <img
+          src={`images/shard_${dotaInfo.has_shard ? "on" : "off"}.png`}
+        ></img>
       </div>
     </>
   );
@@ -52,7 +68,13 @@ const HeroDetail = (dotaInfo) => {
       <div className={styles.firstRow}>
         <div className={styles.inventory}>
           {dotaInfo.inventory.items.map((item) => (
-            <img alt={item.name} src={`https://dotatooltips.b-cdn.net/items/${item.n.replace("item_", "")}_png.png`} />
+            <img
+              alt={item.name}
+              src={`https://dotatooltips.b-cdn.net/items/${item.n.replace(
+                "item_",
+                ""
+              )}_png.png`}
+            />
           ))}
         </div>
         {dotaInfo.inventory.neutral_slot ? (
@@ -72,13 +94,20 @@ const HeroDetail = (dotaInfo) => {
           />
         )}
         <div className={styles.aghsShard}>
-          <img src={`images/scepter_${dotaInfo.has_aghs ? "on" : "off"}.png`}></img>
-          <img src={`images/shard_${dotaInfo.has_shard ? "on" : "off"}.png`}></img>
+          <img
+            src={`images/scepter_${dotaInfo.has_aghs ? "on" : "off"}.png`}
+          ></img>
+          <img
+            src={`images/shard_${dotaInfo.has_shard ? "on" : "off"}.png`}
+          ></img>
         </div>
       </div>
       <div className={styles.skills}>
         {dotaInfo.abilities.map((ability) => (
-          <img alt={ability.name} src={`https://dotatooltips.b-cdn.net/spellicons/${ability.n}_png.png`} />
+          <img
+            alt={ability.name}
+            src={`https://dotatooltips.b-cdn.net/spellicons/${ability.n}_png.png`}
+          />
         ))}
       </div>
     </div>
@@ -98,9 +127,13 @@ const Dota = ({ user_login }) => {
       <summary>
         <details>
           <h2>Radiant</h2>
-          <div className={styles.dotaScoreBoard}>{dotaInfo.data.slice(0, 5).map((h) => HeroSummary(h))}</div>
+          <div className={styles.dotaScoreBoard}>
+            {dotaInfo.data.slice(0, 5).map((h) => HeroSummary(h))}
+          </div>
           <h2>Dire</h2>
-          <div className={styles.dotaScoreBoard}>{dotaInfo.data.slice(5, 10).map((h) => HeroSummary(h))}</div>
+          <div className={styles.dotaScoreBoard}>
+            {dotaInfo.data.slice(5, 10).map((h) => HeroSummary(h))}
+          </div>
         </details>
       </summary>
     );
