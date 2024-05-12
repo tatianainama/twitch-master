@@ -21,9 +21,11 @@
   background-color: var(--space-cadet-2);
   grid-template-columns: repeat(7, 1fr);
 }
+
 .inventoryGridEmptyItem {
   background-color: #222135;
 }
+
 .inventoryGridNeutralItemContainer {
   background-color: var(--space-cadet-3);
   margin: -0.25rem -0.3rem -0.25rem 0;
@@ -31,6 +33,7 @@
   justify-content: flex-end;
   align-items: center;
 }
+
 .inventoryGridNeutralItem {
   grid-column: 7;
   grid-row: 1 / 2;
@@ -39,6 +42,7 @@
   overflow: hidden;
   border: 0.25rem solid var(--space-cadet-2);
 }
+
 .inventoryGridItemHeader {
   display: flex;
   justify-content: space-between;
@@ -50,7 +54,6 @@
 }
 
 .inventoryGridItemContentDescription {
-  font-size: smaller;
   opacity: 0.8;
 }
 

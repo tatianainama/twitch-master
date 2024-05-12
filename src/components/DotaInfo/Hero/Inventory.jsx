@@ -74,13 +74,16 @@ const Item = ({ data, ratio = 3 / 2 }) => {
             </PopoverSubtitle>
           </div>
           <p className={styles.inventoryGridItemContentDescription}>
-            {/* TODO: Get better item description */}
-            Ex ex veniam amet ex ut. Eu labore dolor nulla mollit aliquip est
-            laborum mollit nisi tempor incididunt. Velit qui laboris
-            exercitation eu dolore commodo non. Sit commodo culpa occaecat
-            occaecat nulla. Enim sint cupidatat duis proident incididunt mollit
-            consectetur aute ullamco id in est cillum. Occaecat irure cupidatat
-            tempor cillum do pariatur.
+            {data.active.length !== 0 && data.active.map(ToText)}
+            {data.passive.length !== 0 && data.passive.map(ToText)}
+            {data.use.length !== 0 && data.use.map(ToText)}
+            <ul>
+              {Object.entries(data.properties).map(([name, value], key) => (
+                <li key={key}>
+                  <strong>{name}</strong> <span>{value}</span>
+                </li>
+              ))}
+            </ul>
           </p>
         </div>
       </PopoverContent>
@@ -100,4 +103,19 @@ const NeutralItem = ({ data }) => {
       )}
     </div>
   );
+};
+
+const ToText = ({ tag, val }) => {
+  switch (tag) {
+    case "h1":
+      return <h1>{val}</h1>;
+    case "text":
+      return <span>{val}</span>;
+    case "b":
+      return <strong> {val} </strong>;
+    case "newline":
+      return `\n`;
+    default:
+      return val;
+  }
 };
