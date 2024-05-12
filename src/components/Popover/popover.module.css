@@ -8,6 +8,7 @@
   border: var(--border);
   color: var(--space-cadet-10);
   font-size: 0.875rem;
+  max-width: 300px;
 }
 
 .popoverContentTitle {
@@ -21,7 +22,16 @@
   margin-bottom: 0.5rem;
 }
 
-.PopoverHeader {
+.popoverHeader {
   padding: 0.5rem;
   background-color: var(--space-cadet-2);
+}
+
+.popoverContent ul {
+  margin: 0.5rem 0;
+}
+
+.popoverContent li {
+  font-size: smaller;
+  display: block;
 }

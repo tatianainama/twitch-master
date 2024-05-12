@@ -2,6 +2,13 @@ import styles from "./hero.module.css";
 import imageAPI from "./../imageAPI";
 import { TalentTree } from "./TalentTree";
 import { Aghanim } from "./Aghanim";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  PopoverTitle,
+} from "./../../Popover";
+
 export const Summary = ({ hero }) => {
   return (
     <div className={styles.summaryContainer}>
@@ -31,11 +38,25 @@ export const Summary = ({ hero }) => {
 
 export const Ability = ({ data }) => {
   return (
-    <div>
-      <img
-        src={imageAPI.hero.ability(data.n)}
-        style={{ width: `3rem`, height: `3rem`, objectFit: "cover" }}
-      />
-    </div>
+    <Popover>
+      <PopoverTrigger asChild>
+        <img
+          src={imageAPI.hero.ability(data.n)}
+          style={{ width: `3rem`, height: `3rem`, objectFit: "cover" }}
+        />
+      </PopoverTrigger>
+      <PopoverContent>
+        <PopoverTitle>{data.name}</PopoverTitle>
+        <p>{data.tooltip.description}</p>
+        <ul>
+          {data.properties.map((property, key) => (
+            <li key={key}>
+              <strong>{property.name}</strong>{" "}
+              <span>{property.value.join(" / ")}</span>
+            </li>
+          ))}
+        </ul>
+      </PopoverContent>
+    </Popover>
   );
 };
