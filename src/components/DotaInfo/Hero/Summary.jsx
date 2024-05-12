@@ -10,6 +10,11 @@ import {
 } from "./../../Popover";
 
 export const Summary = ({ hero }) => {
+  const abilities = hero.abilities.filter((ability) => {
+    if (ability.granted_by_scepter) return hero.has_scepter;
+    if (ability.granted_by_shard) return hero.has_shard;
+    return true;
+  });
   return (
     <div className={styles.summaryContainer}>
       <div className={styles.summaryHeader}>
@@ -23,11 +28,15 @@ export const Summary = ({ hero }) => {
           </p>
         </div>
         <TalentTree />
-        <Aghanim scepter={false} shard={false} />
+        <Aghanim
+          scepter={hero.has_scepter}
+          shard={hero.has_shard}
+          abilities={hero.abilities}
+        />
       </div>
       <div className={styles.abilities}>
         <div className={styles.abilitiesList}>
-          {hero.abilities.map((_) => (
+          {abilities.map((_) => (
             <Ability data={_} key={_.n} />
           ))}
         </div>

@@ -24,11 +24,11 @@
 
 .popoverHeader {
   padding: 0.5rem;
-  background-color: var(--space-cadet-2);
+  background-color: var(--space-cadet-3);
 }
 
 .popoverContent ul {
-  margin: 0.5rem 0;
+  margin-top: 0.5rem;
 }
 
 .popoverContent li {

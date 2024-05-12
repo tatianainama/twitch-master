@@ -128,3 +128,24 @@
   flex-direction: column;
   align-items: center;
 }
+
+.aghanimPopoverHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.aghanimPopoverHeader h4 {
+  margin-bottom: 0;
+  flex: 1 1 0;
+}
+
+.aghanimAbility {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.aghanimAbility:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
