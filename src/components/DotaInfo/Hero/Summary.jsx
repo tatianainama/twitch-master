@@ -8,6 +8,9 @@ import {
   PopoverTrigger,
   PopoverTitle,
 } from "./../../Popover";
+import * as Collapsible from "@radix-ui/react-collapsible";
+
+import { Chevron } from "./../../Icons";
 
 export const Summary = ({ hero }) => {
   const abilities = hero.abilities.filter((ability) => {
@@ -16,7 +19,7 @@ export const Summary = ({ hero }) => {
     return true;
   });
   return (
-    <div className={styles.summaryContainer}>
+    <Collapsible.Root className={styles.summaryContainer} defaultOpen={false}>
       <div className={styles.summaryHeader}>
         <div className={styles.summaryHeaderPortrait}>
           <img src={imageAPI.hero.portrait(hero.n)} />
@@ -33,15 +36,20 @@ export const Summary = ({ hero }) => {
           shard={hero.has_shard}
           abilities={hero.abilities}
         />
+        <Collapsible.Trigger className={styles.summaryHeroAbilitiesToggle}>
+          <Chevron size={24} />
+        </Collapsible.Trigger>
       </div>
-      <div className={styles.abilities}>
-        <div className={styles.abilitiesList}>
-          {abilities.map((_) => (
-            <Ability data={_} key={_.n} />
-          ))}
+      <Collapsible.Content>
+        <div className={styles.abilities}>
+          <div className={styles.abilitiesList}>
+            {abilities.map((_) => (
+              <Ability data={_} key={_.n} />
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </Collapsible.Content>
+    </Collapsible.Root>
   );
 };
 
