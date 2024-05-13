@@ -160,3 +160,33 @@
 .aghanimAbility:not(:last-child) {
   margin-bottom: 0.5rem;
 }
+
+/**
+* TALENT TREE
+**/
+.talentTreeContent {
+  margin: -0.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.talentTreeBranch {
+  display: flex;
+}
+
+.talentTreeBranch:not(:first-child) {
+  border-bottom: var(--border)
+}
+
+.talentTreeBranchLeaf {
+  flex: 1 1 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.talentTreeBranchLeaf[data-picked="true"] {
+  color: var(--iceberg)
+}

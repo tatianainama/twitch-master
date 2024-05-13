@@ -30,7 +30,7 @@ export const Summary = ({ hero }) => {
             Lvl <strong>{hero.level}</strong> {hero.name}
           </p>
         </div>
-        <TalentTree />
+        <TalentTree data={hero.talent_tree.entries} />
         <Aghanim
           scepter={hero.has_scepter}
           shard={hero.has_shard}

@@ -73,7 +73,7 @@ const Item = ({ data, ratio = 3 / 2 }) => {
               )}{" "}
             </PopoverSubtitle>
           </div>
-          <p className={styles.inventoryGridItemContentDescription}>
+          <div className={styles.inventoryGridItemContentDescription}>
             {data.active.length !== 0 && data.active.map(ToText)}
             {data.passive.length !== 0 && data.passive.map(ToText)}
             {data.use.length !== 0 && data.use.map(ToText)}
@@ -84,7 +84,7 @@ const Item = ({ data, ratio = 3 / 2 }) => {
                 </li>
               ))}
             </ul>
-          </p>
+          </div>
         </div>
       </PopoverContent>
     </Popover>
@@ -105,14 +105,14 @@ const NeutralItem = ({ data }) => {
   );
 };
 
-const ToText = ({ tag, val }) => {
+const ToText = ({ tag, val }, key) => {
   switch (tag) {
     case "h1":
-      return <h1>{val}</h1>;
+      return <h1 key={key}>{val}</h1>;
     case "text":
-      return <span>{val}</span>;
+      return <span key={key}>{val}</span>;
     case "b":
-      return <strong> {val} </strong>;
+      return <strong key={key}> {val} </strong>;
     case "newline":
       return `\n`;
     default:
