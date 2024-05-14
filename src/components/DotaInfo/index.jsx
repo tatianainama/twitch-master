@@ -7,6 +7,7 @@ export const DotaInfo = ({ user }) => {
   const { dotaInfo } = useDotaInfo(user);
   console.log(dotaInfo);
   if (!dotaInfo) return null;
+  if (dotaInfo.error !== undefined) return null;
 
   return (
     <Dialog open>
@@ -28,13 +29,13 @@ const DotaInfoType = ({ info }) => {
       return (
         <div>
           {info.data.map((hero) => (
-            <Hero data={hero} key={hero.name} />
+            <Hero data={hero} key={hero.name} showSkills={false} />
           ))}
         </div>
       );
     }
     case "single": {
-      return <div>single</div>;
+      return <Hero data={info.data} showSkills={true} />;
     }
     default: {
       return <div>unsupported type {info.type}</div>;

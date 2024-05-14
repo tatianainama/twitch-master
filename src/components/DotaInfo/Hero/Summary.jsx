@@ -12,14 +12,14 @@ import * as Collapsible from "@radix-ui/react-collapsible";
 
 import { Chevron } from "./../../Icons";
 
-export const Summary = ({ hero }) => {
+export const Summary = ({ hero, showSkills }) => {
   const abilities = hero.abilities.filter((ability) => {
     if (ability.granted_by_scepter) return hero.has_scepter;
     if (ability.granted_by_shard) return hero.has_shard;
     return true;
   });
   return (
-    <Collapsible.Root className={styles.summaryContainer} defaultOpen={false}>
+    <Collapsible.Root className={styles.summaryContainer} defaultOpen={showSkills}>
       <div className={styles.summaryHeader}>
         <div className={styles.summaryHeaderPortrait}>
           <img src={imageAPI.hero.portrait(hero.n)} />
