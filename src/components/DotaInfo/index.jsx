@@ -5,12 +5,11 @@ import Button from "./../Button";
 import { Notepad } from "../Icons";
 export const DotaInfo = ({ user }) => {
   const { dotaInfo } = useDotaInfo(user);
-  console.log(dotaInfo);
   if (!dotaInfo) return null;
   if (dotaInfo.error !== undefined) return null;
 
   return (
-    <Dialog open>
+    <Dialog>
       <DialogTrigger asChild>
         <Button>
           <Notepad />
@@ -38,7 +37,7 @@ const DotaInfoType = ({ info }) => {
       return <Hero data={info.data} showSkills={true} />;
     }
     default: {
-      return <div>unsupported type {info.type}</div>;
+      return <div>unsupported type {JSON.stringify(info)} {info.type}</div>;
     }
   }
 };
