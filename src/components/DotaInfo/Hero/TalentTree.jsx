@@ -2,7 +2,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "../../Popover";
 import styles from "./hero.module.css";
 
 export const TalentTree = ({ data }) => {
-  console.log(data);
   return (
     <Popover>
       <PopoverTrigger>
@@ -28,7 +27,7 @@ const Leaf = ({ name, picked }) => (
 );
 
 const Tree = ({ data }) => {
-  const pickedTiers = data.map((val, idx) => (val[0].picked || val[1].picked) ? idx : 0);
+  const pickedTiers = data.map((val, idx) => (val[0].picked || val[1].picked) ? idx + 1: 0);
   const highestPickedLevel = Math.max(...pickedTiers);
   const emptyColor = "#32314D";
   const filledColor = "#1DBEFD";
