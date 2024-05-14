@@ -10,3 +10,5 @@ export * from "./Circle";
 export * from "./Film";
 export * from "./Radio";
 export * from "./Power";
+export * from "./Notepad";
+export * from "./Chevron";

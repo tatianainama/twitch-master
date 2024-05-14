@@ -1,0 +1,43 @@
+.dialogOverlay {
+  background-color: var(--space-cadet-1);
+  opacity: 0.8;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogContent {
+  --shadow-color: 242deg 34% 11%;
+  background-color: var(--space-cadet-2);
+  position: fixed;
+  inset: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-elevation-high);
+  overflow-y: auto;
+  margin: 0 auto;
+  max-width: 44rem;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

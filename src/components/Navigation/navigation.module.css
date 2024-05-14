@@ -1,6 +1,6 @@
 .navLink {
-color: white;
-opacity: 0.4;
+  color: white;
+  opacity: 0.4;
   display: inline-flex;
   gap: 0.5rem;
   text-decoration: none;

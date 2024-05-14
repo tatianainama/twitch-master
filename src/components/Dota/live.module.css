@@ -1,0 +1,92 @@
+b {
+  color: #ccc;
+}
+
+.dotaScoreBoard {
+  display: grid;
+  grid-template-columns: 30px 130px auto 40px 35px;
+  grid-row-gap: 15px;
+  grid-column-gap: 10px;
+}
+.heroPortrait {
+  max-width: 30px;
+  height: 30px;
+  place-self: center;
+}
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  width: 100%;
+}
+.aghsShard {
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  width: 100%;
+}
+.aghsShard img {
+  width: 45px;
+}
+.heroLevel {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.neutralItem {
+  /*
+  height: 40px;
+  max-width: 40px;
+  */
+  border-radius: 50px;
+  place-self: center;
+}
+.inventory {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.inventory img {
+  height: 40px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.skills img {
+  height: 50px;
+}
+
+.heroDetail .firstRow {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.heroDetail .inventory {
+  flex: 4;
+}
+
+.heroDetail .neutralItem {
+  flex: 1;
+}
+
+.heroDetail .inventory img {
+  width: 31%;
+  height: auto;
+}
+.heroDetail .aghsShard {
+  flex: 1;
+}
+.heroDetail .aghsShard img {
+  width: 100%;
+}
+
+.bw {
+  filter: grayscale(100%);
+}

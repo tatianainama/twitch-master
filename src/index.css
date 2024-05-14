@@ -13,10 +13,23 @@
   --pale-purple: #efe4f1;
   --blue-bell: #9b9bbf;
   --space-cadet: #302f4dff;
+  --space-cadet-dark: rgb(42, 41, 68);
+  --space-cadet-1: #181725;
+  --space-cadet-2: #1f1d2f;
+  --space-cadet-3: #252339;
+  --space-cadet-4: #29273f;
+  --space-cadet-5: #32314d;
+  --space-cadet-6: #393859;
+  --space-cadet-7: #45446c;
+  --space-cadet-8: #5d5b8a;
+  --space-cadet-9: #6a6999;
+  --space-cadet-10: #7776a7;
+  --space-cadet-11: #afaee2;
+  --border: 1px solid var(--space-cadet-6);
   --purple-navy-light: #50507c;
   --purple-navy: #363659;
-  --ultra-violet: #6967A2;
-    --ultra-violet-dark: #5F5D98;
+  --ultra-violet: #6967a2;
+  --ultra-violet-dark: #5f5d98;
   --main-gradient: linear-gradient(
     150deg,
     var(--uranian-blue) 0%,
@@ -25,6 +38,19 @@
     var(--plum) 75%,
     var(--pansy-purple) 100%
   );
+  --shadow-color: 240deg 33% 15%;
+  --shadow-elevation-medium: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.36),
+    0px 0.2px 0.2px -0.8px hsl(var(--shadow-color) / 0.36),
+    0px 0.4px 0.5px -1.7px hsl(var(--shadow-color) / 0.36),
+    0px 1px 1.1px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0px 0.1px 0.1px hsl(var(--shadow-color) / 0.34),
+    0px 0.3px 0.3px -0.4px hsl(var(--shadow-color) / 0.34),
+    0px 0.6px 0.7px -0.7px hsl(var(--shadow-color) / 0.34),
+    0px 0.9px 1px -1.1px hsl(var(--shadow-color) / 0.34),
+    -0.1px 1.5px 1.7px -1.4px hsl(var(--shadow-color) / 0.34),
+    -0.1px 2.3px 2.6px -1.8px hsl(var(--shadow-color) / 0.34),
+    -0.1px 3.5px 3.9px -2.1px hsl(var(--shadow-color) / 0.34),
+    -0.2px 5.2px 5.9px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
 ul {
@@ -36,11 +62,6 @@ html,
 body {
   font-size: 14px;
   height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: center;
   padding: 0;
   margin: 0;
   background: var(--space-cadet);
@@ -60,14 +81,15 @@ input {
 }
 
 #app {
-  width: 100%;
   max-width: 48em;
   height: 100%;
   background-color: var(--space-cadet);
   color: #fff;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #app {
   display: grid;
-    grid-template-rows: 52px 1fr min-content;
+  grid-template-rows: 52px 1fr min-content;
 }

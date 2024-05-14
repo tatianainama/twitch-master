@@ -1,0 +1,6181 @@
+{
+  "type": "multiple",
+  "data": [
+    {
+      "n": "npc_dota_hero_enchantress",
+      "name": "Enchantress",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "+10 Enchanted Creep Armor",
+              "picked": true
+            },
+            {
+              "name": "+30 Movespeed during Nature's Attendants",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+45 Damage",
+              "picked": false
+            },
+            {
+              "name": "+5 Nature's Attendants Wisps",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+-65 Untouchable Attack Slow",
+              "picked": false
+            },
+            {
+              "name": "+30% Enchanted Creep Health/Damage",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+6.5% Impetus Damage",
+              "picked": false
+            },
+            {
+              "name": "+20 Nature's Attendants Heal",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Impetus",
+          "n": "enchantress_impetus",
+          "tooltip": {
+            "description": "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is.  The farther the target, the greater the damage dealt. Deals double damage to creeps and illusions.",
+            "lore": "While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "%DISTANCE DAMAGE:",
+              "value": ["5", "10", "15", "20"]
+            }
+          ]
+        },
+        {
+          "name": "Enchant",
+          "n": "enchantress_enchant",
+          "tooltip": {
+            "description": "Enchantress charms an enemy. If the enemy is a hero, they are slowed and damaged for 5s.\\n\\n If the enemy is a creep, she brings it under her control, increasing its attack damage and max health. Enchantress can control up to 1 creeps at a time for up to 30s. \\n\\nDISPEL TYPE: Basic Dispel",
+            "lore": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
+            "scepter_description": "Enchantress can control multiple creeps at a time."
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "%HERO MOVE SLOW:",
+              "value": ["-30", "-40", "-50", "-60"]
+            },
+            {
+              "name": "HERO DAMAGE PER SECOND:",
+              "value": ["20", "30", "40", "50"]
+            },
+            {
+              "name": "CREEP MAX HEALTH BONUS:",
+              "value": ["200", "300", "400", "500"]
+            },
+            {
+              "name": "CREEP ATTACK DAMAGE BONUS:",
+              "value": ["0", "25", "50", "75"]
+            },
+            {
+              "name": "CREEP MAX LEVEL:",
+              "value": ["4", "5", "6", "6"]
+            }
+          ]
+        },
+        {
+          "name": "Nature's Attendants",
+          "n": "enchantress_natures_attendants",
+          "tooltip": {
+            "description": "A cloud of wisps heals Enchantress and any friendly units nearby. Lasts 9 seconds.",
+            "lore": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "HEAL PER SECOND:",
+              "value": ["4", "8", "12", "16"]
+            },
+            {
+              "name": "RADIUS:",
+              "value": ["275", "275", "275", "275"]
+            },
+            {
+              "name": "WISPS:",
+              "value": ["8"]
+            }
+          ]
+        },
+        {
+          "name": "Sproink",
+          "n": "enchantress_bunny_hop",
+          "tooltip": {
+            "description": "Leaps backward, dodges incoming projectiles, and launches an Impetus attack on the 2 furthest enemy units within Enchantress' attack range + 100.",
+            "lore": "Sproink is as Sproink does.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": true,
+          "properties": [
+            {
+              "name": "DISTANCE:",
+              "value": ["500"]
+            }
+          ]
+        },
+        {
+          "name": "Little Friends",
+          "n": "enchantress_little_friends",
+          "tooltip": {
+            "description": "Enchantress roots an enemy unit. All creeps, ally, enemy and neutral within a radius will gain bonus movement and attack speed and attack the chosen target for 6 seconds.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": true,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "BONUS ATTACK SPEED:",
+              "value": ["100"]
+            },
+            {
+              "name": "%BONUS MOVE SPEED:",
+              "value": ["100"]
+            },
+            {
+              "name": "RADIUS:",
+              "value": ["1200"]
+            },
+            {
+              "name": "MINIMUM ROOT DURATION:",
+              "value": ["2.0"]
+            },
+            {
+              "name": "ROOT DURATION PER UNIT:",
+              "value": ["0.5"]
+            }
+          ]
+        },
+        {
+          "name": "Untouchable",
+          "n": "enchantress_untouchable",
+          "tooltip": {
+            "description": "Enchantress beguiles her enemies, slowing their attacks when she is attacked.",
+            "lore": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "ATTACK SLOW:",
+              "value": ["-100", "-150", "-200"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_glimmer_cape",
+            "name": "Glimmer Cape",
+            "cooldown": "14.0",
+            "manacost": "90",
+            "cost": "2150",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Glimmer"
+              },
+              {
+                "tag": "text",
+                "val": "After a"
+              },
+              {
+                "tag": "b",
+                "val": "0.5"
+              },
+              {
+                "tag": "text",
+                "val": "second delay, grants invisibility,"
+              },
+              {
+                "tag": "b",
+                "val": "40"
+              },
+              {
+                "tag": "text",
+                "val": "movement speed and a magic damage barrier that absorbs up to"
+              },
+              {
+                "tag": "b",
+                "val": "300"
+              },
+              {
+                "tag": "text",
+                "val": "damage to you or a target allied unit for"
+              },
+              {
+                "tag": "b",
+                "val": "5"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "600"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Can be cast while channeling."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Magic Resistance": "25"
+            }
+          },
+          {
+            "n": "item_hurricane_pike",
+            "name": "Hurricane Pike",
+            "cooldown": "19.0",
+            "manacost": "150",
+            "cost": "4450",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Hurricane Thrust"
+              },
+              {
+                "tag": "text",
+                "val": "Pushes you and target enemy"
+              },
+              {
+                "tag": "b",
+                "val": "450"
+              },
+              {
+                "tag": "text",
+                "val": "units away from each other, and for"
+              },
+              {
+                "tag": "b",
+                "val": "6"
+              },
+              {
+                "tag": "text",
+                "val": "seconds, allows you to make"
+              },
+              {
+                "tag": "b",
+                "val": "5"
+              },
+              {
+                "tag": "text",
+                "val": "attacks against the target without range restrictions and with +"
+              },
+              {
+                "tag": "b",
+                "val": "100"
+              },
+              {
+                "tag": "text",
+                "val": "attack speed."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Can be cast on self or allies to push the target"
+              },
+              {
+                "tag": "b",
+                "val": "600"
+              },
+              {
+                "tag": "text",
+                "val": "units in the direction it is facing."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Enemy Range:"
+              },
+              {
+                "tag": "b",
+                "val": "450"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive:  Dragon's Reach"
+              },
+              {
+                "tag": "text",
+                "val": "Increases attack range of ranged heroes."
+              }
+            ],
+            "properties": {
+              "Intelligence": "15",
+              "Health": "200",
+              "Agility": "20",
+              "Strength": "15",
+              "Attack Range (Ranged Only)": "150"
+            }
+          },
+          {
+            "n": "item_wraith_band",
+            "name": "Wraith Band",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "505",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Agility": "5",
+              "Strength": "2",
+              "Intelligence": "2",
+              "Attack Speed": "5",
+              "Armor": "1.75"
+            }
+          },
+          {
+            "n": "item_wraith_band",
+            "name": "Wraith Band",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "505",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Agility": "5",
+              "Strength": "2",
+              "Intelligence": "2",
+              "Attack Speed": "5",
+              "Armor": "1.75"
+            }
+          },
+          {
+            "n": "item_boots",
+            "name": "Boots of Speed",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "500",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Movement Speed": "45"
+            }
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_paladin_sword",
+          "name": "Paladin Sword",
+          "cooldown": null,
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [
+            {
+              "tag": "h1",
+              "val": "Passive: Greater Healing"
+            },
+            {
+              "tag": "text",
+              "val": "Amplifies the wearer's Regeneration, Healing, Lifesteal and Spell Lifesteal by"
+            },
+            {
+              "tag": "b",
+              "val": "14"
+            },
+            {
+              "tag": "text",
+              "val": "%."
+            }
+          ],
+          "properties": {
+            "Damage": "16",
+            "Lifesteal": "16",
+            "Spell Lifesteal": "8"
+          }
+        }
+      },
+      "player": "Sneyking",
+      "level": 18,
+      "has_scepter": false,
+      "has_shard": false
+    },
+    {
+      "n": "npc_dota_hero_dragon_knight",
+      "name": "Dragon Knight",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "+15 Damage",
+              "picked": true
+            },
+            {
+              "name": "-30% Breathe Fire Damage Reduction",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+0.4s Dragon Tail Stun",
+              "picked": false
+            },
+            {
+              "name": "+300 Health",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+150 Elder Dragon Form Attack Range",
+              "picked": true
+            },
+            {
+              "name": "+85% Breathe Fire Damage/Cast Range in Dragon Form",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+12 Dragon Blood HP Regen/Armor",
+              "picked": false
+            },
+            {
+              "name": "+400 AoE Dragon Tail During Elder Dragon Form",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Breathe Fire",
+          "n": "dragon_knight_breathe_fire",
+          "tooltip": {
+            "description": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.\\n\\nApplies the debuff from Corrosive Breath and Frost Breath Dragon Form is of the corresponding level.",
+            "lore": "Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DAMAGE:",
+              "value": ["80", "160", "240", "320"]
+            },
+            {
+              "name": "%DAMAGE REDUCTION:",
+              "value": ["-30"]
+            },
+            {
+              "name": "REDUCTION DURATION:",
+              "value": ["11"]
+            }
+          ]
+        },
+        {
+          "name": "Dragon Tail",
+          "n": "dragon_knight_dragon_tail",
+          "tooltip": {
+            "description": "Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing damage based on their enemy max HP.  When in Elder Dragon Form, the cast range increases to 450.",
+            "lore": "Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "STUN DURATION:",
+              "value": ["1.8", "2.0", "2.2", "2.4"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["70", "100", "130", "160"]
+            }
+          ]
+        },
+        {
+          "name": "Dragon Blood",
+          "n": "dragon_knight_dragon_blood",
+          "tooltip": {
+            "description": "The life blood of the Dragon improves health regeneration and strengthens armor.",
+            "lore": "Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "HEALTH REGEN:",
+              "value": ["4", "7", "10", "13"]
+            },
+            {
+              "name": "ARMOR:",
+              "value": ["4", "7", "10", "13"]
+            }
+          ]
+        },
+        {
+          "name": "Fireball",
+          "n": "dragon_knight_fireball",
+          "tooltip": {
+            "description": "Ignites an area, dealing damage over time that lingers on enemies in it. Has reduced cast range when melee.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": true,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["350"]
+            },
+            {
+              "name": "DAMAGE PER SECOND:",
+              "value": ["75"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["8.0"]
+            },
+            {
+              "name": "LINGER DURATION:",
+              "value": ["2"]
+            },
+            {
+              "name": "DRAGON FORM CAST RANGE:",
+              "value": ["1400"]
+            },
+            {
+              "name": "MELEE CAST RANGE:",
+              "value": ["600"]
+            }
+          ]
+        },
+        {
+          "name": "Elder Dragon Form",
+          "n": "dragon_knight_elder_dragon_form",
+          "tooltip": {
+            "description": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed and Dragon Tail's range, while granting him new powers.\\nLEVEL 1 Green Dragon - Corrosive Breath: attacks deal 25 poison damage per second for 3.0 seconds. Works on structures.\\nLEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 350 radius for 75% damage, with Corrosive Breath added to the targets.\\nLEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 0% and attack speed by 0 of enemy units in Splash Attack range for 0 seconds, with Corrosive Breath added to the targets.",
+            "lore": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm.",
+            "scepter_description": "Increases the level of Dragon Knight's ultimate. Adds a 4th level, Black Dragon. Black Dragon has bonus Corrosive Damage, Splash Damage and Slow amount, 25% increased Magic Resistance and free pathing."
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DURATION:",
+              "value": ["60"]
+            },
+            {
+              "name": "BONUS MOVE SPEED:",
+              "value": ["30", "35", "40", "45"]
+            },
+            {
+              "name": "BONUS ATTACK RANGE:",
+              "value": ["350", "350", "350", "350"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_black_king_bar",
+            "name": "Black King Bar",
+            "cooldown": "95",
+            "manacost": "50",
+            "cost": "4050",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Avatar"
+              },
+              {
+                "tag": "text",
+                "val": "Applies a basic dispel. Grants"
+              },
+              {
+                "tag": "b",
+                "val": "60"
+              },
+              {
+                "tag": "text",
+                "val": "% Magic resistance and immunity to pure and reflected damage. For the duration of the effect, any negative effect from enemy spells has no effect."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Duration:"
+              },
+              {
+                "tag": "b",
+                "val": "9 8 7 6"
+              },
+              {
+                "tag": "text",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Dispel Type:"
+              },
+              {
+                "tag": "b",
+                "val": "Basic Dispel"
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Strength": "10",
+              "Damage": "24"
+            }
+          },
+          {
+            "n": "item_blink",
+            "name": "Blink Dagger",
+            "cooldown": "15.0",
+            "manacost": "0",
+            "cost": "2250",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Blink"
+              },
+              {
+                "tag": "text",
+                "val": "Teleport to a target point up to"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              },
+              {
+                "tag": "text",
+                "val": "units away."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Blink Dagger cannot be used for"
+              },
+              {
+                "tag": "b",
+                "val": "3.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds after taking damage from an enemy hero or Roshan."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {}
+          },
+          {
+            "n": "item_manta",
+            "name": "Manta Style",
+            "cooldown": "34.0",
+            "manacost": "125",
+            "cost": "4550",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Mirror Image"
+              },
+              {
+                "tag": "text",
+                "val": "Creates"
+              },
+              {
+                "tag": "b",
+                "val": "2"
+              },
+              {
+                "tag": "text",
+                "val": "images of your hero that last"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Melee images deal"
+              },
+              {
+                "tag": "b",
+                "val": "33"
+              },
+              {
+                "tag": "text",
+                "val": "% damage, while Ranged images deal"
+              },
+              {
+                "tag": "b",
+                "val": "28"
+              },
+              {
+                "tag": "text",
+                "val": "%. Illusions take"
+              },
+              {
+                "tag": "b",
+                "val": "300"
+              },
+              {
+                "tag": "text",
+                "val": "% damage."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Dispel Type:"
+              },
+              {
+                "tag": "b",
+                "val": "Basic Dispel"
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Strength": "10",
+              "Agility": "26",
+              "Intelligence": "10",
+              "Attack Speed": "15",
+              "Movement Speed": "10"
+            }
+          },
+          {
+            "n": "item_power_treads",
+            "name": "Power Treads",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "1400",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Switch Attribute"
+              },
+              {
+                "tag": "text",
+                "val": "Switches between +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Strength, +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Agility, or +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Intelligence."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Move Speed (Ranged Heroes)": "45",
+              "Move Speed (Melee Heroes)": "55",
+              "Selected Attribute": "10",
+              "Attack Speed": "25"
+            }
+          },
+          {
+            "n": "item_ultimate_scepter",
+            "name": "Aghanim's Scepter",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "4200",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Ability Upgrade"
+              },
+              {
+                "tag": "text",
+                "val": "Upgrades the ultimate, and some abilities, of all heroes."
+              }
+            ],
+            "properties": {
+              "All Attributes": "10",
+              "Health": "175",
+              "Mana": "175"
+            }
+          },
+          {
+            "n": "item_mage_slayer",
+            "name": "Mage Slayer",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "2825",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Mage Slayer"
+              },
+              {
+                "tag": "text",
+                "val": "Places a debuff when you attack enemies, dealing"
+              },
+              {
+                "tag": "b",
+                "val": "25"
+              },
+              {
+                "tag": "text",
+                "val": "damage per second and causing them to do"
+              },
+              {
+                "tag": "b",
+                "val": "40"
+              },
+              {
+                "tag": "text",
+                "val": "% less spell damage for"
+              },
+              {
+                "tag": "b",
+                "val": "3"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              }
+            ],
+            "properties": {
+              "Magic Resistance": "20",
+              "Attack Speed": "45",
+              "Mana Regeneration": "2",
+              "Intelligence": "10"
+            }
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_vindicators_axe",
+          "name": "Vindicator's Axe",
+          "cooldown": null,
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [
+            {
+              "tag": "h1",
+              "val": "Passive: Vengeance"
+            },
+            {
+              "tag": "text",
+              "val": "Provides"
+            },
+            {
+              "tag": "b",
+              "val": "30"
+            },
+            {
+              "tag": "text",
+              "val": "damage if equipped hero is Silenced and"
+            },
+            {
+              "tag": "b",
+              "val": "20"
+            },
+            {
+              "tag": "text",
+              "val": "armor if equipped hero is Stunned."
+            }
+          ],
+          "properties": {
+            "Attack Speed": "35",
+            "Slow Resistance": "20"
+          }
+        }
+      },
+      "player": "skiter",
+      "level": 23,
+      "has_scepter": true,
+      "has_shard": false
+    },
+    {
+      "n": "npc_dota_hero_zuus",
+      "name": "Zeus",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "-4s Heavenly Jump Cooldown",
+              "picked": false
+            },
+            {
+              "name": "+250 Health",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+30 Movement Speed after Heavenly Jump",
+              "picked": false
+            },
+            {
+              "name": "+1 Heavenly Jump Target",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+6% Arc Lightning Current Health As Damage",
+              "picked": false
+            },
+            {
+              "name": "+0.5s Lightning Bolt Ministun",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "325 AoE Lightning Bolt",
+              "picked": false
+            },
+            {
+              "name": "+150 Thundergod's Wrath Flat Damage",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Arc Lightning",
+          "n": "zuus_arc_lightning",
+          "tooltip": {
+            "description": "Hurls a bolt of lightning that leaps through nearby enemy units that deal a base damage and a percentage of their current health.",
+            "lore": "Arc Lightning is Zeus' favorite spell to use against puny mortals.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "BASE DAMAGE:",
+              "value": ["85", "110", "135", "160"]
+            },
+            {
+              "name": "JUMPS:",
+              "value": ["5", "7", "9", "15"]
+            },
+            {
+              "name": "%CURRENT HEALTH AS DAMAGE:",
+              "value": ["3", "4", "5", "6"]
+            }
+          ]
+        },
+        {
+          "name": "Lightning Bolt",
+          "n": "zuus_lightning_bolt",
+          "tooltip": {
+            "description": "Calls down a bolt of lightning to strike an enemy unit, causing damage and a mini-stun. When cast, Lightning Bolt briefly provides unobstructed vision and True Sight around the target in a 750 radius. Can be cast on the ground, affecting the closest enemy hero in 325 range. Deals 100% more damage to creeps.",
+            "lore": "A shocking punishment for rebellious heathen.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "SIGHT RADIUS:",
+              "value": ["750"]
+            },
+            {
+              "name": "SIGHT DURATION:",
+              "value": ["5"]
+            },
+            {
+              "name": "MINISTUN DURATION:",
+              "value": ["0.35"]
+            }
+          ]
+        },
+        {
+          "name": "Heavenly Jump",
+          "n": "zuus_heavenly_jump",
+          "tooltip": {
+            "description": "Zeus performs a Heavenly Jump, leaping forward and shocking the closest visible nearby enemy (prioritizing heroes), dealing damage as well as reducing their movement and attack speed. Zeus gets 900 unobstructed vision around him for 3 seconds.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DAMAGE:",
+              "value": ["25", "50", "75", "100"]
+            },
+            {
+              "name": "DISTANCE:",
+              "value": ["500"]
+            },
+            {
+              "name": "RANGE:",
+              "value": ["700", "800", "900", "1000"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["1.6"]
+            },
+            {
+              "name": "%MOVE SPEED SLOW:",
+              "value": ["80"]
+            },
+            {
+              "name": "ATTACK SPEED SLOW:",
+              "value": ["100"]
+            },
+            {
+              "name": "TARGETS:",
+              "value": ["1"]
+            }
+          ]
+        },
+        {
+          "name": "Nimbus",
+          "n": "zuus_cloud",
+          "tooltip": {
+            "description": "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemies.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": true,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DURATION:",
+              "value": ["30"]
+            },
+            {
+              "name": "LIGHTNING BOLT BASE COOLDOWN:",
+              "value": ["2.5"]
+            },
+            {
+              "name": "RADIUS:",
+              "value": ["450"]
+            },
+            {
+              "name": "HITS TO DESTROY:",
+              "value": ["8"]
+            },
+            {
+              "name": "CREEP HITS TO DESTROY:",
+              "value": ["16"]
+            }
+          ]
+        },
+        {
+          "name": "Lightning Hands",
+          "n": "zuus_lightning_hands",
+          "tooltip": {
+            "description": "Zeus gains bonus attack range and his attacks create Arc Lightnings that deal a percentage of its damage. Can be toggled off to stop this effect.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": true,
+          "properties": [
+            {
+              "name": "BONUS ATTACK RANGE:",
+              "value": ["100"]
+            },
+            {
+              "name": "%ARC LIGHTNING DAMAGE:",
+              "value": ["50"]
+            },
+            {
+              "name": "%ARC LIGHTNING DAMAGE ILLUSIONS:",
+              "value": ["20"]
+            }
+          ]
+        },
+        {
+          "name": "Thundergod's Wrath",
+          "n": "zuus_thundergods_wrath",
+          "tooltip": {
+            "description": "Strikes all enemy heroes with a bolt of lightning, no matter where they may be. Does a flat amount of damage and additional damage based on the max health of the target.\\n\\nThundergod's Wrath also provides True Sight around each hero struck.  If an enemy hero is invisible, it takes no damage, but the True Sight is still created at that hero's location.",
+            "lore": "The Lord of Heaven smites all who oppose him, near or far.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "TRUE SIGHT RADIUS:",
+              "value": ["500"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["3.0", "3.0", "3.0", "3.0"]
+            },
+            {
+              "name": "FLAT DAMAGE:",
+              "value": ["300", "425", "550"]
+            },
+            {
+              "name": "%MAX HP AS DAMAGE:",
+              "value": ["5", "7.5", "10"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_kaya",
+            "name": "Kaya",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "2000",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Intelligence": "16",
+              "%Spell Amplification": "10",
+              "%Mana Regen Amplification": "50",
+              "%Spell Lifesteal Amplification": "20"
+            }
+          },
+          {
+            "n": "item_arcane_boots",
+            "name": "Arcane Boots",
+            "cooldown": "55.0",
+            "manacost": "0",
+            "cost": "1300",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Replenish Mana"
+              },
+              {
+                "tag": "text",
+                "val": "Restores"
+              },
+              {
+                "tag": "b",
+                "val": "175"
+              },
+              {
+                "tag": "text",
+                "val": "mana to all nearby allies."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Radius:"
+              },
+              {
+                "tag": "b",
+                "val": "UNKNOWN"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Basilius Aura"
+              },
+              {
+                "tag": "text",
+                "val": "Grants"
+              },
+              {
+                "tag": "b",
+                "val": "1"
+              },
+              {
+                "tag": "text",
+                "val": "mana regeneration to allies."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Radius:"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              }
+            ],
+            "properties": {
+              "Movement Speed": "45",
+              "Mana Regeneration": "0.75"
+            }
+          },
+          {
+            "n": "item_ethereal_blade",
+            "name": "Ethereal Blade",
+            "cooldown": "22.0",
+            "manacost": "100",
+            "cost": "5375",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Ether Blast"
+              },
+              {
+                "tag": "text",
+                "val": "Converts the target unit to ethereal form, rendering them immune to physical damage, but unable to attack and"
+              },
+              {
+                "tag": "b",
+                "val": "-40"
+              },
+              {
+                "tag": "text",
+                "val": "% more vulnerable to magic damage."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Enemy targets are also slowed by"
+              },
+              {
+                "tag": "b",
+                "val": "-80"
+              },
+              {
+                "tag": "text",
+                "val": "%, and take"
+              },
+              {
+                "tag": "b",
+                "val": "1.5"
+              },
+              {
+                "tag": "text",
+                "val": "x your target's primary attribute +"
+              },
+              {
+                "tag": "b",
+                "val": "50"
+              },
+              {
+                "tag": "text",
+                "val": "as magical damage."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "800"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Duration:"
+              },
+              {
+                "tag": "b",
+                "val": "4.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds"
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "All Attributes": "8",
+              "Mana": "300",
+              "Cast Range": "250",
+              "Mana Regeneration": "3"
+            }
+          },
+          {
+            "n": "item_null_talisman",
+            "name": "Null Talisman",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "505",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Intelligence": "5",
+              "Strength": "2",
+              "Agility": "2",
+              "Max Mana Bonus": "3",
+              "Mana Regeneration": "1.0"
+            }
+          },
+          {
+            "n": "item_phylactery",
+            "name": "Phylactery",
+            "cooldown": "6.0",
+            "manacost": null,
+            "cost": "2400",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Empower Spell"
+              },
+              {
+                "tag": "text",
+                "val": "The next Unit Target spell you cast on an enemy deals a separate"
+              },
+              {
+                "tag": "b",
+                "val": "150"
+              },
+              {
+                "tag": "text",
+                "val": "bonus damage to the target, and slows them by"
+              },
+              {
+                "tag": "b",
+                "val": "50"
+              },
+              {
+                "tag": "text",
+                "val": "% for"
+              },
+              {
+                "tag": "b",
+                "val": "1.5"
+              },
+              {
+                "tag": "text",
+                "val": "s."
+              }
+            ],
+            "properties": {
+              "Health": "200",
+              "Mana": "200",
+              "All Attributes": "7"
+            }
+          },
+          {
+            "n": "item_ultimate_scepter",
+            "name": "Aghanim's Scepter",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "4200",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Ability Upgrade"
+              },
+              {
+                "tag": "text",
+                "val": "Upgrades the ultimate, and some abilities, of all heroes."
+              }
+            ],
+            "properties": {
+              "All Attributes": "10",
+              "Health": "175",
+              "Mana": "175"
+            }
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_craggy_coat",
+          "name": "Craggy Coat",
+          "cooldown": "12",
+          "manacost": null,
+          "cost": "0",
+          "active": [
+            {
+              "tag": "h1",
+              "val": "Active: Toughen Up"
+            },
+            {
+              "tag": "text",
+              "val": "Grants you an extra"
+            },
+            {
+              "tag": "b",
+              "val": "12"
+            },
+            {
+              "tag": "text",
+              "val": "bonus armor at the cost of -"
+            },
+            {
+              "tag": "b",
+              "val": "30"
+            },
+            {
+              "tag": "text",
+              "val": "movement speed. Lasts"
+            },
+            {
+              "tag": "b",
+              "val": "8"
+            },
+            {
+              "tag": "text",
+              "val": "seconds."
+            }
+          ],
+          "use": [],
+          "passive": [],
+          "properties": {
+            "Armor": "8",
+            "Health": "150"
+          }
+        }
+      },
+      "player": "Nine",
+      "level": 18,
+      "has_scepter": true,
+      "has_shard": false
+    },
+    {
+      "n": "npc_dota_hero_shredder",
+      "name": "Timbersaw",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "+0.2 Reactive Armor Regeneration Per Stack",
+              "picked": false
+            },
+            {
+              "name": "+1.5 Mana Regen",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+2.5% Whirling Death Stat Loss",
+              "picked": true
+            },
+            {
+              "name": "+6 Max / +1 Hero Attack Reactive Armor Stacks",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+20% Magic Resistance",
+              "picked": true
+            },
+            {
+              "name": "+4% Chakram Slow",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "Second Chakram",
+              "picked": true
+            },
+            {
+              "name": "+1125 Timber Chain Range",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Whirling Death",
+          "n": "shredder_whirling_death",
+          "tooltip": {
+            "description": "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area.  If an enemy hero is affected, it loses some of its primary attribute for a short duration.  Whirling Death will deal bonus damage per tree destroyed.",
+            "lore": "In the case that Rizzrack gets surrounded by the vines and plants of his nightmares, he has an immediate chainsaw defense.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["325"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["85", "130", "175", "220"]
+            },
+            {
+              "name": "TREE BONUS DAMAGE:",
+              "value": ["11", "18", "25", "32"]
+            },
+            {
+              "name": "%STAT LOSS PERCENT:",
+              "value": ["13"]
+            },
+            {
+              "name": "STAT LOSS DURATION:",
+              "value": ["12", "13", "14", "15"]
+            }
+          ]
+        },
+        {
+          "name": "Timber Chain",
+          "n": "shredder_timber_chain",
+          "tooltip": {
+            "description": "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it.  Any enemy in the path takes damage.",
+            "lore": "You never know when you might need to escape from malevolent saplings.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "LATCH RANGE:",
+              "value": ["750", "900", "1050", "1200"]
+            },
+            {
+              "name": "RADIUS:",
+              "value": ["225", "225", "225", "225"]
+            },
+            {
+              "name": "SPEED:",
+              "value": ["2200", "2400", "2600", "2800"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["50", "95", "140", "185"]
+            }
+          ]
+        },
+        {
+          "name": "Reactive Armor",
+          "n": "shredder_reactive_armor",
+          "tooltip": {
+            "description": "Each time Timbersaw is attacked, he gains increased health regen and armor. Hero attacks are counted as 3x the amount.",
+            "lore": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "BONUS ARMOR:",
+              "value": ["0.4", "0.5", "0.6", "0.7"]
+            },
+            {
+              "name": "BONUS HP REGEN:",
+              "value": ["0.3", "0.4", "0.5", "0.6"]
+            },
+            {
+              "name": "MAX STACKS:",
+              "value": ["12", "22", "32", "42"]
+            },
+            {
+              "name": "STACK DURATION:",
+              "value": ["10", "12", "14", "16"]
+            }
+          ]
+        },
+        {
+          "name": "Second Chakram",
+          "n": "shredder_chakram_2",
+          "tooltip": {
+            "description": "Launches a second independent Chakram.",
+            "lore": "Cut cut cut cut cut cut cut cut cut cut cut!",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": []
+        },
+        {
+          "name": "Flamethrower",
+          "n": "shredder_flamethrower",
+          "tooltip": {
+            "description": "Releases a flame in the direction Timbersaw is facing. Applies a debuff that deals damage per second and slows enemy movement speed. Affects buildings for reduced damage.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": true,
+          "properties": [
+            {
+              "name": "DAMAGE PER SECOND:",
+              "value": ["70"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["8"]
+            },
+            {
+              "name": "WIDTH:",
+              "value": ["275"]
+            },
+            {
+              "name": "RANGE:",
+              "value": ["400"]
+            },
+            {
+              "name": "%MOVE SLOW:",
+              "value": ["30"]
+            },
+            {
+              "name": "%BUILDING DAMAGE:",
+              "value": ["40"]
+            },
+            {
+              "name": "DEBUFF LINGER TIME:",
+              "value": ["2.0"]
+            }
+          ]
+        },
+        {
+          "name": "Chakram",
+          "n": "shredder_chakram",
+          "tooltip": {
+            "description": "Fires Timbersaw's main saw blade at the target location where it will spin in place, dealing damage in an area around it.  Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and Timbersaw loses the ability to attack.",
+            "lore": "The ultimate in anti-flora weaponry.",
+            "scepter_description": "Increases Chakram and Second Chakram damage per second."
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["200"]
+            },
+            {
+              "name": "PASS DAMAGE:",
+              "value": ["110", "155", "200"]
+            },
+            {
+              "name": "DAMAGE PER SECOND:",
+              "value": ["50", "75", "100"]
+            },
+            {
+              "name": "%SLOW:",
+              "value": ["5"]
+            },
+            {
+              "name": "MANA COST PER SECOND:",
+              "value": ["14", "22", "30"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_arcane_boots",
+            "name": "Arcane Boots",
+            "cooldown": "55.0",
+            "manacost": "0",
+            "cost": "1300",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Replenish Mana"
+              },
+              {
+                "tag": "text",
+                "val": "Restores"
+              },
+              {
+                "tag": "b",
+                "val": "175"
+              },
+              {
+                "tag": "text",
+                "val": "mana to all nearby allies."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Radius:"
+              },
+              {
+                "tag": "b",
+                "val": "UNKNOWN"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Basilius Aura"
+              },
+              {
+                "tag": "text",
+                "val": "Grants"
+              },
+              {
+                "tag": "b",
+                "val": "1"
+              },
+              {
+                "tag": "text",
+                "val": "mana regeneration to allies."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Radius:"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              }
+            ],
+            "properties": {
+              "Movement Speed": "45",
+              "Mana Regeneration": "0.75"
+            }
+          },
+          {
+            "n": "item_shivas_guard",
+            "name": "Shiva's Guard",
+            "cooldown": "27",
+            "manacost": "75",
+            "cost": "5175",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Arctic Blast"
+              },
+              {
+                "tag": "text",
+                "val": "Emits a freezing wave that causes enemies to take"
+              },
+              {
+                "tag": "b",
+                "val": "15"
+              },
+              {
+                "tag": "text",
+                "val": "% more damage from spells for"
+              },
+              {
+                "tag": "b",
+                "val": "16.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds, deals"
+              },
+              {
+                "tag": "b",
+                "val": "200"
+              },
+              {
+                "tag": "text",
+                "val": "magical damage and slows their movement by"
+              },
+              {
+                "tag": "b",
+                "val": "-40"
+              },
+              {
+                "tag": "text",
+                "val": "% for"
+              },
+              {
+                "tag": "b",
+                "val": "4.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds. Deals"
+              },
+              {
+                "tag": "b",
+                "val": "150"
+              },
+              {
+                "tag": "text",
+                "val": "% damage to illusions."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Radius:"
+              },
+              {
+                "tag": "b",
+                "val": "UNKNOWN"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Freezing Aura"
+              },
+              {
+                "tag": "text",
+                "val": "Reduces the attack speed of all enemies by"
+              },
+              {
+                "tag": "b",
+                "val": "-45"
+              },
+              {
+                "tag": "text",
+                "val": "and all heals, regeneration and lifesteal by"
+              },
+              {
+                "tag": "b",
+                "val": "25"
+              },
+              {
+                "tag": "text",
+                "val": "%."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Radius:"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              }
+            ],
+            "properties": {
+              "Intelligence": "5",
+              "Strength": "5",
+              "Agility": "5",
+              "Health Regeneration": "5",
+              "Armor": "15"
+            }
+          },
+          {
+            "n": "item_octarine_core",
+            "name": "Octarine Core",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "4800",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Cooldown Reduction"
+              },
+              {
+                "tag": "text",
+                "val": "Reduces the cooldown time of all spells and items."
+              }
+            ],
+            "properties": {
+              "Cooldown Reduction": "25",
+              "Health": "625",
+              "Mana": "625",
+              "Mana Regeneration": "6"
+            }
+          },
+          {
+            "n": "item_eternal_shroud",
+            "name": "Eternal Shroud",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "3600",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Shroud"
+              },
+              {
+                "tag": "text",
+                "val": "Restores mana equal to"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "% of incoming enemy spell damage before reductions."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "b",
+                "val": "Passive: Eternal Endurance"
+              },
+              {
+                "tag": "text",
+                "val": "For every"
+              },
+              {
+                "tag": "b",
+                "val": "300"
+              },
+              {
+                "tag": "text",
+                "val": "spell damage that equipped hero receives, it gains a stack of Endurance for"
+              },
+              {
+                "tag": "b",
+                "val": "6"
+              },
+              {
+                "tag": "text",
+                "val": "s up to a maximum of"
+              },
+              {
+                "tag": "b",
+                "val": "6"
+              },
+              {
+                "tag": "text",
+                "val": "charges. Each charge increases Eternal Shroud's magic resistance by"
+              },
+              {
+                "tag": "b",
+                "val": "4"
+              },
+              {
+                "tag": "text",
+                "val": "% ."
+              }
+            ],
+            "properties": {
+              "Magic Resistance": "25",
+              "Strength": "14",
+              "Health": "250"
+            }
+          },
+          {
+            "n": "item_kaya_and_sange",
+            "name": "Kaya and Sange",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "4000",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Strength": "16",
+              "Intelligence": "16",
+              "%Status Resistance": "25",
+              "%Mana Regen Amplification": "50",
+              "%Spell Amplification": "12",
+              "%Health Regen and Lifesteal Amp": "25",
+              "%Spell Lifesteal Amplification": "25"
+            }
+          },
+          {
+            "n": "item_gem",
+            "name": "Gem of True Sight",
+            "cooldown": "12",
+            "manacost": null,
+            "cost": "900",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Reveal"
+              },
+              {
+                "tag": "text",
+                "val": "Gives True Sight over a"
+              },
+              {
+                "tag": "b",
+                "val": "UNKNOWN"
+              },
+              {
+                "tag": "text",
+                "val": "radius revealing wards and units even in Fog of War."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: True Sight"
+              },
+              {
+                "tag": "text",
+                "val": "Grants the ability to see invisible units and wards to any allied vision within"
+              },
+              {
+                "tag": "b",
+                "val": "900"
+              },
+              {
+                "tag": "text",
+                "val": "range of its carrier."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "b",
+                "val": "Passive: Everlasting"
+              },
+              {
+                "tag": "text",
+                "val": "Dropped on death, and cannot be destroyed."
+              }
+            ],
+            "properties": {}
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_dandelion_amulet",
+          "name": "Dandelion Amulet",
+          "cooldown": "12",
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [
+            {
+              "tag": "h1",
+              "val": "Passive: Magical Damage Block"
+            },
+            {
+              "tag": "text",
+              "val": "Every %AbilityCooldown%s, blocks up to"
+            },
+            {
+              "tag": "b",
+              "val": "300"
+            },
+            {
+              "tag": "text",
+              "val": "magic damage from damage instances over"
+            },
+            {
+              "tag": "b",
+              "val": "75"
+            },
+            {
+              "tag": "text",
+              "val": "damage."
+            }
+          ],
+          "properties": {
+            "Movement Speed": "25",
+            "Mana": "300"
+          }
+        }
+      },
+      "player": "AMMAR_THE_F",
+      "level": 25,
+      "has_scepter": false,
+      "has_shard": false
+    },
+    {
+      "n": "npc_dota_hero_dark_willow",
+      "name": "Dark Willow",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "+0.5s Cursed Crown Stun Duration",
+              "picked": true
+            },
+            {
+              "name": "-2s Shadow Realm Cooldown",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+30 Bedlam Damage",
+              "picked": true
+            },
+            {
+              "name": "+160 Cursed Crown AoE",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+1.5s Shadow Realm Duration",
+              "picked": false
+            },
+            {
+              "name": "-7s Bramble Maze CD",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+100 Attack Speed",
+              "picked": false
+            },
+            {
+              "name": "+2 Bedlam Attack Targets",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Bramble Maze",
+          "n": "dark_willow_bramble_maze",
+          "tooltip": {
+            "description": "Dark Willow creates a maze of brambles that grow in the target area after 0.3 seconds.  Enemies that walk into a bramble are rooted and take damage over time.",
+            "lore": "The fae realm exists all around you, merely waiting to draw you in...",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "MAZE RADIUS:",
+              "value": ["500"]
+            },
+            {
+              "name": "BRAMBLE COUNT:",
+              "value": ["8"]
+            },
+            {
+              "name": "PLACEMENT DURATION:",
+              "value": ["15"]
+            },
+            {
+              "name": "LATCH ROOT DURATION:",
+              "value": ["1.0", "1.5", "2.0", "2.5"]
+            },
+            {
+              "name": "BRAMBLE LATCH RADIUS:",
+              "value": ["90"]
+            },
+            {
+              "name": "DAMAGE PER TICK:",
+              "value": ["50", "55", "60", "65"]
+            }
+          ]
+        },
+        {
+          "name": "Shadow Realm",
+          "n": "dark_willow_shadow_realm",
+          "tooltip": {
+            "description": "Dark Willow recedes into the shadows, becoming untargetable.  Her next attack has increased attack range and deals bonus magic damage, and will end Shadow Realm. Damage scales based on how long she remains under the effects of Shadow Realm, the maximum being reached after 3.0 seconds.",
+            "lore": "What you can't see will most definitely hurt you.",
+            "scepter_description": "Attacking no longer takes Dark Willow out of Shadow Realm. Each attack still has bonus damage based on the duration of the buff."
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DURATION:",
+              "value": ["5"]
+            },
+            {
+              "name": "MAX DAMAGE:",
+              "value": ["120", "200", "280", "360"]
+            },
+            {
+              "name": "ATTACK RANGE BONUS:",
+              "value": ["600"]
+            },
+            {
+              "name": "DURATION UNTIL MAX DAMAGE:",
+              "value": ["3.0"]
+            }
+          ]
+        },
+        {
+          "name": "Cursed Crown",
+          "n": "dark_willow_cursed_crown",
+          "tooltip": {
+            "description": "Dark Willow casts an ancient fae curse on the target. After a delay, the target and nearby enemies are stunned.",
+            "lore": "Didn't anyone ever tell you? Never strike a deal with a fairy...",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": true,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DELAY:",
+              "value": ["4"]
+            },
+            {
+              "name": "STUN DURATION:",
+              "value": ["1.2", "1.6", "2.0", "2.4"]
+            },
+            {
+              "name": "STUN RADIUS:",
+              "value": ["360"]
+            }
+          ]
+        },
+        {
+          "name": "Bedlam",
+          "n": "dark_willow_bedlam",
+          "tooltip": {
+            "description": "Dark Willow sends her pet wisp to roam around an ally for the duration, rapidly attacking nearby enemies.  Bedlam cannot be used while Terrorize is active.",
+            "lore": "You'll have to excuse my friend Jex. He's really into murder.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "ATTACK DAMAGE:",
+              "value": ["70", "120", "170"]
+            },
+            {
+              "name": "ATTACK INTERVAL:",
+              "value": ["0.25"]
+            },
+            {
+              "name": "ATTACK RADIUS:",
+              "value": ["300"]
+            },
+            {
+              "name": "ATTACK TARGETS:",
+              "value": ["1"]
+            },
+            {
+              "name": "ROAMING RADIUS:",
+              "value": ["200"]
+            },
+            {
+              "name": "ROAMING DURATION:",
+              "value": ["5.5"]
+            }
+          ]
+        },
+        {
+          "name": "Terrorize",
+          "n": "dark_willow_terrorize",
+          "tooltip": {
+            "description": "Dark Willow releases her pet wisp to terrorize her enemies. After a short delay, all enemies in the target area become fearful and run toward their home fountain. Terrorize cannot be used while Bedlam is active.",
+            "lore": "You think you know the first thing about fear? Jex'll show you what that word truly means...",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "FEAR DURATION:",
+              "value": ["2.8", "3.0", "3.2"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_blink",
+            "name": "Blink Dagger",
+            "cooldown": "15.0",
+            "manacost": "0",
+            "cost": "2250",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Blink"
+              },
+              {
+                "tag": "text",
+                "val": "Teleport to a target point up to"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              },
+              {
+                "tag": "text",
+                "val": "units away."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Blink Dagger cannot be used for"
+              },
+              {
+                "tag": "b",
+                "val": "3.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds after taking damage from an enemy hero or Roshan."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {}
+          },
+          {
+            "n": "item_sheepstick",
+            "name": "Scythe of Vyse",
+            "cooldown": "20.0",
+            "manacost": "250",
+            "cost": "5200",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Hex"
+              },
+              {
+                "tag": "text",
+                "val": "Turns a target unit into a harmless critter for"
+              },
+              {
+                "tag": "b",
+                "val": "2.8"
+              },
+              {
+                "tag": "text",
+                "val": "seconds. The target has a base movement speed of"
+              },
+              {
+                "tag": "b",
+                "val": "140"
+              },
+              {
+                "tag": "text",
+                "val": "and will be silenced, muted, and disarmed."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Instantly destroys illusions."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "800"
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Intelligence": "30",
+              "Mana Regeneration": "8.5"
+            }
+          },
+          {
+            "n": "item_cyclone",
+            "name": "Eul's Scepter of Divinity",
+            "cooldown": "23.0",
+            "manacost": "175",
+            "cost": "2625",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Cyclone"
+              },
+              {
+                "tag": "text",
+                "val": "Sweeps a target unit up into a cyclone, making them invulnerable for"
+              },
+              {
+                "tag": "b",
+                "val": "2.5"
+              },
+              {
+                "tag": "text",
+                "val": "seconds. Cyclone can only be cast on enemy units or yourself."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Enemy units take"
+              },
+              {
+                "tag": "b",
+                "val": "50"
+              },
+              {
+                "tag": "text",
+                "val": "magical damage upon landing."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "550"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Dispel Type:"
+              },
+              {
+                "tag": "b",
+                "val": "Basic Dispel"
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Intelligence": "10",
+              "Mana Regeneration": "2.5",
+              "Movement Speed": "20"
+            }
+          },
+          {
+            "n": "item_great_famango",
+            "name": "Great Healing Lotus",
+            "cooldown": "5",
+            "manacost": null,
+            "cost": "0",
+            "active": [],
+            "use": [
+              {
+                "tag": "h1",
+                "val": "Use: Eat Lotus"
+              },
+              {
+                "tag": "text",
+                "val": "Instantly restores"
+              },
+              {
+                "tag": "b",
+                "val": "400"
+              },
+              {
+                "tag": "text",
+                "val": "health and mana."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "400"
+              }
+            ],
+            "passive": [],
+            "properties": {}
+          },
+          {
+            "n": "item_tranquil_boots",
+            "name": "Tranquil Boots",
+            "cooldown": "13.0",
+            "manacost": "0",
+            "cost": "925",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Break"
+              },
+              {
+                "tag": "text",
+                "val": "Whenever you attack a hero or are attacked by any unit, the bonus"
+              },
+              {
+                "tag": "b",
+                "val": "14"
+              },
+              {
+                "tag": "text",
+                "val": "HP regen is lost and the movement speed bonus is reduced to"
+              },
+              {
+                "tag": "b",
+                "val": "40"
+              },
+              {
+                "tag": "text",
+                "val": "for"
+              },
+              {
+                "tag": "b",
+                "val": "13"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              }
+            ],
+            "properties": {
+              "Movement Speed": "65",
+              "Health Regeneration": "14"
+            }
+          },
+          {
+            "n": "item_smoke_of_deceit",
+            "name": "Smoke of Deceit",
+            "cooldown": "1.0",
+            "manacost": null,
+            "cost": "50",
+            "active": [],
+            "use": [
+              {
+                "tag": "h1",
+                "val": "Use: Disguise"
+              },
+              {
+                "tag": "text",
+                "val": "Turns the caster and all allied player-controlled units in a"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              },
+              {
+                "tag": "text",
+                "val": "radius invisible, and grants"
+              },
+              {
+                "tag": "b",
+                "val": "15"
+              },
+              {
+                "tag": "text",
+                "val": "% bonus movement speed for"
+              },
+              {
+                "tag": "b",
+                "val": "45.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "While the caster is still disguised, any allies that come within"
+              },
+              {
+                "tag": "b",
+                "val": "300"
+              },
+              {
+                "tag": "text",
+                "val": "range of them will also get the buff applied to them. Each smoke can only be applied once to allies."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Attacking or moving within"
+              },
+              {
+                "tag": "b",
+                "val": "1025"
+              },
+              {
+                "tag": "text",
+                "val": "range of an enemy hero or tower, will break the invisibility."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Disguise grants invisibility that is immune to True Sight."
+              }
+            ],
+            "passive": [],
+            "properties": {}
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_philosophers_stone",
+          "name": "Philosopher's Stone",
+          "cooldown": null,
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [],
+          "properties": {
+            "GPM BONUS": "75",
+            "Mana": "200",
+            "Attack Damage": "-30"
+          }
+        }
+      },
+      "player": "Cr1t-",
+      "level": 20,
+      "has_scepter": false,
+      "has_shard": true
+    },
+    {
+      "n": "npc_dota_hero_rattletrap",
+      "name": "Clockwerk",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "-2s Rocket Flare Cooldown",
+              "picked": true
+            },
+            {
+              "name": "-3s Power Cogs Cooldown",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+2 Power Cogs Hit To Kill",
+              "picked": true
+            },
+            {
+              "name": "+24 Battery Assault Damage",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "Rocket Flare True Sight",
+              "picked": false
+            },
+            {
+              "name": "+75 Rocket Flare Damage",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "Debuff Immunity Inside Power Cogs",
+              "picked": false
+            },
+            {
+              "name": "-0.25s Battery Assault Interval",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battery Assault",
+          "n": "rattletrap_battery_assault",
+          "tooltip": {
+            "description": "Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and ministun. Deals double damage to creeps.",
+            "lore": "Some of Rattletrap's contraptions don't quite work correctly, so detonating them proves useful as an offensive maneuver.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["275", "275", "275", "275"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["10.5", "10.5", "10.5", "10.5"]
+            },
+            {
+              "name": "INTERVAL:",
+              "value": ["0.7", "0.7", "0.7", "0.7"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["20", "45", "70", "95"]
+            }
+          ]
+        },
+        {
+          "name": "Power Cogs",
+          "n": "rattletrap_power_cogs",
+          "tooltip": {
+            "description": "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near. Allies in the cogs when they are created receive a magic damage barrier. Enemies outside the trap that touch a cog are knocked back, losing health and mana. Damage is increased by 50% of the mana burned.\\n\\nOnce a cog has delivered a shock, it will power down.  Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one.",
+            "lore": "One of Clockwerk's inventions of which he is most proud is the power cog - though it is sometimes despised by his allies.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DURATION:",
+              "value": ["5.0", "6.0", "7.0", "8.0"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["50", "125", "200", "275"]
+            },
+            {
+              "name": "MANA BURN:",
+              "value": ["50", "80", "110", "140"]
+            },
+            {
+              "name": "MAGIC BARRIER:",
+              "value": ["50", "100", "150", "200"]
+            },
+            {
+              "name": "ATTACKS REQUIRED:",
+              "value": ["2"]
+            }
+          ]
+        },
+        {
+          "name": "Rocket Flare",
+          "n": "rattletrap_rocket_flare",
+          "tooltip": {
+            "description": "Fires a global range flare that explodes over a given area. Upon impact, enemies in the area take damage and are briefly slowed. Rocket flare provides vision over the impact area for 6.0 seconds.",
+            "lore": "What started as a festive display has become a useful scouting and bombardment tool.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["600"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["80", "120", "160", "200"]
+            },
+            {
+              "name": "%MOVEMENT SLOW:",
+              "value": ["100"]
+            },
+            {
+              "name": "SLOW DURATION:",
+              "value": ["0.4"]
+            }
+          ]
+        },
+        {
+          "name": "Overclocking",
+          "n": "rattletrap_overclocking",
+          "tooltip": {
+            "description": "Supercharges Clockwerks abilities: Battery Assault affects all enemies in its range; Clockwerk's attack speed in Power Cogs is increased; Rocket Flares have a reduced cooldown and fire additional rockets to either side of the target; Hookshot stun radius and duration is increased; Jetpack moves faster. Clockwerk's movement and attack speed becomes slowed to a crawl after the duration runs out.",
+            "lore": "Rattletrap understands the limitations of his armor. Just as he understands the risks of pushing past them in times of need.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": true,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DURATION:",
+              "value": ["13"]
+            },
+            {
+              "name": "COGS BONUS ATTACK SPEED:",
+              "value": ["250"]
+            },
+            {
+              "name": "SELF STUN DURATION:",
+              "value": ["3"]
+            },
+            {
+              "name": "%HOOKSHOT RADIUS BONUS:",
+              "value": ["50"]
+            },
+            {
+              "name": "%HOOKSHOT DURATION BONUS:",
+              "value": ["50"]
+            },
+            {
+              "name": "BONUS ROCKET FLARES:",
+              "value": ["2"]
+            },
+            {
+              "name": "ROCKET FLARE COOLDOWN:",
+              "value": ["3"]
+            },
+            {
+              "name": "%JETPACK SPEED:",
+              "value": ["40"]
+            }
+          ]
+        },
+        {
+          "name": "Jetpack",
+          "n": "rattletrap_jetpack",
+          "tooltip": {
+            "description": "Clockwerk activates a jetpack, gaining flying movement, flying vision, and bonus movement speed. Clockwerk has a severely-limited turn rate during this time and cannot attack. Jetpack is cancelled upon casting Hookshot.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": true,
+          "granted_by_scepter": false,
+          "granted_by_shard": true,
+          "properties": [
+            {
+              "name": "%BONUS SPEED:",
+              "value": ["20"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["6"]
+            }
+          ]
+        },
+        {
+          "name": "Hookshot",
+          "n": "rattletrap_hookshot",
+          "tooltip": {
+            "description": "Fires a grappling device rapidly at the target location.  If the hook hits a unit, Clockwerk launches himself into the target, stunning and dealing damage to everyone in a 175 radius around the hit target.  Any enemies Clockwerk collides with along the way are damaged and stunned.",
+            "lore": "A somewhat unwieldy device, the Hookshot sends the otherwise clunky Clockwerk armor flying through the air.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "STUN DURATION:",
+              "value": ["1.2", "1.4", "1.6"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["75", "175", "275"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_ward_dispenser",
+            "name": "Observer and Sentry Wards",
+            "cooldown": "0",
+            "manacost": null,
+            "cost": "50",
+            "active": [],
+            "use": [
+              {
+                "tag": "h1",
+                "val": "Use: Plant"
+              },
+              {
+                "tag": "text",
+                "val": "Plant the currently active ward.  Double-Click to switch the currently active ward."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "500"
+              }
+            ],
+            "passive": [],
+            "properties": {
+              "OBSERVER VISION RANGE:": "1200",
+              "OBSERVER DURATION (MINUTES):": "6",
+              "SENTRY DURATION (MINUTES):": "8",
+              "SENTRY TRUE SIGHT RANGE:": "1000"
+            }
+          },
+          {
+            "n": "item_tranquil_boots",
+            "name": "Tranquil Boots",
+            "cooldown": "13.0",
+            "manacost": "0",
+            "cost": "925",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Break"
+              },
+              {
+                "tag": "text",
+                "val": "Whenever you attack a hero or are attacked by any unit, the bonus"
+              },
+              {
+                "tag": "b",
+                "val": "14"
+              },
+              {
+                "tag": "text",
+                "val": "HP regen is lost and the movement speed bonus is reduced to"
+              },
+              {
+                "tag": "b",
+                "val": "40"
+              },
+              {
+                "tag": "text",
+                "val": "for"
+              },
+              {
+                "tag": "b",
+                "val": "13"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              }
+            ],
+            "properties": {
+              "Movement Speed": "65",
+              "Health Regeneration": "14"
+            }
+          },
+          {
+            "n": "item_spirit_vessel",
+            "name": "Spirit Vessel",
+            "cooldown": "7.0",
+            "manacost": null,
+            "cost": "2780",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Soul Release"
+              },
+              {
+                "tag": "text",
+                "val": "When used against enemies, it reduces health by"
+              },
+              {
+                "tag": "b",
+                "val": "4"
+              },
+              {
+                "tag": "text",
+                "val": "% of current health per second, and reduces HP regeneration, healing, lifesteal and spell lifesteal by"
+              },
+              {
+                "tag": "b",
+                "val": "45"
+              },
+              {
+                "tag": "text",
+                "val": "%. Deals"
+              },
+              {
+                "tag": "b",
+                "val": "35"
+              },
+              {
+                "tag": "text",
+                "val": "damage per second."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "When used on allies, it provides"
+              },
+              {
+                "tag": "b",
+                "val": "40"
+              },
+              {
+                "tag": "text",
+                "val": "health regeneration per second."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Lasts"
+              },
+              {
+                "tag": "b",
+                "val": "8.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Gains charges every time an enemy hero dies within"
+              },
+              {
+                "tag": "b",
+                "val": "1400"
+              },
+              {
+                "tag": "text",
+                "val": "units.  Only the closest Spirit Vessel to the dying hero will gain a charge."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Cast Range:"
+              },
+              {
+                "tag": "b",
+                "val": "750"
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Mana Regeneration": "1.75",
+              "All Attributes": "6",
+              "Armor": "2",
+              "Health": "125"
+            }
+          },
+          {
+            "n": "item_glimmer_cape",
+            "name": "Glimmer Cape",
+            "cooldown": "14.0",
+            "manacost": "90",
+            "cost": "2150",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Glimmer"
+              },
+              {
+                "tag": "text",
+                "val": "After a"
+              },
+              {
+                "tag": "b",
+                "val": "0.5"
+              },
+              {
+                "tag": "text",
+                "val": "second delay, grants invisibility,"
+              },
+              {
+                "tag": "b",
+                "val": "40"
+              },
+              {
+                "tag": "text",
+                "val": "movement speed and a magic damage barrier that absorbs up to"
+              },
+              {
+                "tag": "b",
+                "val": "300"
+              },
+              {
+                "tag": "text",
+                "val": "damage to you or a target allied unit for"
+              },
+              {
+                "tag": "b",
+                "val": "5"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "600"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Can be cast while channeling."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Magic Resistance": "25"
+            }
+          },
+          {
+            "n": "item_dust",
+            "name": "Dust of Appearance",
+            "cooldown": "30.0",
+            "manacost": "0",
+            "cost": "80",
+            "active": [],
+            "use": [
+              {
+                "tag": "h1",
+                "val": "Use: Reveal"
+              },
+              {
+                "tag": "text",
+                "val": "For"
+              },
+              {
+                "tag": "b",
+                "val": "12"
+              },
+              {
+                "tag": "text",
+                "val": "seconds, creates an area that reveals and slows invisible heroes by"
+              },
+              {
+                "tag": "b",
+                "val": "-20"
+              },
+              {
+                "tag": "text",
+                "val": "% in a"
+              },
+              {
+                "tag": "b",
+                "val": "UNKNOWN"
+              },
+              {
+                "tag": "text",
+                "val": "radius where the caster was standing. Invisible units revealed by dust take"
+              },
+              {
+                "tag": "b",
+                "val": "25"
+              },
+              {
+                "tag": "text",
+                "val": "damage."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "The debuff effect on enemies lingers for"
+              },
+              {
+                "tag": "b",
+                "val": "8"
+              },
+              {
+                "tag": "text",
+                "val": "s after leaving the area of effect."
+              }
+            ],
+            "passive": [],
+            "properties": {}
+          },
+          {
+            "n": "item_magic_wand",
+            "name": "Magic Wand",
+            "cooldown": "15.0",
+            "manacost": null,
+            "cost": "450",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Energy Charge"
+              },
+              {
+                "tag": "text",
+                "val": "Instantly restores"
+              },
+              {
+                "tag": "b",
+                "val": "15"
+              },
+              {
+                "tag": "text",
+                "val": "health and mana per charge stored."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Max"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "charges. Gains a charge whenever a visible enemy within"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              },
+              {
+                "tag": "text",
+                "val": "range uses an ability."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "All Attributes": "3"
+            }
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_ceremonial_robe",
+          "name": "Ceremonial Robe",
+          "cooldown": null,
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [
+            {
+              "tag": "h1",
+              "val": "Passive: Ceremonial Aura"
+            },
+            {
+              "tag": "text",
+              "val": "Lowers enemy Status Resistance by"
+            },
+            {
+              "tag": "b",
+              "val": "10"
+            },
+            {
+              "tag": "text",
+              "val": "% and Magic Resistance by"
+            },
+            {
+              "tag": "b",
+              "val": "10"
+            },
+            {
+              "tag": "text",
+              "val": "%."
+            },
+            {
+              "tag": "newline",
+              "val": ""
+            },
+            {
+              "tag": "newline",
+              "val": ""
+            },
+            {
+              "tag": "text",
+              "val": "Radius:"
+            },
+            {
+              "tag": "b",
+              "val": "1200"
+            }
+          ],
+          "properties": {
+            "Mana": "300"
+          }
+        }
+      },
+      "player": "Seleri",
+      "level": 15,
+      "has_scepter": false,
+      "has_shard": true
+    },
+    {
+      "n": "npc_dota_hero_clinkz",
+      "name": "Clinkz",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "+15 Tar Bomb Bonus Attack Damage",
+              "picked": false
+            },
+            {
+              "name": "-4s Skeleton Walk Cooldown",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+75 Attack Range",
+              "picked": true
+            },
+            {
+              "name": "+1 Death Pact Charge",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+350 Death Pact Bonus Health",
+              "picked": true
+            },
+            {
+              "name": "+40 Strafe Attack Speed",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "-9s Strafe Cooldown",
+              "picked": false
+            },
+            {
+              "name": "Tar Bomb Multishot",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Strafe",
+          "n": "clinkz_strafe",
+          "tooltip": {
+            "description": "Clinkz gains attack speed and has bonus attack range. Any current Burning Skeleton Archers skeletons within a 1200 radius of Clinkz also gain bonus attack range and 50% of the attack speed bonus. \\n\\n Casting Strafe does not break Skeleton Walk invisibility.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "ATTACK SPEED BONUS:",
+              "value": ["100", "140", "180", "220"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["3.5"]
+            },
+            {
+              "name": "ATTACK RANGE BONUS:",
+              "value": ["200"]
+            }
+          ]
+        },
+        {
+          "name": "Tar Bomb",
+          "n": "clinkz_tar_bomb",
+          "tooltip": {
+            "description": "Clinkz throws a projectile filled with tar at the target enemy, dealing Magic damage on impact. After impact, the tar spills onto the ground and stays there for 5 seconds. Any enemy that walks across it gets slowed, and attacks from Clinkz or his Burning Army Skeleton Archers will deal bonus physical damage.\\n\\n When the Tar Bomb hits, any Burning Army skeletons within attack range will attack the target.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["325"]
+            },
+            {
+              "name": "BONUS DAMAGE:",
+              "value": ["15", "25", "35", "45"]
+            },
+            {
+              "name": "AREA DURATION:",
+              "value": ["5"]
+            },
+            {
+              "name": "%MOVESPEED SLOW:",
+              "value": ["-16", "-19", "-22", "-25"]
+            },
+            {
+              "name": "SLOW DURATION:",
+              "value": ["2.5"]
+            },
+            {
+              "name": "IMPACT DAMAGE:",
+              "value": ["40", "60", "80", "100"]
+            }
+          ]
+        },
+        {
+          "name": "Death Pact",
+          "n": "clinkz_death_pact",
+          "tooltip": {
+            "description": "Clinkz consumes the target enemy creep or friendly skeleton and creates a Burning Skeleton Archer in their place, healing and gaining max health. Does not take Clinkz out of Skeleton Walk. \\n\\nArchers are immobile and die within several attacks from a hero. Skeletons deal a percentage of Clinkz' damage. Attack range is equal to Clinkz's attack range. Only one archer can be summoned from Death Pact at a time.\\n\\n Skeletons deal 25% less damage to buildings",
+            "lore": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings.",
+            "scepter_description": "Increases Skeleton Archer Hits to Kill."
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DURATION:",
+              "value": ["45"]
+            },
+            {
+              "name": "BONUS HEALTH:",
+              "value": ["175", "250", "325", "400"]
+            },
+            {
+              "name": "SKELETON ARCHER DURATION:",
+              "value": ["45"]
+            },
+            {
+              "name": "SKELETON HITS TO KILL:",
+              "value": ["2"]
+            },
+            {
+              "name": "%SKELETON DAMAGE:",
+              "value": ["20"]
+            },
+            {
+              "name": "CREEP MAX LEVEL:",
+              "value": ["4", "5", "6", "6"]
+            }
+          ]
+        },
+        {
+          "name": "Burning Army",
+          "n": "clinkz_burning_army",
+          "tooltip": {
+            "description": "Summons a row of Burning Skeleton Archers in the target location.",
+            "lore": "Existing on the brink of life and death, Clinkz has learned to temporarily bridge the gap between the two.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": true,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RANGE:",
+              "value": ["900"]
+            },
+            {
+              "name": "COUNT:",
+              "value": ["5"]
+            },
+            {
+              "name": "SPAWN INTERVAL:",
+              "value": ["0.15"]
+            }
+          ]
+        },
+        {
+          "name": "Burning Barrage",
+          "n": "clinkz_burning_barrage",
+          "tooltip": {
+            "description": "CHANNELED - Clinkz channels and shoots multiple piercing arrows in the target direction that hit all enemy units dealing a percentage of Clinkz' attack damage and applying attack modifiers, and dousing enemies with Tar Bomb slow.",
+            "lore": "It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": true,
+          "properties": [
+            {
+              "name": "ARROWS FIRED:",
+              "value": ["6"]
+            },
+            {
+              "name": "RANGE:",
+              "value": ["850"]
+            },
+            {
+              "name": "%DAMAGE PER ARROW:",
+              "value": ["75"]
+            }
+          ]
+        },
+        {
+          "name": "Skeleton Walk",
+          "n": "clinkz_wind_walk",
+          "tooltip": {
+            "description": "Clinkz moves invisibly through units until the moment he attacks or uses items. Leaving Skeleton Walk creates Burning Skeleton Archers",
+            "lore": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DURATION:",
+              "value": ["35", "40", "45"]
+            },
+            {
+              "name": "%BONUS MOVEMENT SPEED:",
+              "value": ["25", "40", "55"]
+            },
+            {
+              "name": "SKELETON COUNT:",
+              "value": ["2", "3", "4"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_gungir",
+            "name": "Gleipnir",
+            "cooldown": "18",
+            "manacost": "200",
+            "cost": "5450",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Eternal Chains"
+              },
+              {
+                "tag": "text",
+                "val": "Roots all enemies in a target"
+              },
+              {
+                "tag": "b",
+                "val": "UNKNOWN"
+              },
+              {
+                "tag": "text",
+                "val": "radius for"
+              },
+              {
+                "tag": "b",
+                "val": "2.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds and deals"
+              },
+              {
+                "tag": "b",
+                "val": "180"
+              },
+              {
+                "tag": "text",
+                "val": "damage."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "1100"
+              },
+              {
+                "tag": "text",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Chain Lightning"
+              },
+              {
+                "tag": "text",
+                "val": "Grants a"
+              },
+              {
+                "tag": "b",
+                "val": "25"
+              },
+              {
+                "tag": "text",
+                "val": "% chance on attack to release a bolt of electricity that leaps between"
+              },
+              {
+                "tag": "b",
+                "val": "4"
+              },
+              {
+                "tag": "text",
+                "val": "targets within a"
+              },
+              {
+                "tag": "b",
+                "val": "650"
+              },
+              {
+                "tag": "text",
+                "val": "radius, dealing"
+              },
+              {
+                "tag": "b",
+                "val": "160"
+              },
+              {
+                "tag": "text",
+                "val": "magical damage to each. Lightning proc pierces evasion. Deals"
+              },
+              {
+                "tag": "b",
+                "val": "150"
+              },
+              {
+                "tag": "text",
+                "val": "% damage to illusions."
+              }
+            ],
+            "properties": {
+              "Damage": "30",
+              "Attack Speed": "30",
+              "Intelligence": "24",
+              "Health": "350"
+            }
+          },
+          {
+            "n": "item_power_treads",
+            "name": "Power Treads",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "1400",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Switch Attribute"
+              },
+              {
+                "tag": "text",
+                "val": "Switches between +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Strength, +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Agility, or +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Intelligence."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Move Speed (Ranged Heroes)": "45",
+              "Move Speed (Melee Heroes)": "55",
+              "Selected Attribute": "10",
+              "Attack Speed": "25"
+            }
+          },
+          {
+            "n": "item_gem",
+            "name": "Gem of True Sight",
+            "cooldown": "12",
+            "manacost": null,
+            "cost": "900",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Reveal"
+              },
+              {
+                "tag": "text",
+                "val": "Gives True Sight over a"
+              },
+              {
+                "tag": "b",
+                "val": "UNKNOWN"
+              },
+              {
+                "tag": "text",
+                "val": "radius revealing wards and units even in Fog of War."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: True Sight"
+              },
+              {
+                "tag": "text",
+                "val": "Grants the ability to see invisible units and wards to any allied vision within"
+              },
+              {
+                "tag": "b",
+                "val": "900"
+              },
+              {
+                "tag": "text",
+                "val": "range of its carrier."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "b",
+                "val": "Passive: Everlasting"
+              },
+              {
+                "tag": "text",
+                "val": "Dropped on death, and cannot be destroyed."
+              }
+            ],
+            "properties": {}
+          },
+          {
+            "n": "item_black_king_bar",
+            "name": "Black King Bar",
+            "cooldown": "95",
+            "manacost": "50",
+            "cost": "4050",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Avatar"
+              },
+              {
+                "tag": "text",
+                "val": "Applies a basic dispel. Grants"
+              },
+              {
+                "tag": "b",
+                "val": "60"
+              },
+              {
+                "tag": "text",
+                "val": "% Magic resistance and immunity to pure and reflected damage. For the duration of the effect, any negative effect from enemy spells has no effect."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Duration:"
+              },
+              {
+                "tag": "b",
+                "val": "9 8 7 6"
+              },
+              {
+                "tag": "text",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Dispel Type:"
+              },
+              {
+                "tag": "b",
+                "val": "Basic Dispel"
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Strength": "10",
+              "Damage": "24"
+            }
+          },
+          {
+            "n": "item_monkey_king_bar",
+            "name": "Monkey King Bar",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "4700",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Pierce"
+              },
+              {
+                "tag": "text",
+                "val": "Grants each attack a"
+              },
+              {
+                "tag": "b",
+                "val": "80"
+              },
+              {
+                "tag": "text",
+                "val": "% chance to pierce through evasion and deal"
+              },
+              {
+                "tag": "b",
+                "val": "70"
+              },
+              {
+                "tag": "text",
+                "val": "bonus magical damage."
+              }
+            ],
+            "properties": {
+              "Damage": "40",
+              "Attack Speed": "45"
+            }
+          },
+          {
+            "n": "item_dragon_lance",
+            "name": "Dragon Lance",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "1900",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Dragon's Reach"
+              },
+              {
+                "tag": "text",
+                "val": "Increases attack range of ranged heroes."
+              }
+            ],
+            "properties": {
+              "Agility": "15",
+              "Strength": "10",
+              "Attack Range (Ranged Only)": "150"
+            }
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_grove_bow",
+          "name": "Grove Bow",
+          "cooldown": null,
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [
+            {
+              "tag": "h1",
+              "val": "Passive: Magic Amp"
+            },
+            {
+              "tag": "text",
+              "val": "Reduces magic resistance of the attacked enemy by"
+            },
+            {
+              "tag": "b",
+              "val": "15"
+            },
+            {
+              "tag": "text",
+              "val": "%."
+            }
+          ],
+          "properties": {
+            "Attack Range (Ranged Only)": "75",
+            "Attack Speed": "20"
+          }
+        }
+      },
+      "player": "dyrachyo",
+      "level": 22,
+      "has_scepter": false,
+      "has_shard": true
+    },
+    {
+      "n": "npc_dota_hero_pudge",
+      "name": "Pudge",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "+5 Armor",
+              "picked": false
+            },
+            {
+              "name": "-16% Rot Slow",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+8% Spell Lifesteal",
+              "picked": false
+            },
+            {
+              "name": "+140 Meat Hook Damage",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+0.75s Dismember Duration",
+              "picked": false
+            },
+            {
+              "name": "-4s Meat Hook Cooldown",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "x1.8x Dismember Damage/Heal",
+              "picked": false
+            },
+            {
+              "name": "x1.5x Flesh Heap Stack Str and Damage Block bonuses",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Meat Hook",
+          "n": "pudge_meat_hook",
+          "tooltip": {
+            "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge, killing it if it's a non-ancient creep and dealing damage if it is an enemy otherwise.",
+            "lore": "The Butcher's hook is a symbolic nightmare, its curved blade a frightening reminder of his slaughterous intent.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DAMAGE:",
+              "value": ["150", "220", "290", "360"]
+            },
+            {
+              "name": "CAST RANGE:",
+              "value": ["1300"]
+            }
+          ]
+        },
+        {
+          "name": "Rot",
+          "n": "pudge_rot",
+          "tooltip": {
+            "description": "A toxic cloud that deals intense damage and slows movement--harming not only enemy units but Pudge himself.",
+            "lore": "A foul odor precedes a toxic, choking gas, emanating from the Butcher's putrid, ever-swelling mass.",
+            "scepter_description": "Increases Rot radius and damage, and causes it to reduce enemy health regen."
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["250"]
+            },
+            {
+              "name": "%MOVE SLOW:",
+              "value": ["-14", "-20", "-26", "-32"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["30", "60", "90", "120"]
+            },
+            {
+              "name": "BONUS DAMAGE:",
+              "value": ["90"]
+            },
+            {
+              "name": "BONUS RADIUS:",
+              "value": ["200"]
+            },
+            {
+              "name": "%REGEN REDUCTION:",
+              "value": ["20"]
+            }
+          ]
+        },
+        {
+          "name": "Flesh Heap",
+          "n": "pudge_flesh_heap",
+          "tooltip": {
+            "description": "Gives Pudge damage block against all sources. Passively grants bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active.",
+            "lore": "The Butcher gives new meaning to the words 'meat shield.'",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DAMAGE BLOCK:",
+              "value": ["8", "14", "20", "26"]
+            },
+            {
+              "name": "STRENGTH BONUS:",
+              "value": ["1.1", "1.4", "1.7", "2"]
+            },
+            {
+              "name": "RANGE:",
+              "value": ["450"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["5", "6", "7", "8"]
+            }
+          ]
+        },
+        {
+          "name": "Eject",
+          "n": "pudge_eject",
+          "tooltip": {
+            "description": "Ejects the swallowed allied hero inside of you.",
+            "lore": "Allies emerge forever changed.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": []
+        },
+        {
+          "name": "Dismember",
+          "n": "pudge_dismember",
+          "tooltip": {
+            "description": "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Damage is increased by Pudge's Strength and heals him for the total amount. Pudge pulls the unit at a rate of 75 units, up to a minimum of 125 range. Lasts longer on creeps.",
+            "lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": true,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DAMAGE PER SECOND:",
+              "value": ["80", "100", "120"]
+            },
+            {
+              "name": "STRENGTH MULTIPLIER:",
+              "value": ["0.3", "0.6", "0.9"]
+            },
+            {
+              "name": "CREEP DURATION:",
+              "value": ["5.5"]
+            },
+            {
+              "name": "%MAX HP REGEN:",
+              "value": ["5"]
+            },
+            {
+              "name": "ALLY CAST RANGE:",
+              "value": ["300"]
+            },
+            {
+              "name": "COOLDOWN REDUCTION:",
+              "value": ["5.0"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_veil_of_discord",
+            "name": "Veil of Discord",
+            "cooldown": "16",
+            "manacost": "50",
+            "cost": "1725",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Magic Weakness"
+              },
+              {
+                "tag": "text",
+                "val": "Cast a"
+              },
+              {
+                "tag": "b",
+                "val": "UNKNOWN"
+              },
+              {
+                "tag": "text",
+                "val": "radius blast that causes enemy heroes to take"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "% increased damage from spells."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Duration:"
+              },
+              {
+                "tag": "b",
+                "val": "16.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "All Attributes": "4",
+              "Armor": "4",
+              "Health Regeneration": "4"
+            }
+          },
+          {
+            "n": "item_ultimate_scepter",
+            "name": "Aghanim's Scepter",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "4200",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Ability Upgrade"
+              },
+              {
+                "tag": "text",
+                "val": "Upgrades the ultimate, and some abilities, of all heroes."
+              }
+            ],
+            "properties": {
+              "All Attributes": "10",
+              "Health": "175",
+              "Mana": "175"
+            }
+          },
+          {
+            "n": "item_blink",
+            "name": "Blink Dagger",
+            "cooldown": "15.0",
+            "manacost": "0",
+            "cost": "2250",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Blink"
+              },
+              {
+                "tag": "text",
+                "val": "Teleport to a target point up to"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              },
+              {
+                "tag": "text",
+                "val": "units away."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Blink Dagger cannot be used for"
+              },
+              {
+                "tag": "b",
+                "val": "3.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds after taking damage from an enemy hero or Roshan."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {}
+          },
+          {
+            "n": "item_eternal_shroud",
+            "name": "Eternal Shroud",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "3600",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Shroud"
+              },
+              {
+                "tag": "text",
+                "val": "Restores mana equal to"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "% of incoming enemy spell damage before reductions."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "b",
+                "val": "Passive: Eternal Endurance"
+              },
+              {
+                "tag": "text",
+                "val": "For every"
+              },
+              {
+                "tag": "b",
+                "val": "300"
+              },
+              {
+                "tag": "text",
+                "val": "spell damage that equipped hero receives, it gains a stack of Endurance for"
+              },
+              {
+                "tag": "b",
+                "val": "6"
+              },
+              {
+                "tag": "text",
+                "val": "s up to a maximum of"
+              },
+              {
+                "tag": "b",
+                "val": "6"
+              },
+              {
+                "tag": "text",
+                "val": "charges. Each charge increases Eternal Shroud's magic resistance by"
+              },
+              {
+                "tag": "b",
+                "val": "4"
+              },
+              {
+                "tag": "text",
+                "val": "% ."
+              }
+            ],
+            "properties": {
+              "Magic Resistance": "25",
+              "Strength": "14",
+              "Health": "250"
+            }
+          },
+          {
+            "n": "item_bracer",
+            "name": "Bracer",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "505",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Strength": "5",
+              "Agility": "2",
+              "Intelligence": "2",
+              "Damage": "3",
+              "Health Regeneration": "0.75"
+            }
+          },
+          {
+            "n": "item_phase_boots",
+            "name": "Phase Boots",
+            "cooldown": "8.0",
+            "manacost": null,
+            "cost": "1500",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Phase"
+              },
+              {
+                "tag": "text",
+                "val": "Gives"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "% increased movement speed on melee heroes, and"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "% on ranged heroes, and lets you move through units and turn more quickly for"
+              },
+              {
+                "tag": "b",
+                "val": "3.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Movement Speed": "50",
+              "Damage (MELEE)": "18",
+              "Damage (RANGED)": "12",
+              "Armor": "4"
+            }
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_dandelion_amulet",
+          "name": "Dandelion Amulet",
+          "cooldown": "12",
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [
+            {
+              "tag": "h1",
+              "val": "Passive: Magical Damage Block"
+            },
+            {
+              "tag": "text",
+              "val": "Every %AbilityCooldown%s, blocks up to"
+            },
+            {
+              "tag": "b",
+              "val": "300"
+            },
+            {
+              "tag": "text",
+              "val": "magic damage from damage instances over"
+            },
+            {
+              "tag": "b",
+              "val": "75"
+            },
+            {
+              "tag": "text",
+              "val": "damage."
+            }
+          ],
+          "properties": {
+            "Movement Speed": "25",
+            "Mana": "300"
+          }
+        }
+      },
+      "player": "Ace ♠",
+      "level": 19,
+      "has_scepter": true,
+      "has_shard": true
+    },
+    {
+      "n": "npc_dota_hero_crystal_maiden",
+      "name": "Crystal Maiden",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "+250 Health",
+              "picked": true
+            },
+            {
+              "name": "+125 Crystal Nova AoE",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+125 Frostbite Cast Range",
+              "picked": false
+            },
+            {
+              "name": "-4s Crystal Nova Cooldown",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+225 Attack Speed",
+              "picked": false
+            },
+            {
+              "name": "+50 Freezing Field Damage",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+1.25s Frostbite Duration",
+              "picked": false
+            },
+            {
+              "name": "+300 Crystal Nova Damage",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Crystal Nova",
+          "n": "crystal_maiden_crystal_nova",
+          "tooltip": {
+            "description": "A burst of damaging frost slows enemy movement and attack rate in the targeted area.",
+            "lore": "The air temperature around Rylai drops rapidly, chilling all around her to the core.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["425"]
+            },
+            {
+              "name": "%MOVEMENT SLOW:",
+              "value": ["-20", "-30", "-40", "-50"]
+            },
+            {
+              "name": "ATTACK SLOW:",
+              "value": ["-30", "-45", "-60", "-75"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["5"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["110", "160", "210", "260"]
+            }
+          ]
+        },
+        {
+          "name": "Frostbite",
+          "n": "crystal_maiden_frostbite",
+          "tooltip": {
+            "description": "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time. Lasts 10 seconds on creeps level 6 or lower.",
+            "lore": "Rylai channels winds from the Blueheart Glacier, imprisoning attackers in thick blocks of ice.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DAMAGE PER SECOND:",
+              "value": ["100"]
+            },
+            {
+              "name": "HERO DURATION:",
+              "value": ["1.5", "2", "2.5", "3"]
+            },
+            {
+              "name": "CREEP DURATION:",
+              "value": ["10"]
+            }
+          ]
+        },
+        {
+          "name": "Arcane Aura",
+          "n": "crystal_maiden_brilliance_aura",
+          "tooltip": {
+            "description": "Gives additional mana regeneration to all friendly units on the map. Allies within a 1200 radius of Crystal Maiden receive 3x the mana regeneration. Crystal Maiden herself receives 7x the bonus.",
+            "lore": "Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "MANA REGEN:",
+              "value": ["0.4", "0.6", "0.8", "1.0"]
+            },
+            {
+              "name": "CLOSE MANA REGEN:",
+              "value": ["1.2", "1.8", "2.4", "3.0"]
+            },
+            {
+              "name": "SELF MANA REGEN:",
+              "value": ["2.8", "4.2", "5.6", "7.0"]
+            }
+          ]
+        },
+        {
+          "name": "Crystal Clone",
+          "n": "crystal_maiden_crystal_clone",
+          "tooltip": {
+            "description": "Slides backward, creating a crystal clone of herself in her place and disjointing incoming projectiles. If the clone takes enough damage or times out, it shatters, Frostbiting enemies in a 450 AoE around its place. The Clone can also be destroyed by Crystal Maiden's own spells.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": true,
+          "properties": [
+            {
+              "name": "DISTANCE:",
+              "value": ["275"]
+            },
+            {
+              "name": "CLONE DURATION:",
+              "value": ["5"]
+            },
+            {
+              "name": "CLONE HEALTH:",
+              "value": ["150"]
+            }
+          ]
+        },
+        {
+          "name": "Freezing Field",
+          "n": "crystal_maiden_freezing_field",
+          "tooltip": {
+            "description": "CHANNELED - Surrounds Crystal Maiden with 100 random icy explosions that slow enemies and deal massive damage. Grants bonus armor while channeling. Lasts NaN seconds.",
+            "lore": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught.",
+            "scepter_description": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move -75% slower during this. Increases total number of explosions by +20%. Applies Frostbite to any unit that has been standing in the Freezing Field for over +3.5s."
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "RADIUS:",
+              "value": ["810"]
+            },
+            {
+              "name": "EXPLOSION RADIUS:",
+              "value": ["320"]
+            },
+            {
+              "name": "BONUS ARMOR:",
+              "value": ["20"]
+            },
+            {
+              "name": "%MOVEMENT SLOW:",
+              "value": ["-40"]
+            },
+            {
+              "name": "ATTACK SLOW:",
+              "value": ["-60"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["105", "170", "250"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_tranquil_boots",
+            "name": "Tranquil Boots",
+            "cooldown": "13.0",
+            "manacost": "0",
+            "cost": "925",
+            "active": [],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Break"
+              },
+              {
+                "tag": "text",
+                "val": "Whenever you attack a hero or are attacked by any unit, the bonus"
+              },
+              {
+                "tag": "b",
+                "val": "14"
+              },
+              {
+                "tag": "text",
+                "val": "HP regen is lost and the movement speed bonus is reduced to"
+              },
+              {
+                "tag": "b",
+                "val": "40"
+              },
+              {
+                "tag": "text",
+                "val": "for"
+              },
+              {
+                "tag": "b",
+                "val": "13"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              }
+            ],
+            "properties": {
+              "Movement Speed": "65",
+              "Health Regeneration": "14"
+            }
+          },
+          {
+            "n": "item_ancient_janggo",
+            "name": "Drum of Endurance",
+            "cooldown": "30.0",
+            "manacost": null,
+            "cost": "1650",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Endurance"
+              },
+              {
+                "tag": "text",
+                "val": "Consumes a charge and gives +"
+              },
+              {
+                "tag": "b",
+                "val": "45"
+              },
+              {
+                "tag": "text",
+                "val": "attack speed and +"
+              },
+              {
+                "tag": "b",
+                "val": "13"
+              },
+              {
+                "tag": "text",
+                "val": "% movement speed to nearby allies for"
+              },
+              {
+                "tag": "b",
+                "val": "6"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Comes with"
+              },
+              {
+                "tag": "b",
+                "val": "8"
+              },
+              {
+                "tag": "text",
+                "val": "charges."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Radius:"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              },
+              {
+                "tag": "text",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Swiftness Aura"
+              },
+              {
+                "tag": "text",
+                "val": "Grants"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "movement speed to allies."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Radius:"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              }
+            ],
+            "properties": {
+              "Strength": "7",
+              "Intelligence": "7"
+            }
+          },
+          {
+            "n": "item_fluffy_hat",
+            "name": "Fluffy Hat",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "250",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Health": "125"
+            }
+          },
+          {
+            "n": "item_glimmer_cape",
+            "name": "Glimmer Cape",
+            "cooldown": "14.0",
+            "manacost": "90",
+            "cost": "2150",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Glimmer"
+              },
+              {
+                "tag": "text",
+                "val": "After a"
+              },
+              {
+                "tag": "b",
+                "val": "0.5"
+              },
+              {
+                "tag": "text",
+                "val": "second delay, grants invisibility,"
+              },
+              {
+                "tag": "b",
+                "val": "40"
+              },
+              {
+                "tag": "text",
+                "val": "movement speed and a magic damage barrier that absorbs up to"
+              },
+              {
+                "tag": "b",
+                "val": "300"
+              },
+              {
+                "tag": "text",
+                "val": "damage to you or a target allied unit for"
+              },
+              {
+                "tag": "b",
+                "val": "5"
+              },
+              {
+                "tag": "text",
+                "val": "seconds."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "600"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Can be cast while channeling."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Magic Resistance": "25"
+            }
+          },
+          {
+            "n": "item_magic_wand",
+            "name": "Magic Wand",
+            "cooldown": "15.0",
+            "manacost": null,
+            "cost": "450",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Energy Charge"
+              },
+              {
+                "tag": "text",
+                "val": "Instantly restores"
+              },
+              {
+                "tag": "b",
+                "val": "15"
+              },
+              {
+                "tag": "text",
+                "val": "health and mana per charge stored."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Max"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "charges. Gains a charge whenever a visible enemy within"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              },
+              {
+                "tag": "text",
+                "val": "range uses an ability."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "All Attributes": "3"
+            }
+          },
+          {
+            "n": "item_ward_dispenser",
+            "name": "Observer and Sentry Wards",
+            "cooldown": "0",
+            "manacost": null,
+            "cost": "50",
+            "active": [],
+            "use": [
+              {
+                "tag": "h1",
+                "val": "Use: Plant"
+              },
+              {
+                "tag": "text",
+                "val": "Plant the currently active ward.  Double-Click to switch the currently active ward."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "500"
+              }
+            ],
+            "passive": [],
+            "properties": {
+              "OBSERVER VISION RANGE:": "1200",
+              "OBSERVER DURATION (MINUTES):": "6",
+              "SENTRY DURATION (MINUTES):": "8",
+              "SENTRY TRUE SIGHT RANGE:": "1000"
+            }
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_dandelion_amulet",
+          "name": "Dandelion Amulet",
+          "cooldown": "12",
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [
+            {
+              "tag": "h1",
+              "val": "Passive: Magical Damage Block"
+            },
+            {
+              "tag": "text",
+              "val": "Every %AbilityCooldown%s, blocks up to"
+            },
+            {
+              "tag": "b",
+              "val": "300"
+            },
+            {
+              "tag": "text",
+              "val": "magic damage from damage instances over"
+            },
+            {
+              "tag": "b",
+              "val": "75"
+            },
+            {
+              "tag": "text",
+              "val": "damage."
+            }
+          ],
+          "properties": {
+            "Movement Speed": "25",
+            "Mana": "300"
+          }
+        }
+      },
+      "player": "tOfu",
+      "level": 15,
+      "has_scepter": false,
+      "has_shard": true
+    },
+    {
+      "n": "npc_dota_hero_sniper",
+      "name": "Sniper",
+      "talent_tree": {
+        "entries": [
+          [
+            {
+              "name": "+1s Take Aim Duration",
+              "picked": false
+            },
+            {
+              "name": "+30 Headshot Damage",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+30 Attack Speed",
+              "picked": true
+            },
+            {
+              "name": "+-15% Shrapnel Movement Slow",
+              "picked": false
+            }
+          ],
+          [
+            {
+              "name": "+25 Headshot Knockback Distance",
+              "picked": false
+            },
+            {
+              "name": "+25 Shrapnel DPS",
+              "picked": true
+            }
+          ],
+          [
+            {
+              "name": "+100 Attack Range",
+              "picked": false
+            },
+            {
+              "name": "+6 Shrapnel Charges",
+              "picked": false
+            }
+          ]
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Shrapnel",
+          "n": "sniper_shrapnel",
+          "tooltip": {
+            "description": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every %abilitychargerestoretime% seconds.",
+            "lore": "Kardel's modular rifle also fires incendiary rounds, useful for assaulting entrenched locations.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "%MOVEMENT SLOW:",
+              "value": ["-12", "-18", "-24", "-30"]
+            },
+            {
+              "name": "RADIUS:",
+              "value": ["400", "425", "450", "475"]
+            },
+            {
+              "name": "DAMAGE:",
+              "value": ["25", "40", "55", "70"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["10.0"]
+            }
+          ]
+        },
+        {
+          "name": "Headshot",
+          "n": "sniper_headshot",
+          "tooltip": {
+            "description": "Sniper increases his accuracy, giving him a chance to deal extra damage and knock back his enemies. Headshots briefly slow enemy movement and attack speed by -100%.",
+            "lore": "Taking potshots at steepstalkers in his childhood has been thoroughly refined into perfect leads on enemy combatants.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "DAMAGE:",
+              "value": ["20", "50", "80", "110"]
+            },
+            {
+              "name": "%CHANCE:",
+              "value": ["40"]
+            },
+            {
+              "name": "KNOCKBACK DISTANCE:",
+              "value": ["10"]
+            },
+            {
+              "name": "SLOW DURATION:",
+              "value": ["0.5"]
+            }
+          ]
+        },
+        {
+          "name": "Take Aim",
+          "n": "sniper_take_aim",
+          "tooltip": {
+            "description": "Extends the attack range of Sniper's rifle. Can be activated to provide 100% Headshot chance and an additional 200 attack range bonus. Slows you by 45, 40, 35, 30% for the duration.",
+            "lore": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim.",
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "BONUS RANGE:",
+              "value": ["130", "220", "310", "400"]
+            },
+            {
+              "name": "DURATION:",
+              "value": ["3"]
+            }
+          ]
+        },
+        {
+          "name": "Concussive Grenade",
+          "n": "sniper_concussive_grenade",
+          "tooltip": {
+            "description": "Launches a grenade at the target area, dealing damage to enemies and knocking them and Sniper himself back. Enemies affected are disarmed and have their movement slowed after the knockback.",
+            "lore": null,
+            "scepter_description": null
+          },
+          "has_scepter_upgrade": false,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": true,
+          "properties": [
+            {
+              "name": "DAMAGE:",
+              "value": ["200"]
+            },
+            {
+              "name": "RADIUS:",
+              "value": ["375"]
+            },
+            {
+              "name": "%MOVE SLOW:",
+              "value": ["50"]
+            },
+            {
+              "name": "SLOW DURATION:",
+              "value": ["3"]
+            },
+            {
+              "name": "KNOCKBACK DISTANCE:",
+              "value": ["475"]
+            }
+          ]
+        },
+        {
+          "name": "Assassinate",
+          "n": "sniper_assassinate",
+          "tooltip": {
+            "description": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals Sniper's attack damage plus bonus damage at long range and mini-stuns the target. Whenever Sniper kills an enemy hero, Assassinate is refreshed.",
+            "lore": "In order to fulfill the prophecy and return to his home town, Kardel must make another shot as perfect as the one on the day of his ancient test.",
+            "scepter_description": "Causes Assassinate to fire quicker and stun the enemy target."
+          },
+          "has_scepter_upgrade": true,
+          "has_shard_upgrade": false,
+          "granted_by_scepter": false,
+          "granted_by_shard": false,
+          "properties": [
+            {
+              "name": "STUN DURATION:",
+              "value": ["0.8", "1.0", "1.2"]
+            },
+            {
+              "name": "AIM DURATION:",
+              "value": ["0.5"]
+            }
+          ]
+        }
+      ],
+      "inventory": {
+        "items": [
+          {
+            "n": "item_power_treads",
+            "name": "Power Treads",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "1400",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Switch Attribute"
+              },
+              {
+                "tag": "text",
+                "val": "Switches between +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Strength, +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Agility, or +"
+              },
+              {
+                "tag": "b",
+                "val": "10"
+              },
+              {
+                "tag": "text",
+                "val": "Intelligence."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Movement speed bonuses from multiple pairs of boots do not stack."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Move Speed (Ranged Heroes)": "45",
+              "Move Speed (Melee Heroes)": "55",
+              "Selected Attribute": "10",
+              "Attack Speed": "25"
+            }
+          },
+          {
+            "n": "item_magic_wand",
+            "name": "Magic Wand",
+            "cooldown": "15.0",
+            "manacost": null,
+            "cost": "450",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Energy Charge"
+              },
+              {
+                "tag": "text",
+                "val": "Instantly restores"
+              },
+              {
+                "tag": "b",
+                "val": "15"
+              },
+              {
+                "tag": "text",
+                "val": "health and mana per charge stored."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Max"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "charges. Gains a charge whenever a visible enemy within"
+              },
+              {
+                "tag": "b",
+                "val": "1200"
+              },
+              {
+                "tag": "text",
+                "val": "range uses an ability."
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "All Attributes": "3"
+            }
+          },
+          {
+            "n": "item_hurricane_pike",
+            "name": "Hurricane Pike",
+            "cooldown": "19.0",
+            "manacost": "150",
+            "cost": "4450",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Hurricane Thrust"
+              },
+              {
+                "tag": "text",
+                "val": "Pushes you and target enemy"
+              },
+              {
+                "tag": "b",
+                "val": "450"
+              },
+              {
+                "tag": "text",
+                "val": "units away from each other, and for"
+              },
+              {
+                "tag": "b",
+                "val": "6"
+              },
+              {
+                "tag": "text",
+                "val": "seconds, allows you to make"
+              },
+              {
+                "tag": "b",
+                "val": "5"
+              },
+              {
+                "tag": "text",
+                "val": "attacks against the target without range restrictions and with +"
+              },
+              {
+                "tag": "b",
+                "val": "100"
+              },
+              {
+                "tag": "text",
+                "val": "attack speed."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Can be cast on self or allies to push the target"
+              },
+              {
+                "tag": "b",
+                "val": "600"
+              },
+              {
+                "tag": "text",
+                "val": "units in the direction it is facing."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Enemy Range:"
+              },
+              {
+                "tag": "b",
+                "val": "450"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive:  Dragon's Reach"
+              },
+              {
+                "tag": "text",
+                "val": "Increases attack range of ranged heroes."
+              }
+            ],
+            "properties": {
+              "Intelligence": "15",
+              "Health": "200",
+              "Agility": "20",
+              "Strength": "15",
+              "Attack Range (Ranged Only)": "150"
+            }
+          },
+          {
+            "n": "item_black_king_bar",
+            "name": "Black King Bar",
+            "cooldown": "95",
+            "manacost": "50",
+            "cost": "4050",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Avatar"
+              },
+              {
+                "tag": "text",
+                "val": "Applies a basic dispel. Grants"
+              },
+              {
+                "tag": "b",
+                "val": "60"
+              },
+              {
+                "tag": "text",
+                "val": "% Magic resistance and immunity to pure and reflected damage. For the duration of the effect, any negative effect from enemy spells has no effect."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Duration:"
+              },
+              {
+                "tag": "b",
+                "val": "9 8 7 6"
+              },
+              {
+                "tag": "text",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Dispel Type:"
+              },
+              {
+                "tag": "b",
+                "val": "Basic Dispel"
+              }
+            ],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Strength": "10",
+              "Damage": "24"
+            }
+          },
+          {
+            "n": "item_mjollnir",
+            "name": "Mjollnir",
+            "cooldown": "35.0",
+            "manacost": "50",
+            "cost": "5500",
+            "active": [
+              {
+                "tag": "h1",
+                "val": "Active: Static Charge"
+              },
+              {
+                "tag": "text",
+                "val": "Places a charged shield on a target unit for"
+              },
+              {
+                "tag": "b",
+                "val": "15.0"
+              },
+              {
+                "tag": "text",
+                "val": "seconds which has a"
+              },
+              {
+                "tag": "b",
+                "val": "20"
+              },
+              {
+                "tag": "text",
+                "val": "% chance to release a"
+              },
+              {
+                "tag": "b",
+                "val": "225"
+              },
+              {
+                "tag": "text",
+                "val": "magical damage shocking bolt at a nearby attacker and"
+              },
+              {
+                "tag": "b",
+                "val": "4"
+              },
+              {
+                "tag": "text",
+                "val": "additional enemies."
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "text",
+                "val": "Range:"
+              },
+              {
+                "tag": "b",
+                "val": "800"
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              },
+              {
+                "tag": "newline",
+                "val": ""
+              }
+            ],
+            "use": [],
+            "passive": [
+              {
+                "tag": "h1",
+                "val": "Passive: Chain Lightning"
+              },
+              {
+                "tag": "text",
+                "val": "Grants a"
+              },
+              {
+                "tag": "b",
+                "val": "25"
+              },
+              {
+                "tag": "text",
+                "val": "% chance on attack to release a bolt of electricity that leaps between"
+              },
+              {
+                "tag": "b",
+                "val": "12"
+              },
+              {
+                "tag": "text",
+                "val": "targets within a"
+              },
+              {
+                "tag": "b",
+                "val": "650"
+              },
+              {
+                "tag": "text",
+                "val": "radius, dealing"
+              },
+              {
+                "tag": "b",
+                "val": "180"
+              },
+              {
+                "tag": "text",
+                "val": "magical damage to each. Lightning proc pierces evasion.  Deals"
+              },
+              {
+                "tag": "b",
+                "val": "150"
+              },
+              {
+                "tag": "text",
+                "val": "% damage to illusions."
+              }
+            ],
+            "properties": {
+              "Damage": "25",
+              "Attack Speed": "90"
+            }
+          },
+          {
+            "n": "item_wraith_band",
+            "name": "Wraith Band",
+            "cooldown": null,
+            "manacost": null,
+            "cost": "505",
+            "active": [],
+            "use": [],
+            "passive": [],
+            "properties": {
+              "Agility": "5",
+              "Strength": "2",
+              "Intelligence": "2",
+              "Attack Speed": "5",
+              "Armor": "1.75"
+            }
+          }
+        ],
+        "neutral_slot": {
+          "n": "item_grove_bow",
+          "name": "Grove Bow",
+          "cooldown": null,
+          "manacost": null,
+          "cost": "0",
+          "active": [],
+          "use": [],
+          "passive": [
+            {
+              "tag": "h1",
+              "val": "Passive: Magic Amp"
+            },
+            {
+              "tag": "text",
+              "val": "Reduces magic resistance of the attacked enemy by"
+            },
+            {
+              "tag": "b",
+              "val": "15"
+            },
+            {
+              "tag": "text",
+              "val": "%."
+            }
+          ],
+          "properties": {
+            "Attack Range (Ranged Only)": "75",
+            "Attack Speed": "20"
+          }
+        }
+      },
+      "player": "Quinn",
+      "level": 21,
+      "has_scepter": false,
+      "has_shard": false
+    }
+  ]
+}
