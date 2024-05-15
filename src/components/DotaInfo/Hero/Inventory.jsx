@@ -1,3 +1,6 @@
+import imageMana from "../../../../images/mana.png";
+import imageCd from "../../../../images/cd.png";
+import imageGold from "../../../../images/icon_gold.png";
 import * as AspectRatio from "@radix-ui/react-aspect-ratio";
 import styles from "./hero.module.css";
 import imageAPI from "./../imageAPI";
@@ -47,7 +50,7 @@ const Item = ({ data, ratio = 3 / 2 }) => {
               {data.manacost && (
                 <>
                   <img
-                    src="images/mana.png"
+                    src={imageMana}
                     className={styles.inventoryGridItemUseIcon}
                   />
                   {data.manacost}
@@ -56,7 +59,7 @@ const Item = ({ data, ratio = 3 / 2 }) => {
               {data.cooldown && (
                 <>
                   <img
-                    src="images/cd.png"
+                    src={imageCd}
                     className={styles.inventoryGridItemUseIcon}
                   />{" "}
                   {data.cooldown}
@@ -65,7 +68,7 @@ const Item = ({ data, ratio = 3 / 2 }) => {
               {data.cost && data.cost !== "0" && (
                 <>
                   <img
-                    src="images/icon_gold.png"
+                    src={imageGold}
                     className={styles.inventoryGridItemUseIcon}
                   />{" "}
                   {data.cost}

@@ -1,3 +1,7 @@
+import scepterOn from "../../../../images/scepter_on.png";
+import scepterOff from "../../../../images/scepter_off.png";
+import shardOn from "../../../../images/shard_on.png";
+import shardOff from "../../../../images/shard_off.png";
 import styles from "./hero.module.css";
 import { isNonNullish } from "remeda";
 import Chip from "../../Chip";
@@ -85,14 +89,14 @@ const Ability = ({ data }) => (
 
 const Scepter = ({ active, size }) => (
   <img
-    src={`images/scepter_${active ? "on" : "off"}.png`}
+    src={active ? scepterOn : scepterOff}
     style={{ height: sizes[size].scepter, width: `auto` }}
   />
 );
 
 const Shard = ({ active, size }) => (
   <img
-    src={`images/shard_${active ? "on" : "off"}.png`}
+    src={active ? shardOn : shardOff}
     style={{ height: sizes[size].shard, width: `auto` }}
   />
 );
