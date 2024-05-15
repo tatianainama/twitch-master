@@ -9,8 +9,13 @@ export const getStreaming = () => {
   return fetch(`${API}/list`).then((res) => res.json());
 };
 
-export const castStream = (user_name) =>
-  fetch(`${API}/cast_live?user=${user_name}`).then((res) => res.json());
+export const getTargets = () =>
+  fetch(`${API}/targets`)
+    .then((res) => res.json())
+    .then((data) => [...data]);
+
+export const castStream = (target, user_name) =>
+  fetch(`${API}/cast_live/${target}/${user_name}`).then((res) => res.json());
 
 export const castVOD = (video_id) =>
   fetch(`${API}/cast_vod?vod_id=${video_id}`).then((res) => res.json());

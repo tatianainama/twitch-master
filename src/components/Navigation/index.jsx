@@ -1,17 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { Radio, Film, Power } from "../Icons";
+import { Radio, Film } from "../Icons";
 import styles from "./navigation.module.css";
-import { useState } from "react";
-import { setPowerOn, setPowerOff } from "../../api";
 
-export function Navigation() {
-  const [togglePower, setTogglePower] = useState(true);
-
-  const handlePower = () => {
-    togglePower ? setPowerOff() : setPowerOn();
-    setTogglePower(!togglePower);
-  };
-
+export function Navigation({targets, onTargetChange}) {
   return (
     <nav className={styles.nav}>
       <NavLink
@@ -33,9 +24,12 @@ export function Navigation() {
         VoD
       </NavLink>
       <div>
-        <button onClick={handlePower}>
-          <Power size={20} />
-        </button>
+        <select onChange={(ev) => {console.log("change to", ev.target.value); onTargetChange(ev.target.value)}} defaultValue="Kodi">
+	      {targets ? targets.map(t => (
+			  <option value={t} key={t}>{t}</option>
+		  )) : <></>
+		  }
+        </select>
       </div>
     </nav>
   );

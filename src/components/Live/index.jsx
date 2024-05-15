@@ -7,7 +7,7 @@ import { DotaInfo } from "./../DotaInfo";
 import styles from "./live.module.css";
 import { castStream } from "../../api";
 
-export function Live() {
+export function Live({target}) {
   const { streaming } = useStreamingList();
   const { setCasting } = useCasted();
 
@@ -29,7 +29,7 @@ export function Live() {
                   <>
                     {game_name === "Dota 2" && <DotaInfo user={user_name} />}
                     <Button
-                      onClick={() => castStream(user_name).then(setCasting)}
+                      onClick={() => castStream(target, user_name).then(setCasting)}
                     >
                       <Play size={24} />
                     </Button>
