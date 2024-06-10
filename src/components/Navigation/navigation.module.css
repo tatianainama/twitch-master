@@ -38,3 +38,9 @@
 .nav div {
   flex: 1;
 }
+
+.targetDropdown {
+  background-color: var(--space-cadet-3);
+  padding: 0.1rem;
+  border-radius: .25rem;
+}

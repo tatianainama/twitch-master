@@ -24,7 +24,7 @@ export function Navigation({targets, onTargetChange}) {
         VoD
       </NavLink>
       <div>
-        <select onChange={(ev) => {console.log("change to", ev.target.value); onTargetChange(ev.target.value)}} defaultValue="Kodi">
+        <select className={styles.targetDropdown} onChange={(ev) => {onTargetChange(ev.target.value)}} defaultValue="Kodi">
 	      {targets ? targets.map(t => (
 			  <option value={t} key={t}>{t}</option>
 		  )) : <></>
