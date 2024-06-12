@@ -48,7 +48,7 @@ export const Aghanim = ({ scepter, shard, size = "md", abilities }) => {
             <Scepter active={scepter} size="sm" />
             <PopoverTitle>Aghanim&apos;s Scepter</PopoverTitle>
             <Chip color="space_cadet">
-              {scepterAbility.has_scepter_upgrade ? "Upgrade" : "New ability"}
+              {scepterAbility?.has_scepter_upgrade ? "Upgrade" : "New ability"}
             </Chip>
           </div>
         </PopoverHeader>
